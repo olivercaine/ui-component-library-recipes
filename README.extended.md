@@ -1,0 +1,1 @@
+Components based on https://ezcater.github.io/recipe/components/ez-card#card-size
