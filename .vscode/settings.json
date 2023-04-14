@@ -5,7 +5,7 @@
   },
   "editor.formatOnSave": true,
   "workbench.colorCustomizations": {
-    "titleBar.activeForeground": "#dd98ff"
+    "titleBar.activeForeground": "#F6D479"
   },
   "eslint.format.enable": true,
   "eslint.lintTask.enable": true,
