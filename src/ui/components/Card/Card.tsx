@@ -28,6 +28,6 @@ export const Card: FC<IProps> = ({ text = 'Default button text' }: IProps) =>
         <use width='535' height='110' xlinkHref='#B' x='316' />
         <use width='535' height='110' xlinkHref='#B' x='421' />
       </svg>
-      4.7 (463 reviews)
+      4.7 (462 reviews)
     </p>
   </EzCard>
