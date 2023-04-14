@@ -12,7 +12,7 @@ export const Card: FC<IProps> = ({ text = 'Default button text' }: IProps) =>
   <EzCard
     title={text}
     subtitle='Corporate Catering  |  3 mi  |  $$$$'
-    imageSrc={'/images/wrap.jpg'}
+    imageSrc={'https://ezcater.github.io/recipe/images/thai.jpg'}
     imageMaxHeight={120}
     size='small'
   >
