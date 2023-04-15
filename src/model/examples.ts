@@ -267,7 +267,7 @@ export const exampleRecipe: Recipe = {
       media: {
         images: [
           {
-            image: 'https://raw.githubusercontent.com/olivercaine/ui-component-library-recipes/main/src/images/eggs-benedict/', // TODO: generate
+            image: 'https://raw.githubusercontent.com/olivercaine/ui-component-library-recipes/main/src/images/eggs-benedict/dalle-2023-04-15-155058-a-bowl-of-whisked-egg-and-melted-butter.png',
             width: 1500
           }
         ]
