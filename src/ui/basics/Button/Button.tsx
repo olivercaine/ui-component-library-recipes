@@ -1,3 +1,4 @@
+import { EzButton } from '@ezcater/recipe'
 import React, { FC, MouseEventHandler } from 'react'
 
 export interface IProps {
@@ -12,6 +13,4 @@ export interface IProps {
 }
 
 export const Button: FC<IProps> = ({ onClick, text = 'Default button text' }: IProps) =>
-  <button className='btn btn-primary' onClick={onClick}>
-    {text}
-  </button>
+  <EzButton onClick={onClick}> {text}</EzButton>
