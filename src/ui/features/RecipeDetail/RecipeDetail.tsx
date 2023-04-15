@@ -1,3 +1,4 @@
+import { Rating } from '@mui/material'
 import React, { FC } from 'react'
 import { Recipe } from '../../../model/types'
 import { CookingInstructions } from '../../components/CookingInstructions/CookingInstructions'
@@ -13,11 +14,18 @@ export interface IProps {
 export const RecipeDetail: FC<IProps> = ({ recipe }: IProps) =>
   <>
     <h1>{recipe.title}</h1>
-    <img src={recipe.media.images?.length ? recipe.media.images[0].image : undefined}/>
-    {recipe.rating.average}
-    {recipe.rating.count}
+    <img src={recipe.media.images?.length ? recipe.media.images[0].image : undefined} style={{ maxWidth:'100%' }}/>
+    <Rating
+      name='simple-controlled'
+      value={recipe.rating.average}
+      disabled={true}
+    />
+    {recipe.rating.count} reviews
+    <hr/>
     {recipe.cuisine.title}
-    {recipe.prep_times.for_2}mins
+    <hr/>
+    Prep time: {recipe.prep_times.for_2}mins
+    <hr/>
     <Ingredients ingredients={recipe.ingredients || []}/>
     <CookingInstructions cookingInstructions={recipe.cooking_instructions || []}/>
   </>
