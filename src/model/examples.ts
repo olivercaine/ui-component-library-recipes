@@ -44,7 +44,7 @@ export const exampleRecipe: Recipe = {
       media: {
         images: [
           {
-            image: 'olive-oil.jpg',
+            image: 'https://raw.githubusercontent.com/olivercaine/ui-component-library-recipes/main/src/images/ingredients/dalle-2023-04-15-150151-bottle-of-olive-oil-with-a-white-background.png',
             width: 1500
           }
         ]
@@ -61,7 +61,7 @@ export const exampleRecipe: Recipe = {
       media: {
         images: [
           {
-            image: 'white-wine.jpg',
+            image: 'https://raw.githubusercontent.com/olivercaine/ui-component-library-recipes/main/src/images/ingredients/dalle-2023-04-15-150041-bottle-of-white-wine-vinegar-with-a-white-background.png',
             width: 1500
           }
         ]
@@ -78,7 +78,7 @@ export const exampleRecipe: Recipe = {
       media: {
         images: [
           {
-            image: 'ham-slice.jpg',
+            image: 'https://raw.githubusercontent.com/olivercaine/ui-component-library-recipes/main/src/images/ingredients/dalle-2023-04-15-150307-parma-ham-slices-on-a-plate-with-a-white-background.png',
             width: 1500
           }
         ]
@@ -99,7 +99,7 @@ export const exampleRecipe: Recipe = {
       media: {
         images: [
           {
-            image: 'egg.jpg',
+            image: 'https://raw.githubusercontent.com/olivercaine/ui-component-library-recipes/main/src/images/ingredients/dalle-2023-04-15-150443-egg-with-a-white-background.png',
             width: 1500
           }
         ]
@@ -120,7 +120,7 @@ export const exampleRecipe: Recipe = {
       media: {
         images: [
           {
-            image: 'english-muffin.jpg',
+            image: 'https://raw.githubusercontent.com/olivercaine/ui-component-library-recipes/main/src/images/ingredients/dalle-2023-04-15-150542-a-single-english-muffin.png',
             width: 1500
           }
         ]
