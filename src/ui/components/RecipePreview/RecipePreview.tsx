@@ -1,10 +1,7 @@
-// import { EzRecipePreview, EzRating } from '@ezcater/recipe'
 import { EzCard } from '@ezcater/recipe'
+import { Rating } from '@mui/material'
 import React, { FC } from 'react'
 import { Recipe } from '../../../model/types'
-// const { fullStar } = require('@fortawesome/free-solid-svg-icons/faStar')
-// const { halfStar } = require('@fortawesome/free-solid-svg-icons/faStarHalfStroke')
-// const { emptyStar } = require('@fortawesome/free-regular-svg-icons/faStar')
 
 export interface IProps {
   /**
@@ -22,26 +19,11 @@ export const RecipePreview: FC<IProps> = ({ recipe }: IProps) =>
     size='small'
   >
     <p>
-      {/* <EzRating
-        color='primary'
-        // emptyIcon={emptyStar}
-        // fullIcon={fullStar}
-        // halfIcon={halfStar}
-        label={`${value} stars`}
-        max={5}
-        value={value}
-      /> */}
-      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 550 100' height='16' width='80'>
-        <path
-          id='B'
-          d='M57 5l12 38 40-.002-32 24 12 38-32-24-32 24 12-38-32-24L45 43 57 5z'
-          fill='currentColor'
-        />
-        <use width='535' height='110' xlinkHref='#B' x='105' />
-        <use width='535' height='110' xlinkHref='#B' x='211' />
-        <use width='535' height='110' xlinkHref='#B' x='316' />
-        <use width='535' height='110' xlinkHref='#B' x='421' />
-      </svg>
+      <Rating 
+        name="simple-controlled"
+        value={recipe.rating.average}
+        disabled={true}
+      />
       {recipe.rating.average} ({recipe.rating.count} reviews)
     </p>
   </EzCard>
