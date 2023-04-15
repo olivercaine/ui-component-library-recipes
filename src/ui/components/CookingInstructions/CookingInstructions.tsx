@@ -19,8 +19,8 @@ export const CookingInstructions = ({
 }: IProps) =>
   <div className='CookingInstructions'>
     <h2>Cooking Instructions</h2>
-    <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-      {ingredients.map((cookingInstruction) =>
+    <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
+      {ingredients.map((cookingInstruction, i) =>
         <>
           <ListItem alignItems='flex-start'>
             <ListItemAvatar>
@@ -30,7 +30,7 @@ export const CookingInstructions = ({
               />
             </ListItemAvatar>
             <ListItemText
-              primary={cookingInstruction.instruction}
+              primary={`${i + 1}. ${cookingInstruction.instruction}`}
             />
           </ListItem>
 
