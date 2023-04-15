@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { Recipe } from '../../../model/types'
-import { Card } from '../../components/Card'
+import { RecipePreview } from '../../components/RecipePreview'
 
 export interface IProps {
   /**
@@ -11,5 +11,5 @@ export interface IProps {
 
 export const Recipes: FC<IProps> = ({ recipes }: IProps) =>
   <>
-    {recipes.map(recipe => <Card recipe={recipe} />)}
+    {recipes.map(recipe => <RecipePreview recipe={recipe} />)}
   </>

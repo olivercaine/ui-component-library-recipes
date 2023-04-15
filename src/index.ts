@@ -1,7 +1,7 @@
 import { Button } from './ui/basics/Button'
-import { Card } from './ui/components/Card'
+import { RecipePreview } from './ui/components/RecipePreview/RecipePreview'
 
 export {
   Button,
-  Card
+  RecipePreview
 }
