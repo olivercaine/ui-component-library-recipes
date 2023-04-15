@@ -243,7 +243,7 @@ export const exampleRecipe: Recipe = {
       media: {
         images: [
           {
-            image: 'https://raw.githubusercontent.com/olivercaine/ui-component-library-recipes/main/src/images/eggs-benedict/', // TODO: generate
+            image: 'https://raw.githubusercontent.com/olivercaine/ui-component-library-recipes/main/src/images/eggs-benedict/dalle-2023-04-15-152604-a-human-hand-squeezing-a-lemon-into-a-pan-which-contains-melted-butter.png',
             width: 1500
           }
         ]
@@ -255,7 +255,7 @@ export const exampleRecipe: Recipe = {
       media: {
         images: [
           {
-            image: 'https://raw.githubusercontent.com/olivercaine/ui-component-library-recipes/main/src/images/eggs-benedict/', // TODO: generate
+            image: 'https://raw.githubusercontent.com/olivercaine/ui-component-library-recipes/main/src/images/eggs-benedict/dalle-2023-04-15-152820-a-bowl-containing-frothy-egg-white-with-a-whiskpng.png',
             width: 1500
           }
         ]
@@ -279,7 +279,7 @@ export const exampleRecipe: Recipe = {
       media: {
         images: [
           {
-            image: 'https://raw.githubusercontent.com/olivercaine/ui-component-library-recipes/main/src/images/eggs-benedict/', // TODO: generate
+            image: 'https://raw.githubusercontent.com/olivercaine/ui-component-library-recipes/main/src/images/eggs-benedict/dalle-2023-04-15-152954-two-english-muffin-halves-on-a-plate-with-bacon-on-top-and-poached-egg-on-top-of-that.png',
             width: 1500
           }
         ]
@@ -291,7 +291,7 @@ export const exampleRecipe: Recipe = {
       media: {
         images: [
           {
-            image: 'https://raw.githubusercontent.com/olivercaine/ui-component-library-recipes/main/src/images/eggs-benedict/', // TODO: generate
+            image: 'https://raw.githubusercontent.com/olivercaine/ui-component-library-recipes/main/src/images/eggs-benedict/dalle-2023-04-15-153146-using-a-spoon-to-pour-hollandaise-sauce-over-poached-eggs-on-two-muffins-with-bacon-on-top.png',
             width: 1500
           }
         ]
