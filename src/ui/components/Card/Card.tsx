@@ -1,22 +1,36 @@
+// import { EzCard, EzRating } from '@ezcater/recipe'
 import { EzCard } from '@ezcater/recipe'
 import React, { FC } from 'react'
+import { Recipe } from '../../../model/types'
+// const { fullStar } = require('@fortawesome/free-solid-svg-icons/faStar')
+// const { halfStar } = require('@fortawesome/free-solid-svg-icons/faStarHalfStroke')
+// const { emptyStar } = require('@fortawesome/free-regular-svg-icons/faStar')
 
 export interface IProps {
   /**
-  Text to be shown in the button
+  The recipe to be displayed
   */
-  text?: string
+  recipe: Recipe
 }
 
-export const Card: FC<IProps> = ({ text = 'Default button text' }: IProps) =>
+export const Card: FC<IProps> = ({ recipe }: IProps) =>
   <EzCard
-    title={text}
-    subtitle='Corporate Catering  |  3 mi  |  $$$$'
-    imageSrc={'https://ezcater.github.io/recipe/images/thai.jpg'}
+    title={recipe.title}
+    subtitle={`Prep time: ${recipe.prep_times.for_2}mins`}
+    imageSrc={recipe.media.images?.length ? recipe.media.images[0].image : undefined}
     imageMaxHeight={120}
     size='small'
   >
     <p>
+      {/* <EzRating
+        color='primary'
+        // emptyIcon={emptyStar}
+        // fullIcon={fullStar}
+        // halfIcon={halfStar}
+        label={`${value} stars`}
+        max={5}
+        value={value}
+      /> */}
       <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 550 100' height='16' width='80'>
         <path
           id='B'
