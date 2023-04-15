@@ -1,4 +1,4 @@
-// import { EzCard, EzRating } from '@ezcater/recipe'
+// import { EzRecipePreview, EzRating } from '@ezcater/recipe'
 import { EzCard } from '@ezcater/recipe'
 import React, { FC } from 'react'
 import { Recipe } from '../../../model/types'
@@ -13,7 +13,7 @@ export interface IProps {
   recipe: Recipe
 }
 
-export const Card: FC<IProps> = ({ recipe }: IProps) =>
+export const RecipePreview: FC<IProps> = ({ recipe }: IProps) =>
   <EzCard
     title={recipe.title}
     subtitle={`Prep time: ${recipe.prep_times.for_2}mins`}
