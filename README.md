@@ -4,7 +4,7 @@
 
 Pre-configured React Storybook package for rapidly developing user interfaces
 
-[Demo](https://olivercaine.github.io/ui-component-library)
+[Demo](https://olivercaine.github.io/ui-component-library-recipes)
 
 ## Tools & Frameworks
 
