@@ -1,7 +1,7 @@
 import { ComponentMeta } from '@storybook/react'
 import { storyTemplate } from '../../../../.storybook/helpers'
+import { RecipePreview } from '../../../index'
 import { exampleRecipe } from '../../../model/examples'
-import { IProps, RecipePreview } from './RecipePreview'
 
 export default {
   component: RecipePreview,
@@ -10,7 +10,7 @@ export default {
 
 const template = storyTemplate(RecipePreview)
 
-const defaultArgs: IProps = {
+const defaultArgs = {
   recipe: exampleRecipe
 }
 

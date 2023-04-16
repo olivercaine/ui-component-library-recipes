@@ -1,3 +1,6 @@
+import Grid from '@mui/joy/Grid'
+import Sheet from '@mui/joy/Sheet'
+import { styled } from '@mui/joy/styles'
 import React, { FC } from 'react'
 import { Recipe } from '../../../model/types'
 import { RecipePreview } from '../../components/RecipePreview/RecipePreview'
@@ -9,7 +12,18 @@ export interface IProps {
   recipes: Recipe[]
 }
 
+const Item = styled(Sheet)(({ theme }: { theme: any }) => ({
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: 'center',
+  color: theme.vars.palette.text.tertiary,
+}))
+
 export const Recipes: FC<IProps> = ({ recipes }: IProps) =>
-  <>
-    {recipes.map(recipe => <RecipePreview recipe={recipe} />)}
-  </>
+  <div className='Recipes'>
+    <Grid container spacing={2} sx={{ flexGrow: 1 }}>
+      <Grid sm={6} lg={3}>
+        {recipes.map(recipe => <Item><RecipePreview recipe={recipe} /></Item>)}
+      </Grid>
+    </Grid>
+  </div>

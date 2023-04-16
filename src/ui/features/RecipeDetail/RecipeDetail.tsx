@@ -1,8 +1,11 @@
-import { Rating } from '@mui/material'
+import Grid from '@mui/joy/Grid'
+import Sheet from '@mui/joy/Sheet'
+import { styled } from '@mui/joy/styles'
 import React, { FC } from 'react'
-import { Recipe } from '../../../model/types'
+import { CookingInstructionsEntity, IngredientsEntity, Recipe } from '../../../model/types'
 import { CookingInstructions } from '../../components/CookingInstructions/CookingInstructions'
 import { Ingredients } from '../../components/Ingredients/Ingredients'
+import { RecipePreview } from '../../components/RecipePreview/RecipePreview'
 
 export interface IProps {
   /**
@@ -11,21 +14,28 @@ export interface IProps {
   recipe: Recipe
 }
 
+const Item = styled(Sheet)(({ theme }: { theme: any }) => ({
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: 'center',
+  color: theme.vars.palette.text.tertiary,
+}))
+
 export const RecipeDetail: FC<IProps> = ({ recipe }: IProps) =>
-  <>
-    <h1>{recipe.title}</h1>
-    <img src={recipe.media.images?.length ? recipe.media.images[0].image : undefined} style={{ maxWidth:'100%' }}/>
-    <Rating
-      name='simple-controlled'
-      value={recipe.rating.average}
-      disabled={true}
-    />
-    {recipe.rating.count} reviews
-    <hr/>
-    {recipe.cuisine.title}
-    <hr/>
-    Prep time: {recipe.prep_times.for_2}mins
-    <hr/>
-    <Ingredients ingredients={recipe.ingredients || []}/>
-    <CookingInstructions cookingInstructions={recipe.cooking_instructions || []}/>
-  </>
+  <div className='RecipeDetail'>
+    <Grid container spacing={2} sx={{ flexGrow: 1 }}>
+      <Grid sm={1} lg={12}>
+        <RecipePreview recipe={recipe}/>
+      </Grid>
+      <Grid sm={1} lg={4}>
+        <Item>
+          <Ingredients ingredients={recipe.ingredients as IngredientsEntity[]} />
+        </Item>
+      </Grid>
+      <Grid sm={1} lg={8}>
+        <Item>
+          <CookingInstructions cookingInstructions={recipe.cooking_instructions as CookingInstructionsEntity[]} />
+        </Item>
+      </Grid>
+    </Grid>
+  </div>
