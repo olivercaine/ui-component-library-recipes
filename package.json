@@ -4,7 +4,7 @@
   "description": "A storybook 6 with TypeScript demo",
   "main": "index.js",
   "module": "index.esm.js",
-  "types": "index.d.ts",
+  "types": "src/index.d.ts",
   "scripts": {
     "lint": "eslint -c .eslintrc --ext .ts src",
     "lint:fix": "npm run lint -- --fix",
