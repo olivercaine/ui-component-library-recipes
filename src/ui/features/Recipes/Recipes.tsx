@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { Recipe } from '../../../model/types'
-import { RecipePreview } from '../../components/RecipePreview'
+import { RecipePreview } from '../../components/RecipePreview/RecipePreview'
 
 export interface IProps {
   /**
