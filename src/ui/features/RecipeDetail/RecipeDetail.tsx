@@ -24,15 +24,15 @@ const Item = styled(Sheet)(({ theme }: { theme: any }) => ({
 export const RecipeDetail: FC<IProps> = ({ recipe }: IProps) =>
   <div className='RecipeDetail'>
     <Grid container spacing={2} sx={{ flexGrow: 1 }}>
-      <Grid sm={1} lg={12}>
+      <Grid sm={12}>
         <RecipePreview recipe={recipe}/>
       </Grid>
-      <Grid sm={1} lg={4}>
+      <Grid md={4}>
         <Item>
           <Ingredients ingredients={recipe.ingredients as IngredientsEntity[]} />
         </Item>
       </Grid>
-      <Grid sm={1} lg={8}>
+      <Grid md={8}>
         <Item>
           <CookingInstructions cookingInstructions={recipe.cooking_instructions as CookingInstructionsEntity[]} />
         </Item>

@@ -1,8 +1,6 @@
-import Avatar from '@mui/material/Avatar'
 import Divider from '@mui/material/Divider'
 import List from '@mui/material/List'
 import ListItem from '@mui/material/ListItem'
-import ListItemAvatar from '@mui/material/ListItemAvatar'
 import ListItemText from '@mui/material/ListItemText'
 import * as React from 'react'
 import { CookingInstructionsEntity } from '../../../model/types'
@@ -23,12 +21,8 @@ export const CookingInstructions = ({
       {ingredients.map((cookingInstruction, i) =>
         <>
           <ListItem alignItems='flex-start'>
-            <ListItemAvatar>
-              <Avatar
-                alt={cookingInstruction.instruction}
-                src={cookingInstruction?.media?.images?.length ? cookingInstruction?.media?.images[0]?.image : undefined}
-              />
-            </ListItemAvatar>
+
+            <img style={{ maxWidth:'33%' }} src={cookingInstruction?.media?.images?.length ? cookingInstruction?.media?.images[0]?.image : undefined} />
             <ListItemText
               primary={`${i + 1}. ${cookingInstruction.instruction}`}
             />

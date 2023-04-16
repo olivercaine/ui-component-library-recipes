@@ -1,3 +1,4 @@
+import FavoriteIcon from '@mui/icons-material/Favorite'
 import { CardActions, Link, Rating } from '@mui/material'
 import Avatar from '@mui/material/Avatar'
 import Card from '@mui/material/Card'
@@ -10,7 +11,7 @@ import { blue } from '@mui/material/colors'
 import { styled } from '@mui/material/styles'
 import React from 'react'
 import { Recipe } from '../../../model/types'
-import { Button } from '../../basics/Button/Button'
+import { Stepper } from '../Stepper/Stepper'
 
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean
@@ -40,6 +41,11 @@ export const RecipePreview = ({
             R
           </Avatar>
         }
+        action={
+          <IconButton aria-label='add to favorites'>
+            <FavoriteIcon />
+          </IconButton>
+        }
         title={recipe.title}
         subheader={`${recipe.prep_times.for_2} minutes`}
       />
@@ -57,7 +63,8 @@ export const RecipePreview = ({
         </Typography>
       </CardContent>
       <CardActions>
-        <Button onClick={console.log} />
+
+        <Stepper handleDecrement={console.log} handleIncrement={console.log} number={10} />
       </CardActions>
     </Card>
   </Link>

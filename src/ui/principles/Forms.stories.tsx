@@ -6,7 +6,7 @@ export default {
   title: 'Principles/Forms',
   parameters: {
     viewport: {
-      defaultViewport: 'desktop',
+      defaultViewport: 'ipad',
     },
   },
 } as Meta
