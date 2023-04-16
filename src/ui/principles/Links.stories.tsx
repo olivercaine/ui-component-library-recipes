@@ -6,7 +6,7 @@ export default {
   title: 'Principles/Links',
   parameters: {
     viewport: {
-      defaultViewport: 'desktop',
+      defaultViewport: 'ipad',
     },
   },
 } as Meta
