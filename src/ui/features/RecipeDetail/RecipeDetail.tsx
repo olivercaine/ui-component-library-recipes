@@ -23,7 +23,7 @@ const Item = styled(Sheet)(({ theme }: { theme: any }) => ({
 
 export const RecipeDetail: FC<IProps> = ({ recipe }: IProps) =>
   <div className='RecipeDetail'>
-    <Grid container spacing={2} sx={{ flexGrow: 1 }}>
+    <Grid container sx={{ flexGrow: 1 }}>
       <Grid sm={12}>
         <RecipePreview recipe={recipe}/>
       </Grid>
