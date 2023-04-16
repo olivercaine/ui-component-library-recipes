@@ -3,7 +3,7 @@ import ButtonGroup from '@mui/material/ButtonGroup'
 import * as React from 'react'
 
 /**
- * Based on MUI: {@link https://codesandbox.io/s/thirsty-rain-i1tzi?fontsize=14&hidenavigation=1&theme=dark&file=/src/GroupedButtons.js:607-781}
+ * Based on: {@link https://codesandbox.io/s/thirsty-rain-i1tzi?fontsize=14&hidenavigation=1&theme=dark&file=/src/GroupedButtons.js:607-781}
  */
 export const Stepper = ({
   handleDecrement,
