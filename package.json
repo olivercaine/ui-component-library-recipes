@@ -1,6 +1,6 @@
 {
   "name": "ui-component-library-recipes",
-  "version": "1.0.28",
+  "version": "1.0.2",
   "description": "Recipe UI components",
   "main": "index.js",
   "module": "index.esm.js",

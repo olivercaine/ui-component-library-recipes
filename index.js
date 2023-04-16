@@ -29,6 +29,369 @@ function _interopNamespace(e) {
 var React__namespace = /*#__PURE__*/_interopNamespace(React);
 var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
 
+var exampleRecipe = {
+    url: '/classic-eggs-benedict',
+    title: 'Classic Eggs Benedict',
+    categories: [
+        {
+            title: 'Breakfast',
+            url: '/breakfast',
+            uid: '12345'
+        }
+    ],
+    uid: '43473cb2-db34-11ed-afa1-0242ac120002',
+    mealie_id: '1',
+    mealie_uid: 'a410236e-db35-11ed-afa1-0242ac120002',
+    media: {
+        images: [
+            {
+                image: 'https://raw.githubusercontent.com/olivercaine/ui-component-library-recipes/main/src/images/eggs-benedict/dalle-2023-04-15-122313-close-up-of-eggs-benedict-on-a-blue-plate-in-a-sunny-kitchen.png',
+                width: 1024
+            }
+        ]
+    },
+    rating: {
+        average: 4.8,
+        count: 1234
+    },
+    description: 'Eggs Benedict is a classic breakfast dish consisting of two halves of an English muffin, topped with Canadian bacon or ham, poached eggs, and hollandaise sauce. It is often served with a side of roasted potatoes or fresh fruit. The dish is known for its rich and creamy hollandaise sauce, which is made from butter, egg yolks, lemon juice, and seasoning. Eggs Benedict is a popular brunch item and is enjoyed by many people around the world.',
+    prep_times: {
+        for_2: 20,
+    },
+    cuisine: {
+        slug: 'american',
+        title: 'American'
+    },
+    ingredients: [
+        {
+            label: '4 Tablespoon Olive oil for frying',
+            title: '4 Tablespoon Olive oil for frying',
+            uid: '934bbf3c-db3c-11ed-afa1-0242ac120001',
+            name: '4 Tablespoon Olive oil for frying',
+            media: {
+                images: [
+                    {
+                        image: 'https://raw.githubusercontent.com/olivercaine/ui-component-library-recipes/main/src/images/ingredients/dalle-2023-04-15-150151-bottle-of-olive-oil-with-a-white-background.png',
+                        width: 1500
+                    }
+                ]
+            },
+            allergens: {
+                allergen: []
+            }
+        },
+        {
+            label: 'White wine vinegar for poaching',
+            title: 'White wine vinegar for poaching',
+            uid: '934bbf3c-db3c-11ed-afa1-0242ac120002',
+            name: 'White wine vinegar for poaching',
+            media: {
+                images: [
+                    {
+                        image: 'https://raw.githubusercontent.com/olivercaine/ui-component-library-recipes/main/src/images/ingredients/dalle-2023-04-15-150041-bottle-of-white-wine-vinegar-with-a-white-background.png',
+                        width: 1500
+                    }
+                ]
+            },
+            allergens: {
+                allergen: []
+            }
+        },
+        {
+            label: '8 di Parma ham slices',
+            title: '8 di Parma ham slices',
+            uid: '934bbf3c-db3c-11ed-afa1-0242ac120003',
+            name: '8 di Parma ham slices',
+            media: {
+                images: [
+                    {
+                        image: 'https://raw.githubusercontent.com/olivercaine/ui-component-library-recipes/main/src/images/ingredients/dalle-2023-04-15-150307-parma-ham-slices-on-a-plate-with-a-white-background.png',
+                        width: 1500
+                    }
+                ]
+            },
+            allergens: {
+                allergen: [
+                    {
+                        slug: 'pork'
+                    }
+                ]
+            }
+        },
+        {
+            label: '4 Whole eggs',
+            title: '4 Whole eggs',
+            uid: '934bbf3c-db3c-11ed-afa1-0242ac120004',
+            name: '4 Whole eggs',
+            media: {
+                images: [
+                    {
+                        image: 'https://raw.githubusercontent.com/olivercaine/ui-component-library-recipes/main/src/images/ingredients/dalle-2023-04-15-150443-egg-with-a-white-background.png',
+                        width: 1500
+                    }
+                ]
+            },
+            allergens: {
+                allergen: [
+                    {
+                        slug: 'egg'
+                    }
+                ]
+            }
+        },
+        {
+            label: '2 Split English muffins',
+            title: '2 Split English muffins',
+            uid: '934bbf3c-db3c-11ed-afa1-0242ac120005',
+            name: '2 Split English muffins',
+            media: {
+                images: [
+                    {
+                        image: 'https://raw.githubusercontent.com/olivercaine/ui-component-library-recipes/main/src/images/ingredients/dalle-2023-04-15-150542-a-single-english-muffin.png',
+                        width: 1500
+                    }
+                ]
+            },
+            allergens: {
+                allergen: [
+                    {
+                        slug: 'wheat'
+                    }
+                ]
+            }
+        },
+    ],
+    basics: [
+        {
+            title: 'Butter',
+            slug: 'butter'
+        },
+        {
+            title: 'Olive oil',
+            slug: 'olive-oil'
+        },
+        {
+            title: 'Pepper',
+            slug: 'pepper'
+        },
+        {
+            title: 'Salt',
+            slug: 'salt'
+        }
+    ],
+    cooking_instructions: [
+        {
+            instruction: 'Toast the English muffins and set them aside.',
+            order: 1,
+            media: {
+                images: [
+                    {
+                        image: 'https://raw.githubusercontent.com/olivercaine/ui-component-library-recipes/main/src/images/eggs-benedict/dalle-2023-04-15-133932-toasting-english-muffins.png',
+                        width: 1500
+                    }
+                ]
+            }
+        },
+        {
+            instruction: 'In a skillet, cook the Canadian bacon or ham until it is lightly browned, then set it aside.',
+            order: 2,
+            media: {
+                images: [
+                    {
+                        image: 'https://raw.githubusercontent.com/olivercaine/ui-component-library-recipes/main/src/images/eggs-benedict/dalle-2023-04-15-134106-skillet-cooking-bacon.png',
+                        width: 1500
+                    }
+                ]
+            }
+        },
+        {
+            instruction: 'Fill a saucepan with 4 cups of water and add the white vinegar. Bring to a simmer over medium-high heat.',
+            order: 3,
+            media: {
+                images: [
+                    {
+                        image: 'https://raw.githubusercontent.com/olivercaine/ui-component-library-recipes/main/src/images/eggs-benedict/dalle-2023-04-15-134214-water-simmering-in-a-saucepan.png',
+                        width: 1500
+                    }
+                ]
+            }
+        },
+        {
+            instruction: 'Crack one egg into a small bowl or ramekin.',
+            order: 4,
+            media: {
+                images: [
+                    {
+                        image: 'https://raw.githubusercontent.com/olivercaine/ui-component-library-recipes/main/src/images/eggs-benedict/dalle-2023-04-15-134306-cracked-egg-in-a-ramekin.png',
+                        width: 1500
+                    }
+                ]
+            }
+        },
+        {
+            instruction: 'Use a spoon to create a whirlpool in the simmering water, then carefully pour the egg into the center of the whirlpool. Cook the egg for 3-4 minutes, or until the whites are set but the yolk is still runny.',
+            order: 5,
+            media: {
+                images: [
+                    {
+                        image: 'https://raw.githubusercontent.com/olivercaine/ui-component-library-recipes/main/src/images/eggs-benedict/dalle-2023-04-15-134631-egg-yoke-in-a-ramekin-being-poured-into-a-saucepan-full-of-boiling-water.png',
+                        width: 1500
+                    }
+                ]
+            }
+        },
+        {
+            instruction: 'Use a slotted spoon to remove the poached egg from the water and set it on a paper towel to drain. Repeat with the remaining eggs.',
+            order: 6,
+            media: {
+                images: [
+                    {
+                        image: 'https://raw.githubusercontent.com/olivercaine/ui-component-library-recipes/main/src/images/eggs-benedict/dalle-2023-04-15-134851-poached-egg-on-paper-towl.png',
+                        width: 1500
+                    }
+                ]
+            }
+        },
+        {
+            instruction: 'To make the hollandaise sauce, melt the butter in a saucepan over low heat.',
+            order: 7,
+            media: {
+                images: [
+                    {
+                        image: 'https://raw.githubusercontent.com/olivercaine/ui-component-library-recipes/main/src/images/eggs-benedict/dalle-2023-04-15-134943-butter-melting-in-a-saucepan.png',
+                        width: 1500
+                    }
+                ]
+            }
+        },
+        {
+            instruction: 'Add the lemon juice, salt, and black pepper to the melted butter and whisk to combine.',
+            order: 8,
+            media: {
+                images: [
+                    {
+                        image: 'https://raw.githubusercontent.com/olivercaine/ui-component-library-recipes/main/src/images/eggs-benedict/dalle-2023-04-15-152604-a-human-hand-squeezing-a-lemon-into-a-pan-which-contains-melted-butter.png',
+                        width: 1500
+                    }
+                ]
+            }
+        },
+        {
+            instruction: 'In a separate bowl, whisk the egg yolks until they are light and frothy.',
+            order: 9,
+            media: {
+                images: [
+                    {
+                        image: 'https://raw.githubusercontent.com/olivercaine/ui-component-library-recipes/main/src/images/eggs-benedict/dalle-2023-04-15-152820-a-bowl-containing-frothy-egg-white-with-a-whiskpng.png',
+                        width: 1500
+                    }
+                ]
+            }
+        },
+        {
+            instruction: 'Slowly pour the melted butter mixture into the egg yolks while whisking constantly. Continue whisking until the sauce is thickened and creamy.',
+            order: 10,
+            media: {
+                images: [
+                    {
+                        image: 'https://raw.githubusercontent.com/olivercaine/ui-component-library-recipes/main/src/images/eggs-benedict/dalle-2023-04-15-155058-a-bowl-of-whisked-egg-and-melted-butter.png',
+                        width: 1500
+                    }
+                ]
+            }
+        },
+        {
+            instruction: 'To assemble, place two English muffin halves on a plate. Top each half with a slice of Canadian bacon or ham, then a poached egg.',
+            order: 11,
+            media: {
+                images: [
+                    {
+                        image: 'https://raw.githubusercontent.com/olivercaine/ui-component-library-recipes/main/src/images/eggs-benedict/dalle-2023-04-15-152954-two-english-muffin-halves-on-a-plate-with-bacon-on-top-and-poached-egg-on-top-of-that.png',
+                        width: 1500
+                    }
+                ]
+            }
+        },
+        {
+            instruction: 'Spoon the hollandaise sauce over the poached eggs.',
+            order: 12,
+            media: {
+                images: [
+                    {
+                        image: 'https://raw.githubusercontent.com/olivercaine/ui-component-library-recipes/main/src/images/eggs-benedict/dalle-2023-04-15-153146-using-a-spoon-to-pour-hollandaise-sauce-over-poached-eggs-on-two-muffins-with-bacon-on-top.png',
+                        width: 1500
+                    }
+                ]
+            }
+        },
+        {
+            instruction: 'Serve immediately and enjoy!',
+            order: 13,
+            media: {
+                images: [
+                    {
+                        image: 'https://raw.githubusercontent.com/olivercaine/ui-component-library-recipes/main/src/images/eggs-benedict/dalle-2023-04-15-122313-close-up-of-eggs-benedict-on-a-blue-plate-in-a-sunny-kitchen.png',
+                        width: 1500
+                    }
+                ]
+            }
+        },
+    ],
+    allergens: [
+        {
+            title: 'egg',
+            slug: 'egg'
+        },
+        {
+            title: 'wheat',
+            slug: 'wheat'
+        },
+        {
+            title: 'milk',
+            slug: 'milk'
+        },
+        {
+            title: 'pork',
+            slug: 'pork'
+        }
+    ],
+    seo: {
+        title: 'Classic Eggs Benedict',
+        description: 'Eggs Benedict is a classic breakfast dish consisting of two halves of an English muffin, topped with Canadian bacon or ham, poached eggs, and hollandaise sauce. It is often served with a side of roasted potatoes or fresh fruit. The dish is known for its rich and creamy hollandaise sauce, which is made from butter, egg yolks, lemon juice, and seasoning. Eggs Benedict is a popular brunch item and is enjoyed by many people around the world.',
+        robots: [],
+        canonical: '',
+        open_graph_image: 'dalle-2023-04-15-122313-close-up-of-eggs-benedict-on-a-blue-plate-in-a-sunny-kitchen.png'
+    },
+    tags: [],
+    _version: 1,
+    nutritional_information: {
+        per_hundred_grams: {
+            energy_kcal: 86,
+            energy_kj: 374,
+            fat_mg: 2944,
+            fat_saturates_mg: 602,
+            carbs_mg: 10882,
+            carbs_sugars_mg: 2560,
+            fibre_mg: 1312,
+            protein_mg: 4802,
+            salt_mg: 320,
+            net_weight_mg: 100000
+        },
+        per_portion: {
+            energy_kcal: 482,
+            energy_kj: 2038,
+            fat_mg: 16126,
+            fat_saturates_mg: 3283,
+            carbs_mg: 59562,
+            carbs_sugars_mg: 13961,
+            fibre_mg: 7197,
+            protein_mg: 26302,
+            salt_mg: 1771,
+            net_weight_mg: 547502
+        }
+    }
+};
+
 function _typeof(obj) {
   "@babel/helpers - typeof";
 
@@ -1807,6 +2170,10 @@ function capitalize(string) {
     throw new Error(process.env.NODE_ENV !== "production" ? `MUI: \`capitalize(string)\` expects a string argument.` : formatMuiErrorMessage(7));
   }
   return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function isMuiElement(element, muiNames) {
+  return /*#__PURE__*/React__namespace.isValidElement(element) && muiNames.indexOf(element.type.muiName) !== -1;
 }
 
 /**
@@ -4922,7 +5289,7 @@ const internal_processStyles = (tag, processor) => {
   }
 };
 
-const _excluded$s = ["values", "unit", "step"];
+const _excluded$A = ["values", "unit", "step"];
 const sortBreakpointsValues = values => {
   const breakpointsAsArray = Object.keys(values).map(key => ({
     key,
@@ -4957,7 +5324,7 @@ function createBreakpoints(breakpoints) {
       unit = 'px',
       step = 5
     } = breakpoints,
-    other = _objectWithoutPropertiesLoose(breakpoints, _excluded$s);
+    other = _objectWithoutPropertiesLoose(breakpoints, _excluded$A);
   const sortedValues = sortBreakpointsValues(values);
   const keys = Object.keys(sortedValues);
   function up(key) {
@@ -5983,7 +6350,7 @@ const styleFunctionSx = unstable_createStyleFunctionSx();
 styleFunctionSx.filterProps = ['sx'];
 var styleFunctionSx$1 = styleFunctionSx;
 
-const _excluded$r = ["breakpoints", "palette", "spacing", "shape"];
+const _excluded$z = ["breakpoints", "palette", "spacing", "shape"];
 function createTheme$1(options = {}, ...args) {
   const {
       breakpoints: breakpointsInput = {},
@@ -5991,7 +6358,7 @@ function createTheme$1(options = {}, ...args) {
       spacing: spacingInput,
       shape: shapeInput = {}
     } = options,
-    other = _objectWithoutPropertiesLoose(options, _excluded$r);
+    other = _objectWithoutPropertiesLoose(options, _excluded$z);
   const breakpoints = createBreakpoints(breakpointsInput);
   const spacing = createSpacing(spacingInput);
   let muiTheme = deepmerge({
@@ -6029,7 +6396,7 @@ function useTheme$1(defaultTheme = systemDefaultTheme$1) {
   return useTheme$2(defaultTheme);
 }
 
-const _excluded$q = ["sx"];
+const _excluded$y = ["sx"];
 const splitProps = props => {
   var _props$theme$unstable, _props$theme;
   const result = {
@@ -6050,7 +6417,7 @@ function extendSxProp(props) {
   const {
       sx: inSx
     } = props,
-    other = _objectWithoutPropertiesLoose(props, _excluded$q);
+    other = _objectWithoutPropertiesLoose(props, _excluded$y);
   const {
     systemProps,
     otherProps
@@ -6076,7 +6443,7 @@ function extendSxProp(props) {
 
 function r$2(e){var t,f,n="";if("string"==typeof e||"number"==typeof e)n+=e;else if("object"==typeof e)if(Array.isArray(e))for(t=0;t<e.length;t++)e[t]&&(f=r$2(e[t]))&&(n&&(n+=" "),n+=f);else for(t in e)e[t]&&(n&&(n+=" "),n+=t);return n}function clsx$2(){for(var e,t,f=0,n="";f<arguments.length;)(e=arguments[f++])&&(t=r$2(e))&&(n&&(n+=" "),n+=t);return n}
 
-const _excluded$p = ["className", "component"];
+const _excluded$x = ["className", "component"];
 function createBox(options = {}) {
   const {
     themeId,
@@ -6094,7 +6461,7 @@ function createBox(options = {}) {
         className,
         component = 'div'
       } = _extendSxProp,
-      other = _objectWithoutPropertiesLoose(_extendSxProp, _excluded$p);
+      other = _objectWithoutPropertiesLoose(_extendSxProp, _excluded$x);
     return /*#__PURE__*/jsxRuntime.jsx(BoxRoot, _extends({
       as: component,
       ref: ref,
@@ -6105,7 +6472,7 @@ function createBox(options = {}) {
   return Box;
 }
 
-const _excluded$o = ["variant"];
+const _excluded$w = ["variant"];
 function isEmpty$1(string) {
   return string.length === 0;
 }
@@ -6119,7 +6486,7 @@ function propsToClassKey(props) {
   const {
       variant
     } = props,
-    other = _objectWithoutPropertiesLoose(props, _excluded$o);
+    other = _objectWithoutPropertiesLoose(props, _excluded$w);
   let classKey = variant || '';
   Object.keys(other).sort().forEach(key => {
     if (key === 'color') {
@@ -6131,7 +6498,7 @@ function propsToClassKey(props) {
   return classKey;
 }
 
-const _excluded$n = ["name", "slot", "skipVariantsResolver", "skipSx", "overridesResolver"];
+const _excluded$v = ["name", "slot", "skipVariantsResolver", "skipSx", "overridesResolver"];
 function isEmpty(obj) {
   return Object.keys(obj).length === 0;
 }
@@ -6226,7 +6593,7 @@ function createStyled(input = {}) {
         skipSx: inputSkipSx,
         overridesResolver
       } = inputOptions,
-      options = _objectWithoutPropertiesLoose(inputOptions, _excluded$n);
+      options = _objectWithoutPropertiesLoose(inputOptions, _excluded$v);
 
     // if skipVariantsResolver option is defined, take the value, otherwise, true for root and false for other slots.
     const skipVariantsResolver = inputSkipVariantsResolver !== undefined ? inputSkipVariantsResolver : componentSlot && componentSlot !== 'Root' || false;
@@ -6615,7 +6982,7 @@ function createMixins(breakpoints, mixins) {
   }, mixins);
 }
 
-const _excluded$m = ["mode", "contrastThreshold", "tonalOffset"];
+const _excluded$u = ["mode", "contrastThreshold", "tonalOffset"];
 const light = {
   // The colors used to style the text.
   text: {
@@ -6784,7 +7151,7 @@ function createPalette(palette) {
       contrastThreshold = 3,
       tonalOffset = 0.2
     } = palette,
-    other = _objectWithoutPropertiesLoose(palette, _excluded$m);
+    other = _objectWithoutPropertiesLoose(palette, _excluded$u);
   const primary = palette.primary || getDefaultPrimary(mode);
   const secondary = palette.secondary || getDefaultSecondary(mode);
   const error = palette.error || getDefaultError(mode);
@@ -6908,7 +7275,7 @@ const theme2 = createTheme({ palette: {
   return paletteOutput;
 }
 
-const _excluded$l = ["fontFamily", "fontSize", "fontWeightLight", "fontWeightRegular", "fontWeightMedium", "fontWeightBold", "htmlFontSize", "allVariants", "pxToRem"];
+const _excluded$t = ["fontFamily", "fontSize", "fontWeightLight", "fontWeightRegular", "fontWeightMedium", "fontWeightBold", "htmlFontSize", "allVariants", "pxToRem"];
 function round$1(value) {
   return Math.round(value * 1e5) / 1e5;
 }
@@ -6939,7 +7306,7 @@ function createTypography(palette, typography) {
       allVariants,
       pxToRem: pxToRem2
     } = _ref,
-    other = _objectWithoutPropertiesLoose(_ref, _excluded$l);
+    other = _objectWithoutPropertiesLoose(_ref, _excluded$t);
   if (process.env.NODE_ENV !== 'production') {
     if (typeof fontSize !== 'number') {
       console.error('MUI: `fontSize` is required to be a number.');
@@ -7006,7 +7373,7 @@ function createShadow(...px) {
 const shadows = ['none', createShadow(0, 2, 1, -1, 0, 1, 1, 0, 0, 1, 3, 0), createShadow(0, 3, 1, -2, 0, 2, 2, 0, 0, 1, 5, 0), createShadow(0, 3, 3, -2, 0, 3, 4, 0, 0, 1, 8, 0), createShadow(0, 2, 4, -1, 0, 4, 5, 0, 0, 1, 10, 0), createShadow(0, 3, 5, -1, 0, 5, 8, 0, 0, 1, 14, 0), createShadow(0, 3, 5, -1, 0, 6, 10, 0, 0, 1, 18, 0), createShadow(0, 4, 5, -2, 0, 7, 10, 1, 0, 2, 16, 1), createShadow(0, 5, 5, -3, 0, 8, 10, 1, 0, 3, 14, 2), createShadow(0, 5, 6, -3, 0, 9, 12, 1, 0, 3, 16, 2), createShadow(0, 6, 6, -3, 0, 10, 14, 1, 0, 4, 18, 3), createShadow(0, 6, 7, -4, 0, 11, 15, 1, 0, 4, 20, 3), createShadow(0, 7, 8, -4, 0, 12, 17, 2, 0, 5, 22, 4), createShadow(0, 7, 8, -4, 0, 13, 19, 2, 0, 5, 24, 4), createShadow(0, 7, 9, -4, 0, 14, 21, 2, 0, 5, 26, 4), createShadow(0, 8, 9, -5, 0, 15, 22, 2, 0, 6, 28, 5), createShadow(0, 8, 10, -5, 0, 16, 24, 2, 0, 6, 30, 5), createShadow(0, 8, 11, -5, 0, 17, 26, 2, 0, 6, 32, 5), createShadow(0, 9, 11, -5, 0, 18, 28, 2, 0, 7, 34, 6), createShadow(0, 9, 12, -6, 0, 19, 29, 2, 0, 7, 36, 6), createShadow(0, 10, 13, -6, 0, 20, 31, 3, 0, 8, 38, 7), createShadow(0, 10, 13, -6, 0, 21, 33, 3, 0, 8, 40, 7), createShadow(0, 10, 14, -6, 0, 22, 35, 3, 0, 8, 42, 7), createShadow(0, 11, 14, -7, 0, 23, 36, 3, 0, 9, 44, 8), createShadow(0, 11, 15, -7, 0, 24, 38, 3, 0, 9, 46, 8)];
 var shadows$1 = shadows;
 
-const _excluded$k = ["duration", "easing", "delay"];
+const _excluded$s = ["duration", "easing", "delay"];
 // Follow https://material.google.com/motion/duration-easing.html#duration-easing-natural-easing-curves
 // to learn the context in which each easing should be used.
 const easing = {
@@ -7057,7 +7424,7 @@ function createTransitions(inputTransitions) {
         easing: easingOption = mergedEasing.easeInOut,
         delay = 0
       } = options,
-      other = _objectWithoutPropertiesLoose(options, _excluded$k);
+      other = _objectWithoutPropertiesLoose(options, _excluded$s);
     if (process.env.NODE_ENV !== 'production') {
       const isString = value => typeof value === 'string';
       // IE11 support, replace with Number.isNaN
@@ -7104,7 +7471,7 @@ const zIndex = {
 };
 var zIndex$1 = zIndex;
 
-const _excluded$j = ["breakpoints", "mixins", "spacing", "palette", "transitions", "typography", "shape"];
+const _excluded$r = ["breakpoints", "mixins", "spacing", "palette", "transitions", "typography", "shape"];
 function createTheme(options = {}, ...args) {
   const {
       mixins: mixinsInput = {},
@@ -7112,7 +7479,7 @@ function createTheme(options = {}, ...args) {
       transitions: transitionsInput = {},
       typography: typographyInput = {}
     } = options,
-    other = _objectWithoutPropertiesLoose(options, _excluded$j);
+    other = _objectWithoutPropertiesLoose(options, _excluded$r);
   if (options.vars) {
     throw new Error(process.env.NODE_ENV !== "production" ? `MUI: \`vars\` is a private field used for CSS variables support.
 Please use another name.` : formatMuiErrorMessage(18));
@@ -7204,6 +7571,13 @@ const styled = createStyled({
 var styled$1 = styled;
 
 function r$1(e){var t,f,n="";if("string"==typeof e||"number"==typeof e)n+=e;else if("object"==typeof e)if(Array.isArray(e))for(t=0;t<e.length;t++)e[t]&&(f=r$1(e[t]))&&(n&&(n+=" "),n+=f);else for(t in e)e[t]&&(n&&(n+=" "),n+=t);return n}function clsx$1(){for(var e,t,f=0,n="";f<arguments.length;)(e=arguments[f++])&&(t=r$1(e))&&(n&&(n+=" "),n+=t);return n}
+
+/**
+ * Determines if a given element is a DOM element name (i.e. not a React component).
+ */
+function isHostComponent(element) {
+  return typeof element === 'string';
+}
 
 var top = 'top';
 var bottom = 'bottom';
@@ -9183,8 +9557,8 @@ function getSvgIconUtilityClass(slot) {
 }
 generateUtilityClasses('MuiSvgIcon', ['root', 'colorPrimary', 'colorSecondary', 'colorAction', 'colorError', 'colorDisabled', 'fontSizeInherit', 'fontSizeSmall', 'fontSizeMedium', 'fontSizeLarge']);
 
-const _excluded$i = ["children", "className", "color", "component", "fontSize", "htmlColor", "inheritViewBox", "titleAccess", "viewBox"];
-const useUtilityClasses$5 = ownerState => {
+const _excluded$q = ["children", "className", "color", "component", "fontSize", "htmlColor", "inheritViewBox", "titleAccess", "viewBox"];
+const useUtilityClasses$d = ownerState => {
   const {
     color,
     fontSize,
@@ -9249,7 +9623,7 @@ const SvgIcon = /*#__PURE__*/React__namespace.forwardRef(function SvgIcon(inProp
       titleAccess,
       viewBox = '0 0 24 24'
     } = props,
-    other = _objectWithoutPropertiesLoose(props, _excluded$i);
+    other = _objectWithoutPropertiesLoose(props, _excluded$q);
   const ownerState = _extends({}, props, {
     color,
     component,
@@ -9262,7 +9636,7 @@ const SvgIcon = /*#__PURE__*/React__namespace.forwardRef(function SvgIcon(inProp
   if (!inheritViewBox) {
     more.viewBox = viewBox;
   }
-  const classes = useUtilityClasses$5(ownerState);
+  const classes = useUtilityClasses$d(ownerState);
   return /*#__PURE__*/jsxRuntime.jsxs(SvgIconRoot, _extends({
     as: component,
     className: clsx$1(classes.root, className),
@@ -9797,7 +10171,7 @@ process.env.NODE_ENV !== "production" ? Ripple.propTypes = {
 const touchRippleClasses = generateUtilityClasses('MuiTouchRipple', ['root', 'ripple', 'rippleVisible', 'ripplePulsate', 'child', 'childLeaving', 'childPulsate']);
 var touchRippleClasses$1 = touchRippleClasses;
 
-const _excluded$h = ["center", "classes", "className"];
+const _excluded$p = ["center", "classes", "className"];
 let _$1 = t => t,
   _t$1,
   _t2$1,
@@ -9926,7 +10300,7 @@ const TouchRipple = /*#__PURE__*/React__namespace.forwardRef(function TouchRippl
       classes = {},
       className
     } = props,
-    other = _objectWithoutPropertiesLoose(props, _excluded$h);
+    other = _objectWithoutPropertiesLoose(props, _excluded$p);
   const [ripples, setRipples] = React__namespace.useState([]);
   const nextKey = React__namespace.useRef(0);
   const rippleCallback = React__namespace.useRef(null);
@@ -10127,8 +10501,8 @@ function getButtonBaseUtilityClass(slot) {
 const buttonBaseClasses = generateUtilityClasses('MuiButtonBase', ['root', 'disabled', 'focusVisible']);
 var buttonBaseClasses$1 = buttonBaseClasses;
 
-const _excluded$g = ["action", "centerRipple", "children", "className", "component", "disabled", "disableRipple", "disableTouchRipple", "focusRipple", "focusVisibleClassName", "LinkComponent", "onBlur", "onClick", "onContextMenu", "onDragLeave", "onFocus", "onFocusVisible", "onKeyDown", "onKeyUp", "onMouseDown", "onMouseLeave", "onMouseUp", "onTouchEnd", "onTouchMove", "onTouchStart", "tabIndex", "TouchRippleProps", "touchRippleRef", "type"];
-const useUtilityClasses$4 = ownerState => {
+const _excluded$o = ["action", "centerRipple", "children", "className", "component", "disabled", "disableRipple", "disableTouchRipple", "focusRipple", "focusVisibleClassName", "LinkComponent", "onBlur", "onClick", "onContextMenu", "onDragLeave", "onFocus", "onFocusVisible", "onKeyDown", "onKeyUp", "onMouseDown", "onMouseLeave", "onMouseUp", "onTouchEnd", "onTouchMove", "onTouchStart", "tabIndex", "TouchRippleProps", "touchRippleRef", "type"];
+const useUtilityClasses$c = ownerState => {
   const {
     disabled,
     focusVisible,
@@ -10229,7 +10603,7 @@ const ButtonBase = /*#__PURE__*/React__namespace.forwardRef(function ButtonBase(
       touchRippleRef,
       type
     } = props,
-    other = _objectWithoutPropertiesLoose(props, _excluded$g);
+    other = _objectWithoutPropertiesLoose(props, _excluded$o);
   const buttonRef = React__namespace.useRef(null);
   const rippleRef = React__namespace.useRef(null);
   const handleRippleRef = useForkRef(rippleRef, touchRippleRef);
@@ -10396,7 +10770,7 @@ const ButtonBase = /*#__PURE__*/React__namespace.forwardRef(function ButtonBase(
     tabIndex,
     focusVisible
   });
-  const classes = useUtilityClasses$4(ownerState);
+  const classes = useUtilityClasses$c(ownerState);
   return /*#__PURE__*/jsxRuntime.jsxs(ButtonBaseRoot, _extends({
     as: ComponentProp,
     className: clsx$1(classes.root, className),
@@ -10587,6 +10961,432 @@ process.env.NODE_ENV !== "production" ? ButtonBase.propTypes /* remove-proptypes
 } : void 0;
 var ButtonBase$1 = ButtonBase;
 
+function getTypographyUtilityClass(slot) {
+  return generateUtilityClass('MuiTypography', slot);
+}
+generateUtilityClasses('MuiTypography', ['root', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'subtitle1', 'subtitle2', 'body1', 'body2', 'inherit', 'button', 'caption', 'overline', 'alignLeft', 'alignRight', 'alignCenter', 'alignJustify', 'noWrap', 'gutterBottom', 'paragraph']);
+
+const _excluded$n = ["align", "className", "component", "gutterBottom", "noWrap", "paragraph", "variant", "variantMapping"];
+const useUtilityClasses$b = ownerState => {
+  const {
+    align,
+    gutterBottom,
+    noWrap,
+    paragraph,
+    variant,
+    classes
+  } = ownerState;
+  const slots = {
+    root: ['root', variant, ownerState.align !== 'inherit' && `align${capitalize(align)}`, gutterBottom && 'gutterBottom', noWrap && 'noWrap', paragraph && 'paragraph']
+  };
+  return composeClasses(slots, getTypographyUtilityClass, classes);
+};
+const TypographyRoot = styled$1('span', {
+  name: 'MuiTypography',
+  slot: 'Root',
+  overridesResolver: (props, styles) => {
+    const {
+      ownerState
+    } = props;
+    return [styles.root, ownerState.variant && styles[ownerState.variant], ownerState.align !== 'inherit' && styles[`align${capitalize(ownerState.align)}`], ownerState.noWrap && styles.noWrap, ownerState.gutterBottom && styles.gutterBottom, ownerState.paragraph && styles.paragraph];
+  }
+})(({
+  theme,
+  ownerState
+}) => _extends({
+  margin: 0
+}, ownerState.variant && theme.typography[ownerState.variant], ownerState.align !== 'inherit' && {
+  textAlign: ownerState.align
+}, ownerState.noWrap && {
+  overflow: 'hidden',
+  textOverflow: 'ellipsis',
+  whiteSpace: 'nowrap'
+}, ownerState.gutterBottom && {
+  marginBottom: '0.35em'
+}, ownerState.paragraph && {
+  marginBottom: 16
+}));
+const defaultVariantMapping = {
+  h1: 'h1',
+  h2: 'h2',
+  h3: 'h3',
+  h4: 'h4',
+  h5: 'h5',
+  h6: 'h6',
+  subtitle1: 'h6',
+  subtitle2: 'h6',
+  body1: 'p',
+  body2: 'p',
+  inherit: 'p'
+};
+
+// TODO v6: deprecate these color values in v5.x and remove the transformation in v6
+const colorTransformations = {
+  primary: 'primary.main',
+  textPrimary: 'text.primary',
+  secondary: 'secondary.main',
+  textSecondary: 'text.secondary',
+  error: 'error.main'
+};
+const transformDeprecatedColors = color => {
+  return colorTransformations[color] || color;
+};
+const Typography = /*#__PURE__*/React__namespace.forwardRef(function Typography(inProps, ref) {
+  const themeProps = useThemeProps({
+    props: inProps,
+    name: 'MuiTypography'
+  });
+  const color = transformDeprecatedColors(themeProps.color);
+  const props = extendSxProp(_extends({}, themeProps, {
+    color
+  }));
+  const {
+      align = 'inherit',
+      className,
+      component,
+      gutterBottom = false,
+      noWrap = false,
+      paragraph = false,
+      variant = 'body1',
+      variantMapping = defaultVariantMapping
+    } = props,
+    other = _objectWithoutPropertiesLoose(props, _excluded$n);
+  const ownerState = _extends({}, props, {
+    align,
+    color,
+    className,
+    component,
+    gutterBottom,
+    noWrap,
+    paragraph,
+    variant,
+    variantMapping
+  });
+  const Component = component || (paragraph ? 'p' : variantMapping[variant] || defaultVariantMapping[variant]) || 'span';
+  const classes = useUtilityClasses$b(ownerState);
+  return /*#__PURE__*/jsxRuntime.jsx(TypographyRoot, _extends({
+    as: Component,
+    ref: ref,
+    ownerState: ownerState,
+    className: clsx$1(classes.root, className)
+  }, other));
+});
+process.env.NODE_ENV !== "production" ? Typography.propTypes /* remove-proptypes */ = {
+  // ----------------------------- Warning --------------------------------
+  // | These PropTypes are generated from the TypeScript type definitions |
+  // |     To update them edit the d.ts file and run "yarn proptypes"     |
+  // ----------------------------------------------------------------------
+  /**
+   * Set the text-align on the component.
+   * @default 'inherit'
+   */
+  align: PropTypes.oneOf(['center', 'inherit', 'justify', 'left', 'right']),
+  /**
+   * The content of the component.
+   */
+  children: PropTypes.node,
+  /**
+   * Override or extend the styles applied to the component.
+   */
+  classes: PropTypes.object,
+  /**
+   * @ignore
+   */
+  className: PropTypes.string,
+  /**
+   * The component used for the root node.
+   * Either a string to use a HTML element or a component.
+   */
+  component: PropTypes.elementType,
+  /**
+   * If `true`, the text will have a bottom margin.
+   * @default false
+   */
+  gutterBottom: PropTypes.bool,
+  /**
+   * If `true`, the text will not wrap, but instead will truncate with a text overflow ellipsis.
+   *
+   * Note that text overflow can only happen with block or inline-block level elements
+   * (the element needs to have a width in order to overflow).
+   * @default false
+   */
+  noWrap: PropTypes.bool,
+  /**
+   * If `true`, the element will be a paragraph element.
+   * @default false
+   */
+  paragraph: PropTypes.bool,
+  /**
+   * The system prop that allows defining system overrides as well as additional CSS styles.
+   */
+  sx: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.func, PropTypes.object, PropTypes.bool])), PropTypes.func, PropTypes.object]),
+  /**
+   * Applies the theme typography styles.
+   * @default 'body1'
+   */
+  variant: PropTypes /* @typescript-to-proptypes-ignore */.oneOfType([PropTypes.oneOf(['body1', 'body2', 'button', 'caption', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'inherit', 'overline', 'subtitle1', 'subtitle2']), PropTypes.string]),
+  /**
+   * The component maps the variant prop to a range of different HTML element types.
+   * For instance, subtitle1 to `<h6>`.
+   * If you wish to change that mapping, you can provide your own.
+   * Alternatively, you can use the `component` prop.
+   * @default {
+   *   h1: 'h1',
+   *   h2: 'h2',
+   *   h3: 'h3',
+   *   h4: 'h4',
+   *   h5: 'h5',
+   *   h6: 'h6',
+   *   subtitle1: 'h6',
+   *   subtitle2: 'h6',
+   *   body1: 'p',
+   *   body2: 'p',
+   *   inherit: 'p',
+   * }
+   */
+  variantMapping: PropTypes /* @typescript-to-proptypes-ignore */.object
+} : void 0;
+var Typography$1 = Typography;
+
+var Person = createSvgIcon( /*#__PURE__*/jsxRuntime.jsx("path", {
+  d: "M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+}), 'Person');
+
+function getAvatarUtilityClass(slot) {
+  return generateUtilityClass('MuiAvatar', slot);
+}
+generateUtilityClasses('MuiAvatar', ['root', 'colorDefault', 'circular', 'rounded', 'square', 'img', 'fallback']);
+
+const _excluded$m = ["alt", "children", "className", "component", "imgProps", "sizes", "src", "srcSet", "variant"];
+const useUtilityClasses$a = ownerState => {
+  const {
+    classes,
+    variant,
+    colorDefault
+  } = ownerState;
+  const slots = {
+    root: ['root', variant, colorDefault && 'colorDefault'],
+    img: ['img'],
+    fallback: ['fallback']
+  };
+  return composeClasses(slots, getAvatarUtilityClass, classes);
+};
+const AvatarRoot = styled$1('div', {
+  name: 'MuiAvatar',
+  slot: 'Root',
+  overridesResolver: (props, styles) => {
+    const {
+      ownerState
+    } = props;
+    return [styles.root, styles[ownerState.variant], ownerState.colorDefault && styles.colorDefault];
+  }
+})(({
+  theme,
+  ownerState
+}) => _extends({
+  position: 'relative',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  flexShrink: 0,
+  width: 40,
+  height: 40,
+  fontFamily: theme.typography.fontFamily,
+  fontSize: theme.typography.pxToRem(20),
+  lineHeight: 1,
+  borderRadius: '50%',
+  overflow: 'hidden',
+  userSelect: 'none'
+}, ownerState.variant === 'rounded' && {
+  borderRadius: (theme.vars || theme).shape.borderRadius
+}, ownerState.variant === 'square' && {
+  borderRadius: 0
+}, ownerState.colorDefault && _extends({
+  color: (theme.vars || theme).palette.background.default
+}, theme.vars ? {
+  backgroundColor: theme.vars.palette.Avatar.defaultBg
+} : {
+  backgroundColor: theme.palette.mode === 'light' ? theme.palette.grey[400] : theme.palette.grey[600]
+})));
+const AvatarImg = styled$1('img', {
+  name: 'MuiAvatar',
+  slot: 'Img',
+  overridesResolver: (props, styles) => styles.img
+})({
+  width: '100%',
+  height: '100%',
+  textAlign: 'center',
+  // Handle non-square image. The property isn't supported by IE11.
+  objectFit: 'cover',
+  // Hide alt text.
+  color: 'transparent',
+  // Hide the image broken icon, only works on Chrome.
+  textIndent: 10000
+});
+const AvatarFallback = styled$1(Person, {
+  name: 'MuiAvatar',
+  slot: 'Fallback',
+  overridesResolver: (props, styles) => styles.fallback
+})({
+  width: '75%',
+  height: '75%'
+});
+function useLoaded({
+  crossOrigin,
+  referrerPolicy,
+  src,
+  srcSet
+}) {
+  const [loaded, setLoaded] = React__namespace.useState(false);
+  React__namespace.useEffect(() => {
+    if (!src && !srcSet) {
+      return undefined;
+    }
+    setLoaded(false);
+    let active = true;
+    const image = new Image();
+    image.onload = () => {
+      if (!active) {
+        return;
+      }
+      setLoaded('loaded');
+    };
+    image.onerror = () => {
+      if (!active) {
+        return;
+      }
+      setLoaded('error');
+    };
+    image.crossOrigin = crossOrigin;
+    image.referrerPolicy = referrerPolicy;
+    image.src = src;
+    if (srcSet) {
+      image.srcset = srcSet;
+    }
+    return () => {
+      active = false;
+    };
+  }, [crossOrigin, referrerPolicy, src, srcSet]);
+  return loaded;
+}
+const Avatar = /*#__PURE__*/React__namespace.forwardRef(function Avatar(inProps, ref) {
+  const props = useThemeProps({
+    props: inProps,
+    name: 'MuiAvatar'
+  });
+  const {
+      alt,
+      children: childrenProp,
+      className,
+      component = 'div',
+      imgProps,
+      sizes,
+      src,
+      srcSet,
+      variant = 'circular'
+    } = props,
+    other = _objectWithoutPropertiesLoose(props, _excluded$m);
+  let children = null;
+
+  // Use a hook instead of onError on the img element to support server-side rendering.
+  const loaded = useLoaded(_extends({}, imgProps, {
+    src,
+    srcSet
+  }));
+  const hasImg = src || srcSet;
+  const hasImgNotFailing = hasImg && loaded !== 'error';
+  const ownerState = _extends({}, props, {
+    colorDefault: !hasImgNotFailing,
+    component,
+    variant
+  });
+  const classes = useUtilityClasses$a(ownerState);
+  if (hasImgNotFailing) {
+    children = /*#__PURE__*/jsxRuntime.jsx(AvatarImg, _extends({
+      alt: alt,
+      src: src,
+      srcSet: srcSet,
+      sizes: sizes,
+      ownerState: ownerState,
+      className: classes.img
+    }, imgProps));
+  } else if (childrenProp != null) {
+    children = childrenProp;
+  } else if (hasImg && alt) {
+    children = alt[0];
+  } else {
+    children = /*#__PURE__*/jsxRuntime.jsx(AvatarFallback, {
+      ownerState: ownerState,
+      className: classes.fallback
+    });
+  }
+  return /*#__PURE__*/jsxRuntime.jsx(AvatarRoot, _extends({
+    as: component,
+    ownerState: ownerState,
+    className: clsx$1(classes.root, className),
+    ref: ref
+  }, other, {
+    children: children
+  }));
+});
+process.env.NODE_ENV !== "production" ? Avatar.propTypes /* remove-proptypes */ = {
+  // ----------------------------- Warning --------------------------------
+  // | These PropTypes are generated from the TypeScript type definitions |
+  // |     To update them edit the d.ts file and run "yarn proptypes"     |
+  // ----------------------------------------------------------------------
+  /**
+   * Used in combination with `src` or `srcSet` to
+   * provide an alt attribute for the rendered `img` element.
+   */
+  alt: PropTypes.string,
+  /**
+   * Used to render icon or text elements inside the Avatar if `src` is not set.
+   * This can be an element, or just a string.
+   */
+  children: PropTypes.node,
+  /**
+   * Override or extend the styles applied to the component.
+   */
+  classes: PropTypes.object,
+  /**
+   * @ignore
+   */
+  className: PropTypes.string,
+  /**
+   * The component used for the root node.
+   * Either a string to use a HTML element or a component.
+   */
+  component: PropTypes.elementType,
+  /**
+   * [Attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attributes) applied to the `img` element if the component is used to display an image.
+   * It can be used to listen for the loading error event.
+   */
+  imgProps: PropTypes.object,
+  /**
+   * The `sizes` attribute for the `img` element.
+   */
+  sizes: PropTypes.string,
+  /**
+   * The `src` attribute for the `img` element.
+   */
+  src: PropTypes.string,
+  /**
+   * The `srcSet` attribute for the `img` element.
+   * Use this attribute for responsive image display.
+   */
+  srcSet: PropTypes.string,
+  /**
+   * The system prop that allows defining system overrides as well as additional CSS styles.
+   */
+  sx: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.func, PropTypes.object, PropTypes.bool])), PropTypes.func, PropTypes.object]),
+  /**
+   * The shape of the avatar.
+   * @default 'circular'
+   */
+  variant: PropTypes /* @typescript-to-proptypes-ignore */.oneOfType([PropTypes.oneOf(['circular', 'rounded', 'square']), PropTypes.string])
+} : void 0;
+var Avatar$1 = Avatar;
+
 const defaultTheme = createTheme();
 const Box = createBox({
   themeId: THEME_ID,
@@ -10630,8 +11430,8 @@ if (process.env.NODE_ENV !== 'production') {
 }
 var ButtonGroupContext$1 = ButtonGroupContext;
 
-const _excluded$f = ["children", "color", "component", "className", "disabled", "disableElevation", "disableFocusRipple", "endIcon", "focusVisibleClassName", "fullWidth", "size", "startIcon", "type", "variant"];
-const useUtilityClasses$3 = ownerState => {
+const _excluded$l = ["children", "color", "component", "className", "disabled", "disableElevation", "disableFocusRipple", "endIcon", "focusVisibleClassName", "fullWidth", "size", "startIcon", "type", "variant"];
+const useUtilityClasses$9 = ownerState => {
   const {
     color,
     disableElevation,
@@ -10854,7 +11654,7 @@ const Button$1 = /*#__PURE__*/React__namespace.forwardRef(function Button(inProp
       type,
       variant = 'text'
     } = props,
-    other = _objectWithoutPropertiesLoose(props, _excluded$f);
+    other = _objectWithoutPropertiesLoose(props, _excluded$l);
   const ownerState = _extends({}, props, {
     color,
     component,
@@ -10866,7 +11666,7 @@ const Button$1 = /*#__PURE__*/React__namespace.forwardRef(function Button(inProp
     type,
     variant
   });
-  const classes = useUtilityClasses$3(ownerState);
+  const classes = useUtilityClasses$9(ownerState);
   const startIcon = startIconProp && /*#__PURE__*/jsxRuntime.jsx(ButtonStartIcon, {
     className: classes.startIcon,
     ownerState: ownerState,
@@ -10992,7 +11792,7 @@ function getCircularProgressUtilityClass(slot) {
 }
 generateUtilityClasses('MuiCircularProgress', ['root', 'determinate', 'indeterminate', 'colorPrimary', 'colorSecondary', 'svg', 'circle', 'circleDeterminate', 'circleIndeterminate', 'circleDisableShrink']);
 
-const _excluded$e = ["className", "color", "disableShrink", "size", "style", "thickness", "value", "variant"];
+const _excluded$k = ["className", "color", "disableShrink", "size", "style", "thickness", "value", "variant"];
 let _ = t => t,
   _t,
   _t2,
@@ -11024,7 +11824,7 @@ const circularDashKeyframe = keyframes(_t2 || (_t2 = _`
     stroke-dashoffset: -125px;
   }
 `));
-const useUtilityClasses$2 = ownerState => {
+const useUtilityClasses$8 = ownerState => {
   const {
     classes,
     variant,
@@ -11117,7 +11917,7 @@ const CircularProgress = /*#__PURE__*/React__namespace.forwardRef(function Circu
       value = 0,
       variant = 'indeterminate'
     } = props,
-    other = _objectWithoutPropertiesLoose(props, _excluded$e);
+    other = _objectWithoutPropertiesLoose(props, _excluded$k);
   const ownerState = _extends({}, props, {
     color,
     disableShrink,
@@ -11126,7 +11926,7 @@ const CircularProgress = /*#__PURE__*/React__namespace.forwardRef(function Circu
     value,
     variant
   });
-  const classes = useUtilityClasses$2(ownerState);
+  const classes = useUtilityClasses$8(ownerState);
   const circleStyle = {};
   const rootStyle = {};
   const rootProps = {};
@@ -11229,6 +12029,1107 @@ process.env.NODE_ENV !== "production" ? CircularProgress.propTypes /* remove-pro
   variant: PropTypes.oneOf(['determinate', 'indeterminate'])
 } : void 0;
 var CircularProgress$1 = CircularProgress;
+
+function getDividerUtilityClass(slot) {
+  return generateUtilityClass('MuiDivider', slot);
+}
+generateUtilityClasses('MuiDivider', ['root', 'absolute', 'fullWidth', 'inset', 'middle', 'flexItem', 'light', 'vertical', 'withChildren', 'withChildrenVertical', 'textAlignRight', 'textAlignLeft', 'wrapper', 'wrapperVertical']);
+
+const _excluded$j = ["absolute", "children", "className", "component", "flexItem", "light", "orientation", "role", "textAlign", "variant"];
+const useUtilityClasses$7 = ownerState => {
+  const {
+    absolute,
+    children,
+    classes,
+    flexItem,
+    light,
+    orientation,
+    textAlign,
+    variant
+  } = ownerState;
+  const slots = {
+    root: ['root', absolute && 'absolute', variant, light && 'light', orientation === 'vertical' && 'vertical', flexItem && 'flexItem', children && 'withChildren', children && orientation === 'vertical' && 'withChildrenVertical', textAlign === 'right' && orientation !== 'vertical' && 'textAlignRight', textAlign === 'left' && orientation !== 'vertical' && 'textAlignLeft'],
+    wrapper: ['wrapper', orientation === 'vertical' && 'wrapperVertical']
+  };
+  return composeClasses(slots, getDividerUtilityClass, classes);
+};
+const DividerRoot = styled$1('div', {
+  name: 'MuiDivider',
+  slot: 'Root',
+  overridesResolver: (props, styles) => {
+    const {
+      ownerState
+    } = props;
+    return [styles.root, ownerState.absolute && styles.absolute, styles[ownerState.variant], ownerState.light && styles.light, ownerState.orientation === 'vertical' && styles.vertical, ownerState.flexItem && styles.flexItem, ownerState.children && styles.withChildren, ownerState.children && ownerState.orientation === 'vertical' && styles.withChildrenVertical, ownerState.textAlign === 'right' && ownerState.orientation !== 'vertical' && styles.textAlignRight, ownerState.textAlign === 'left' && ownerState.orientation !== 'vertical' && styles.textAlignLeft];
+  }
+})(({
+  theme,
+  ownerState
+}) => _extends({
+  margin: 0,
+  // Reset browser default style.
+  flexShrink: 0,
+  borderWidth: 0,
+  borderStyle: 'solid',
+  borderColor: (theme.vars || theme).palette.divider,
+  borderBottomWidth: 'thin'
+}, ownerState.absolute && {
+  position: 'absolute',
+  bottom: 0,
+  left: 0,
+  width: '100%'
+}, ownerState.light && {
+  borderColor: theme.vars ? `rgba(${theme.vars.palette.dividerChannel} / 0.08)` : alpha(theme.palette.divider, 0.08)
+}, ownerState.variant === 'inset' && {
+  marginLeft: 72
+}, ownerState.variant === 'middle' && ownerState.orientation === 'horizontal' && {
+  marginLeft: theme.spacing(2),
+  marginRight: theme.spacing(2)
+}, ownerState.variant === 'middle' && ownerState.orientation === 'vertical' && {
+  marginTop: theme.spacing(1),
+  marginBottom: theme.spacing(1)
+}, ownerState.orientation === 'vertical' && {
+  height: '100%',
+  borderBottomWidth: 0,
+  borderRightWidth: 'thin'
+}, ownerState.flexItem && {
+  alignSelf: 'stretch',
+  height: 'auto'
+}), ({
+  theme,
+  ownerState
+}) => _extends({}, ownerState.children && {
+  display: 'flex',
+  whiteSpace: 'nowrap',
+  textAlign: 'center',
+  border: 0,
+  '&::before, &::after': {
+    position: 'relative',
+    width: '100%',
+    borderTop: `thin solid ${(theme.vars || theme).palette.divider}`,
+    top: '50%',
+    content: '""',
+    transform: 'translateY(50%)'
+  }
+}), ({
+  theme,
+  ownerState
+}) => _extends({}, ownerState.children && ownerState.orientation === 'vertical' && {
+  flexDirection: 'column',
+  '&::before, &::after': {
+    height: '100%',
+    top: '0%',
+    left: '50%',
+    borderTop: 0,
+    borderLeft: `thin solid ${(theme.vars || theme).palette.divider}`,
+    transform: 'translateX(0%)'
+  }
+}), ({
+  ownerState
+}) => _extends({}, ownerState.textAlign === 'right' && ownerState.orientation !== 'vertical' && {
+  '&::before': {
+    width: '90%'
+  },
+  '&::after': {
+    width: '10%'
+  }
+}, ownerState.textAlign === 'left' && ownerState.orientation !== 'vertical' && {
+  '&::before': {
+    width: '10%'
+  },
+  '&::after': {
+    width: '90%'
+  }
+}));
+const DividerWrapper = styled$1('span', {
+  name: 'MuiDivider',
+  slot: 'Wrapper',
+  overridesResolver: (props, styles) => {
+    const {
+      ownerState
+    } = props;
+    return [styles.wrapper, ownerState.orientation === 'vertical' && styles.wrapperVertical];
+  }
+})(({
+  theme,
+  ownerState
+}) => _extends({
+  display: 'inline-block',
+  paddingLeft: `calc(${theme.spacing(1)} * 1.2)`,
+  paddingRight: `calc(${theme.spacing(1)} * 1.2)`
+}, ownerState.orientation === 'vertical' && {
+  paddingTop: `calc(${theme.spacing(1)} * 1.2)`,
+  paddingBottom: `calc(${theme.spacing(1)} * 1.2)`
+}));
+const Divider = /*#__PURE__*/React__namespace.forwardRef(function Divider(inProps, ref) {
+  const props = useThemeProps({
+    props: inProps,
+    name: 'MuiDivider'
+  });
+  const {
+      absolute = false,
+      children,
+      className,
+      component = children ? 'div' : 'hr',
+      flexItem = false,
+      light = false,
+      orientation = 'horizontal',
+      role = component !== 'hr' ? 'separator' : undefined,
+      textAlign = 'center',
+      variant = 'fullWidth'
+    } = props,
+    other = _objectWithoutPropertiesLoose(props, _excluded$j);
+  const ownerState = _extends({}, props, {
+    absolute,
+    component,
+    flexItem,
+    light,
+    orientation,
+    role,
+    textAlign,
+    variant
+  });
+  const classes = useUtilityClasses$7(ownerState);
+  return /*#__PURE__*/jsxRuntime.jsx(DividerRoot, _extends({
+    as: component,
+    className: clsx$1(classes.root, className),
+    role: role,
+    ref: ref,
+    ownerState: ownerState
+  }, other, {
+    children: children ? /*#__PURE__*/jsxRuntime.jsx(DividerWrapper, {
+      className: classes.wrapper,
+      ownerState: ownerState,
+      children: children
+    }) : null
+  }));
+});
+process.env.NODE_ENV !== "production" ? Divider.propTypes /* remove-proptypes */ = {
+  // ----------------------------- Warning --------------------------------
+  // | These PropTypes are generated from the TypeScript type definitions |
+  // |     To update them edit the d.ts file and run "yarn proptypes"     |
+  // ----------------------------------------------------------------------
+  /**
+   * Absolutely position the element.
+   * @default false
+   */
+  absolute: PropTypes.bool,
+  /**
+   * The content of the component.
+   */
+  children: PropTypes.node,
+  /**
+   * Override or extend the styles applied to the component.
+   */
+  classes: PropTypes.object,
+  /**
+   * @ignore
+   */
+  className: PropTypes.string,
+  /**
+   * The component used for the root node.
+   * Either a string to use a HTML element or a component.
+   */
+  component: PropTypes.elementType,
+  /**
+   * If `true`, a vertical divider will have the correct height when used in flex container.
+   * (By default, a vertical divider will have a calculated height of `0px` if it is the child of a flex container.)
+   * @default false
+   */
+  flexItem: PropTypes.bool,
+  /**
+   * If `true`, the divider will have a lighter color.
+   * @default false
+   */
+  light: PropTypes.bool,
+  /**
+   * The component orientation.
+   * @default 'horizontal'
+   */
+  orientation: PropTypes.oneOf(['horizontal', 'vertical']),
+  /**
+   * @ignore
+   */
+  role: PropTypes /* @typescript-to-proptypes-ignore */.string,
+  /**
+   * The system prop that allows defining system overrides as well as additional CSS styles.
+   */
+  sx: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.func, PropTypes.object, PropTypes.bool])), PropTypes.func, PropTypes.object]),
+  /**
+   * The text alignment.
+   * @default 'center'
+   */
+  textAlign: PropTypes.oneOf(['center', 'left', 'right']),
+  /**
+   * The variant to use.
+   * @default 'fullWidth'
+   */
+  variant: PropTypes /* @typescript-to-proptypes-ignore */.oneOfType([PropTypes.oneOf(['fullWidth', 'inset', 'middle']), PropTypes.string])
+} : void 0;
+var Divider$1 = Divider;
+
+/**
+ * @ignore - internal component.
+ */
+const ListContext = /*#__PURE__*/React__namespace.createContext({});
+if (process.env.NODE_ENV !== 'production') {
+  ListContext.displayName = 'ListContext';
+}
+var ListContext$1 = ListContext;
+
+function getListUtilityClass(slot) {
+  return generateUtilityClass('MuiList', slot);
+}
+generateUtilityClasses('MuiList', ['root', 'padding', 'dense', 'subheader']);
+
+const _excluded$i = ["children", "className", "component", "dense", "disablePadding", "subheader"];
+const useUtilityClasses$6 = ownerState => {
+  const {
+    classes,
+    disablePadding,
+    dense,
+    subheader
+  } = ownerState;
+  const slots = {
+    root: ['root', !disablePadding && 'padding', dense && 'dense', subheader && 'subheader']
+  };
+  return composeClasses(slots, getListUtilityClass, classes);
+};
+const ListRoot = styled$1('ul', {
+  name: 'MuiList',
+  slot: 'Root',
+  overridesResolver: (props, styles) => {
+    const {
+      ownerState
+    } = props;
+    return [styles.root, !ownerState.disablePadding && styles.padding, ownerState.dense && styles.dense, ownerState.subheader && styles.subheader];
+  }
+})(({
+  ownerState
+}) => _extends({
+  listStyle: 'none',
+  margin: 0,
+  padding: 0,
+  position: 'relative'
+}, !ownerState.disablePadding && {
+  paddingTop: 8,
+  paddingBottom: 8
+}, ownerState.subheader && {
+  paddingTop: 0
+}));
+const List = /*#__PURE__*/React__namespace.forwardRef(function List(inProps, ref) {
+  const props = useThemeProps({
+    props: inProps,
+    name: 'MuiList'
+  });
+  const {
+      children,
+      className,
+      component = 'ul',
+      dense = false,
+      disablePadding = false,
+      subheader
+    } = props,
+    other = _objectWithoutPropertiesLoose(props, _excluded$i);
+  const context = React__namespace.useMemo(() => ({
+    dense
+  }), [dense]);
+  const ownerState = _extends({}, props, {
+    component,
+    dense,
+    disablePadding
+  });
+  const classes = useUtilityClasses$6(ownerState);
+  return /*#__PURE__*/jsxRuntime.jsx(ListContext$1.Provider, {
+    value: context,
+    children: /*#__PURE__*/jsxRuntime.jsxs(ListRoot, _extends({
+      as: component,
+      className: clsx$1(classes.root, className),
+      ref: ref,
+      ownerState: ownerState
+    }, other, {
+      children: [subheader, children]
+    }))
+  });
+});
+process.env.NODE_ENV !== "production" ? List.propTypes /* remove-proptypes */ = {
+  // ----------------------------- Warning --------------------------------
+  // | These PropTypes are generated from the TypeScript type definitions |
+  // |     To update them edit the d.ts file and run "yarn proptypes"     |
+  // ----------------------------------------------------------------------
+  /**
+   * The content of the component.
+   */
+  children: PropTypes.node,
+  /**
+   * Override or extend the styles applied to the component.
+   */
+  classes: PropTypes.object,
+  /**
+   * @ignore
+   */
+  className: PropTypes.string,
+  /**
+   * The component used for the root node.
+   * Either a string to use a HTML element or a component.
+   */
+  component: PropTypes.elementType,
+  /**
+   * If `true`, compact vertical padding designed for keyboard and mouse input is used for
+   * the list and list items.
+   * The prop is available to descendant components as the `dense` context.
+   * @default false
+   */
+  dense: PropTypes.bool,
+  /**
+   * If `true`, vertical padding is removed from the list.
+   * @default false
+   */
+  disablePadding: PropTypes.bool,
+  /**
+   * The content of the subheader, normally `ListSubheader`.
+   */
+  subheader: PropTypes.node,
+  /**
+   * The system prop that allows defining system overrides as well as additional CSS styles.
+   */
+  sx: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.func, PropTypes.object, PropTypes.bool])), PropTypes.func, PropTypes.object])
+} : void 0;
+var List$1 = List;
+
+function getListItemUtilityClass(slot) {
+  return generateUtilityClass('MuiListItem', slot);
+}
+const listItemClasses = generateUtilityClasses('MuiListItem', ['root', 'container', 'focusVisible', 'dense', 'alignItemsFlexStart', 'disabled', 'divider', 'gutters', 'padding', 'button', 'secondaryAction', 'selected']);
+var listItemClasses$1 = listItemClasses;
+
+const listItemButtonClasses = generateUtilityClasses('MuiListItemButton', ['root', 'focusVisible', 'dense', 'alignItemsFlexStart', 'disabled', 'divider', 'gutters', 'selected']);
+var listItemButtonClasses$1 = listItemButtonClasses;
+
+function getListItemSecondaryActionClassesUtilityClass(slot) {
+  return generateUtilityClass('MuiListItemSecondaryAction', slot);
+}
+generateUtilityClasses('MuiListItemSecondaryAction', ['root', 'disableGutters']);
+
+const _excluded$h = ["className"];
+const useUtilityClasses$5 = ownerState => {
+  const {
+    disableGutters,
+    classes
+  } = ownerState;
+  const slots = {
+    root: ['root', disableGutters && 'disableGutters']
+  };
+  return composeClasses(slots, getListItemSecondaryActionClassesUtilityClass, classes);
+};
+const ListItemSecondaryActionRoot = styled$1('div', {
+  name: 'MuiListItemSecondaryAction',
+  slot: 'Root',
+  overridesResolver: (props, styles) => {
+    const {
+      ownerState
+    } = props;
+    return [styles.root, ownerState.disableGutters && styles.disableGutters];
+  }
+})(({
+  ownerState
+}) => _extends({
+  position: 'absolute',
+  right: 16,
+  top: '50%',
+  transform: 'translateY(-50%)'
+}, ownerState.disableGutters && {
+  right: 0
+}));
+
+/**
+ * Must be used as the last child of ListItem to function properly.
+ */
+const ListItemSecondaryAction = /*#__PURE__*/React__namespace.forwardRef(function ListItemSecondaryAction(inProps, ref) {
+  const props = useThemeProps({
+    props: inProps,
+    name: 'MuiListItemSecondaryAction'
+  });
+  const {
+      className
+    } = props,
+    other = _objectWithoutPropertiesLoose(props, _excluded$h);
+  const context = React__namespace.useContext(ListContext$1);
+  const ownerState = _extends({}, props, {
+    disableGutters: context.disableGutters
+  });
+  const classes = useUtilityClasses$5(ownerState);
+  return /*#__PURE__*/jsxRuntime.jsx(ListItemSecondaryActionRoot, _extends({
+    className: clsx$1(classes.root, className),
+    ownerState: ownerState,
+    ref: ref
+  }, other));
+});
+process.env.NODE_ENV !== "production" ? ListItemSecondaryAction.propTypes /* remove-proptypes */ = {
+  // ----------------------------- Warning --------------------------------
+  // | These PropTypes are generated from the TypeScript type definitions |
+  // |     To update them edit the d.ts file and run "yarn proptypes"     |
+  // ----------------------------------------------------------------------
+  /**
+   * The content of the component, normally an `IconButton` or selection control.
+   */
+  children: PropTypes.node,
+  /**
+   * Override or extend the styles applied to the component.
+   */
+  classes: PropTypes.object,
+  /**
+   * @ignore
+   */
+  className: PropTypes.string,
+  /**
+   * The system prop that allows defining system overrides as well as additional CSS styles.
+   */
+  sx: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.func, PropTypes.object, PropTypes.bool])), PropTypes.func, PropTypes.object])
+} : void 0;
+ListItemSecondaryAction.muiName = 'ListItemSecondaryAction';
+var ListItemSecondaryAction$1 = ListItemSecondaryAction;
+
+const _excluded$g = ["className"],
+  _excluded2$2 = ["alignItems", "autoFocus", "button", "children", "className", "component", "components", "componentsProps", "ContainerComponent", "ContainerProps", "dense", "disabled", "disableGutters", "disablePadding", "divider", "focusVisibleClassName", "secondaryAction", "selected", "slotProps", "slots"];
+const overridesResolver = (props, styles) => {
+  const {
+    ownerState
+  } = props;
+  return [styles.root, ownerState.dense && styles.dense, ownerState.alignItems === 'flex-start' && styles.alignItemsFlexStart, ownerState.divider && styles.divider, !ownerState.disableGutters && styles.gutters, !ownerState.disablePadding && styles.padding, ownerState.button && styles.button, ownerState.hasSecondaryAction && styles.secondaryAction];
+};
+const useUtilityClasses$4 = ownerState => {
+  const {
+    alignItems,
+    button,
+    classes,
+    dense,
+    disabled,
+    disableGutters,
+    disablePadding,
+    divider,
+    hasSecondaryAction,
+    selected
+  } = ownerState;
+  const slots = {
+    root: ['root', dense && 'dense', !disableGutters && 'gutters', !disablePadding && 'padding', divider && 'divider', disabled && 'disabled', button && 'button', alignItems === 'flex-start' && 'alignItemsFlexStart', hasSecondaryAction && 'secondaryAction', selected && 'selected'],
+    container: ['container']
+  };
+  return composeClasses(slots, getListItemUtilityClass, classes);
+};
+const ListItemRoot = styled$1('div', {
+  name: 'MuiListItem',
+  slot: 'Root',
+  overridesResolver
+})(({
+  theme,
+  ownerState
+}) => _extends({
+  display: 'flex',
+  justifyContent: 'flex-start',
+  alignItems: 'center',
+  position: 'relative',
+  textDecoration: 'none',
+  width: '100%',
+  boxSizing: 'border-box',
+  textAlign: 'left'
+}, !ownerState.disablePadding && _extends({
+  paddingTop: 8,
+  paddingBottom: 8
+}, ownerState.dense && {
+  paddingTop: 4,
+  paddingBottom: 4
+}, !ownerState.disableGutters && {
+  paddingLeft: 16,
+  paddingRight: 16
+}, !!ownerState.secondaryAction && {
+  // Add some space to avoid collision as `ListItemSecondaryAction`
+  // is absolutely positioned.
+  paddingRight: 48
+}), !!ownerState.secondaryAction && {
+  [`& > .${listItemButtonClasses$1.root}`]: {
+    paddingRight: 48
+  }
+}, {
+  [`&.${listItemClasses$1.focusVisible}`]: {
+    backgroundColor: (theme.vars || theme).palette.action.focus
+  },
+  [`&.${listItemClasses$1.selected}`]: {
+    backgroundColor: theme.vars ? `rgba(${theme.vars.palette.primary.mainChannel} / ${theme.vars.palette.action.selectedOpacity})` : alpha(theme.palette.primary.main, theme.palette.action.selectedOpacity),
+    [`&.${listItemClasses$1.focusVisible}`]: {
+      backgroundColor: theme.vars ? `rgba(${theme.vars.palette.primary.mainChannel} / calc(${theme.vars.palette.action.selectedOpacity} + ${theme.vars.palette.action.focusOpacity}))` : alpha(theme.palette.primary.main, theme.palette.action.selectedOpacity + theme.palette.action.focusOpacity)
+    }
+  },
+  [`&.${listItemClasses$1.disabled}`]: {
+    opacity: (theme.vars || theme).palette.action.disabledOpacity
+  }
+}, ownerState.alignItems === 'flex-start' && {
+  alignItems: 'flex-start'
+}, ownerState.divider && {
+  borderBottom: `1px solid ${(theme.vars || theme).palette.divider}`,
+  backgroundClip: 'padding-box'
+}, ownerState.button && {
+  transition: theme.transitions.create('background-color', {
+    duration: theme.transitions.duration.shortest
+  }),
+  '&:hover': {
+    textDecoration: 'none',
+    backgroundColor: (theme.vars || theme).palette.action.hover,
+    // Reset on touch devices, it doesn't add specificity
+    '@media (hover: none)': {
+      backgroundColor: 'transparent'
+    }
+  },
+  [`&.${listItemClasses$1.selected}:hover`]: {
+    backgroundColor: theme.vars ? `rgba(${theme.vars.palette.primary.mainChannel} / calc(${theme.vars.palette.action.selectedOpacity} + ${theme.vars.palette.action.hoverOpacity}))` : alpha(theme.palette.primary.main, theme.palette.action.selectedOpacity + theme.palette.action.hoverOpacity),
+    // Reset on touch devices, it doesn't add specificity
+    '@media (hover: none)': {
+      backgroundColor: theme.vars ? `rgba(${theme.vars.palette.primary.mainChannel} / ${theme.vars.palette.action.selectedOpacity})` : alpha(theme.palette.primary.main, theme.palette.action.selectedOpacity)
+    }
+  }
+}, ownerState.hasSecondaryAction && {
+  // Add some space to avoid collision as `ListItemSecondaryAction`
+  // is absolutely positioned.
+  paddingRight: 48
+}));
+const ListItemContainer = styled$1('li', {
+  name: 'MuiListItem',
+  slot: 'Container',
+  overridesResolver: (props, styles) => styles.container
+})({
+  position: 'relative'
+});
+
+/**
+ * Uses an additional container component if `ListItemSecondaryAction` is the last child.
+ */
+const ListItem = /*#__PURE__*/React__namespace.forwardRef(function ListItem(inProps, ref) {
+  const props = useThemeProps({
+    props: inProps,
+    name: 'MuiListItem'
+  });
+  const {
+      alignItems = 'center',
+      autoFocus = false,
+      button = false,
+      children: childrenProp,
+      className,
+      component: componentProp,
+      components = {},
+      componentsProps = {},
+      ContainerComponent = 'li',
+      ContainerProps: {
+        className: ContainerClassName
+      } = {},
+      dense = false,
+      disabled = false,
+      disableGutters = false,
+      disablePadding = false,
+      divider = false,
+      focusVisibleClassName,
+      secondaryAction,
+      selected = false,
+      slotProps = {},
+      slots = {}
+    } = props,
+    ContainerProps = _objectWithoutPropertiesLoose(props.ContainerProps, _excluded$g),
+    other = _objectWithoutPropertiesLoose(props, _excluded2$2);
+  const context = React__namespace.useContext(ListContext$1);
+  const childContext = React__namespace.useMemo(() => ({
+    dense: dense || context.dense || false,
+    alignItems,
+    disableGutters
+  }), [alignItems, context.dense, dense, disableGutters]);
+  const listItemRef = React__namespace.useRef(null);
+  useEnhancedEffect$1(() => {
+    if (autoFocus) {
+      if (listItemRef.current) {
+        listItemRef.current.focus();
+      } else if (process.env.NODE_ENV !== 'production') {
+        console.error('MUI: Unable to set focus to a ListItem whose component has not been rendered.');
+      }
+    }
+  }, [autoFocus]);
+  const children = React__namespace.Children.toArray(childrenProp);
+
+  // v4 implementation, deprecated in v5, will be removed in v6
+  const hasSecondaryAction = children.length && isMuiElement(children[children.length - 1], ['ListItemSecondaryAction']);
+  const ownerState = _extends({}, props, {
+    alignItems,
+    autoFocus,
+    button,
+    dense: childContext.dense,
+    disabled,
+    disableGutters,
+    disablePadding,
+    divider,
+    hasSecondaryAction,
+    selected
+  });
+  const classes = useUtilityClasses$4(ownerState);
+  const handleRef = useForkRef(listItemRef, ref);
+  const Root = slots.root || components.Root || ListItemRoot;
+  const rootProps = slotProps.root || componentsProps.root || {};
+  const componentProps = _extends({
+    className: clsx$1(classes.root, rootProps.className, className),
+    disabled
+  }, other);
+  let Component = componentProp || 'li';
+  if (button) {
+    componentProps.component = componentProp || 'div';
+    componentProps.focusVisibleClassName = clsx$1(listItemClasses$1.focusVisible, focusVisibleClassName);
+    Component = ButtonBase$1;
+  }
+
+  // v4 implementation, deprecated in v5, will be removed in v6
+  if (hasSecondaryAction) {
+    // Use div by default.
+    Component = !componentProps.component && !componentProp ? 'div' : Component;
+
+    // Avoid nesting of li > li.
+    if (ContainerComponent === 'li') {
+      if (Component === 'li') {
+        Component = 'div';
+      } else if (componentProps.component === 'li') {
+        componentProps.component = 'div';
+      }
+    }
+    return /*#__PURE__*/jsxRuntime.jsx(ListContext$1.Provider, {
+      value: childContext,
+      children: /*#__PURE__*/jsxRuntime.jsxs(ListItemContainer, _extends({
+        as: ContainerComponent,
+        className: clsx$1(classes.container, ContainerClassName),
+        ref: handleRef,
+        ownerState: ownerState
+      }, ContainerProps, {
+        children: [/*#__PURE__*/jsxRuntime.jsx(Root, _extends({}, rootProps, !isHostComponent(Root) && {
+          as: Component,
+          ownerState: _extends({}, ownerState, rootProps.ownerState)
+        }, componentProps, {
+          children: children
+        })), children.pop()]
+      }))
+    });
+  }
+  return /*#__PURE__*/jsxRuntime.jsx(ListContext$1.Provider, {
+    value: childContext,
+    children: /*#__PURE__*/jsxRuntime.jsxs(Root, _extends({}, rootProps, {
+      as: Component,
+      ref: handleRef
+    }, !isHostComponent(Root) && {
+      ownerState: _extends({}, ownerState, rootProps.ownerState)
+    }, componentProps, {
+      children: [children, secondaryAction && /*#__PURE__*/jsxRuntime.jsx(ListItemSecondaryAction$1, {
+        children: secondaryAction
+      })]
+    }))
+  });
+});
+process.env.NODE_ENV !== "production" ? ListItem.propTypes /* remove-proptypes */ = {
+  // ----------------------------- Warning --------------------------------
+  // | These PropTypes are generated from the TypeScript type definitions |
+  // |     To update them edit the d.ts file and run "yarn proptypes"     |
+  // ----------------------------------------------------------------------
+  /**
+   * Defines the `align-items` style property.
+   * @default 'center'
+   */
+  alignItems: PropTypes.oneOf(['center', 'flex-start']),
+  /**
+   * If `true`, the list item is focused during the first mount.
+   * Focus will also be triggered if the value changes from false to true.
+   * @default false
+   * @deprecated checkout [ListItemButton](/material-ui/api/list-item-button/) instead
+   */
+  autoFocus: PropTypes.bool,
+  /**
+   * If `true`, the list item is a button (using `ButtonBase`). Props intended
+   * for `ButtonBase` can then be applied to `ListItem`.
+   * @default false
+   * @deprecated checkout [ListItemButton](/material-ui/api/list-item-button/) instead
+   */
+  button: PropTypes.bool,
+  /**
+   * The content of the component if a `ListItemSecondaryAction` is used it must
+   * be the last child.
+   */
+  children: chainPropTypes(PropTypes.node, props => {
+    const children = React__namespace.Children.toArray(props.children);
+
+    // React.Children.toArray(props.children).findLastIndex(isListItemSecondaryAction)
+    let secondaryActionIndex = -1;
+    for (let i = children.length - 1; i >= 0; i -= 1) {
+      const child = children[i];
+      if (isMuiElement(child, ['ListItemSecondaryAction'])) {
+        secondaryActionIndex = i;
+        break;
+      }
+    }
+
+    //  is ListItemSecondaryAction the last child of ListItem
+    if (secondaryActionIndex !== -1 && secondaryActionIndex !== children.length - 1) {
+      return new Error('MUI: You used an element after ListItemSecondaryAction. ' + 'For ListItem to detect that it has a secondary action ' + 'you must pass it as the last child to ListItem.');
+    }
+    return null;
+  }),
+  /**
+   * Override or extend the styles applied to the component.
+   */
+  classes: PropTypes.object,
+  /**
+   * @ignore
+   */
+  className: PropTypes.string,
+  /**
+   * The component used for the root node.
+   * Either a string to use a HTML element or a component.
+   */
+  component: PropTypes.elementType,
+  /**
+   * The components used for each slot inside.
+   *
+   * This prop is an alias for the `slots` prop.
+   * It's recommended to use the `slots` prop instead.
+   *
+   * @default {}
+   */
+  components: PropTypes.shape({
+    Root: PropTypes.elementType
+  }),
+  /**
+   * The extra props for the slot components.
+   * You can override the existing props or add new ones.
+   *
+   * This prop is an alias for the `slotProps` prop.
+   * It's recommended to use the `slotProps` prop instead, as `componentsProps` will be deprecated in the future.
+   *
+   * @default {}
+   */
+  componentsProps: PropTypes.shape({
+    root: PropTypes.object
+  }),
+  /**
+   * The container component used when a `ListItemSecondaryAction` is the last child.
+   * @default 'li'
+   * @deprecated
+   */
+  ContainerComponent: elementTypeAcceptingRef$1,
+  /**
+   * Props applied to the container component if used.
+   * @default {}
+   * @deprecated
+   */
+  ContainerProps: PropTypes.object,
+  /**
+   * If `true`, compact vertical padding designed for keyboard and mouse input is used.
+   * The prop defaults to the value inherited from the parent List component.
+   * @default false
+   */
+  dense: PropTypes.bool,
+  /**
+   * If `true`, the component is disabled.
+   * @default false
+   * @deprecated checkout [ListItemButton](/material-ui/api/list-item-button/) instead
+   */
+  disabled: PropTypes.bool,
+  /**
+   * If `true`, the left and right padding is removed.
+   * @default false
+   */
+  disableGutters: PropTypes.bool,
+  /**
+   * If `true`, all padding is removed.
+   * @default false
+   */
+  disablePadding: PropTypes.bool,
+  /**
+   * If `true`, a 1px light border is added to the bottom of the list item.
+   * @default false
+   */
+  divider: PropTypes.bool,
+  /**
+   * @ignore
+   */
+  focusVisibleClassName: PropTypes.string,
+  /**
+   * The element to display at the end of ListItem.
+   */
+  secondaryAction: PropTypes.node,
+  /**
+   * Use to apply selected styling.
+   * @default false
+   * @deprecated checkout [ListItemButton](/material-ui/api/list-item-button/) instead
+   */
+  selected: PropTypes.bool,
+  /**
+   * The extra props for the slot components.
+   * You can override the existing props or add new ones.
+   *
+   * This prop is an alias for the `componentsProps` prop, which will be deprecated in the future.
+   *
+   * @default {}
+   */
+  slotProps: PropTypes.shape({
+    root: PropTypes.object
+  }),
+  /**
+   * The components used for each slot inside.
+   *
+   * This prop is an alias for the `components` prop, which will be deprecated in the future.
+   *
+   * @default {}
+   */
+  slots: PropTypes.shape({
+    root: PropTypes.elementType
+  }),
+  /**
+   * The system prop that allows defining system overrides as well as additional CSS styles.
+   */
+  sx: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.func, PropTypes.object, PropTypes.bool])), PropTypes.func, PropTypes.object])
+} : void 0;
+var ListItem$1 = ListItem;
+
+function getListItemAvatarUtilityClass(slot) {
+  return generateUtilityClass('MuiListItemAvatar', slot);
+}
+generateUtilityClasses('MuiListItemAvatar', ['root', 'alignItemsFlexStart']);
+
+const _excluded$f = ["className"];
+const useUtilityClasses$3 = ownerState => {
+  const {
+    alignItems,
+    classes
+  } = ownerState;
+  const slots = {
+    root: ['root', alignItems === 'flex-start' && 'alignItemsFlexStart']
+  };
+  return composeClasses(slots, getListItemAvatarUtilityClass, classes);
+};
+const ListItemAvatarRoot = styled$1('div', {
+  name: 'MuiListItemAvatar',
+  slot: 'Root',
+  overridesResolver: (props, styles) => {
+    const {
+      ownerState
+    } = props;
+    return [styles.root, ownerState.alignItems === 'flex-start' && styles.alignItemsFlexStart];
+  }
+})(({
+  ownerState
+}) => _extends({
+  minWidth: 56,
+  flexShrink: 0
+}, ownerState.alignItems === 'flex-start' && {
+  marginTop: 8
+}));
+
+/**
+ * A simple wrapper to apply `List` styles to an `Avatar`.
+ */
+const ListItemAvatar = /*#__PURE__*/React__namespace.forwardRef(function ListItemAvatar(inProps, ref) {
+  const props = useThemeProps({
+    props: inProps,
+    name: 'MuiListItemAvatar'
+  });
+  const {
+      className
+    } = props,
+    other = _objectWithoutPropertiesLoose(props, _excluded$f);
+  const context = React__namespace.useContext(ListContext$1);
+  const ownerState = _extends({}, props, {
+    alignItems: context.alignItems
+  });
+  const classes = useUtilityClasses$3(ownerState);
+  return /*#__PURE__*/jsxRuntime.jsx(ListItemAvatarRoot, _extends({
+    className: clsx$1(classes.root, className),
+    ownerState: ownerState,
+    ref: ref
+  }, other));
+});
+process.env.NODE_ENV !== "production" ? ListItemAvatar.propTypes /* remove-proptypes */ = {
+  // ----------------------------- Warning --------------------------------
+  // | These PropTypes are generated from the TypeScript type definitions |
+  // |     To update them edit the d.ts file and run "yarn proptypes"     |
+  // ----------------------------------------------------------------------
+  /**
+   * The content of the component, normally an `Avatar`.
+   */
+  children: PropTypes.node,
+  /**
+   * Override or extend the styles applied to the component.
+   */
+  classes: PropTypes.object,
+  /**
+   * @ignore
+   */
+  className: PropTypes.string,
+  /**
+   * The system prop that allows defining system overrides as well as additional CSS styles.
+   */
+  sx: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.func, PropTypes.object, PropTypes.bool])), PropTypes.func, PropTypes.object])
+} : void 0;
+var ListItemAvatar$1 = ListItemAvatar;
+
+function getListItemTextUtilityClass(slot) {
+  return generateUtilityClass('MuiListItemText', slot);
+}
+const listItemTextClasses = generateUtilityClasses('MuiListItemText', ['root', 'multiline', 'dense', 'inset', 'primary', 'secondary']);
+var listItemTextClasses$1 = listItemTextClasses;
+
+const _excluded$e = ["children", "className", "disableTypography", "inset", "primary", "primaryTypographyProps", "secondary", "secondaryTypographyProps"];
+const useUtilityClasses$2 = ownerState => {
+  const {
+    classes,
+    inset,
+    primary,
+    secondary,
+    dense
+  } = ownerState;
+  const slots = {
+    root: ['root', inset && 'inset', dense && 'dense', primary && secondary && 'multiline'],
+    primary: ['primary'],
+    secondary: ['secondary']
+  };
+  return composeClasses(slots, getListItemTextUtilityClass, classes);
+};
+const ListItemTextRoot = styled$1('div', {
+  name: 'MuiListItemText',
+  slot: 'Root',
+  overridesResolver: (props, styles) => {
+    const {
+      ownerState
+    } = props;
+    return [{
+      [`& .${listItemTextClasses$1.primary}`]: styles.primary
+    }, {
+      [`& .${listItemTextClasses$1.secondary}`]: styles.secondary
+    }, styles.root, ownerState.inset && styles.inset, ownerState.primary && ownerState.secondary && styles.multiline, ownerState.dense && styles.dense];
+  }
+})(({
+  ownerState
+}) => _extends({
+  flex: '1 1 auto',
+  minWidth: 0,
+  marginTop: 4,
+  marginBottom: 4
+}, ownerState.primary && ownerState.secondary && {
+  marginTop: 6,
+  marginBottom: 6
+}, ownerState.inset && {
+  paddingLeft: 56
+}));
+const ListItemText = /*#__PURE__*/React__namespace.forwardRef(function ListItemText(inProps, ref) {
+  const props = useThemeProps({
+    props: inProps,
+    name: 'MuiListItemText'
+  });
+  const {
+      children,
+      className,
+      disableTypography = false,
+      inset = false,
+      primary: primaryProp,
+      primaryTypographyProps,
+      secondary: secondaryProp,
+      secondaryTypographyProps
+    } = props,
+    other = _objectWithoutPropertiesLoose(props, _excluded$e);
+  const {
+    dense
+  } = React__namespace.useContext(ListContext$1);
+  let primary = primaryProp != null ? primaryProp : children;
+  let secondary = secondaryProp;
+  const ownerState = _extends({}, props, {
+    disableTypography,
+    inset,
+    primary: !!primary,
+    secondary: !!secondary,
+    dense
+  });
+  const classes = useUtilityClasses$2(ownerState);
+  if (primary != null && primary.type !== Typography$1 && !disableTypography) {
+    primary = /*#__PURE__*/jsxRuntime.jsx(Typography$1, _extends({
+      variant: dense ? 'body2' : 'body1',
+      className: classes.primary,
+      component: primaryTypographyProps != null && primaryTypographyProps.variant ? undefined : 'span',
+      display: "block"
+    }, primaryTypographyProps, {
+      children: primary
+    }));
+  }
+  if (secondary != null && secondary.type !== Typography$1 && !disableTypography) {
+    secondary = /*#__PURE__*/jsxRuntime.jsx(Typography$1, _extends({
+      variant: "body2",
+      className: classes.secondary,
+      color: "text.secondary",
+      display: "block"
+    }, secondaryTypographyProps, {
+      children: secondary
+    }));
+  }
+  return /*#__PURE__*/jsxRuntime.jsxs(ListItemTextRoot, _extends({
+    className: clsx$1(classes.root, className),
+    ownerState: ownerState,
+    ref: ref
+  }, other, {
+    children: [primary, secondary]
+  }));
+});
+process.env.NODE_ENV !== "production" ? ListItemText.propTypes /* remove-proptypes */ = {
+  // ----------------------------- Warning --------------------------------
+  // | These PropTypes are generated from the TypeScript type definitions |
+  // |     To update them edit the d.ts file and run "yarn proptypes"     |
+  // ----------------------------------------------------------------------
+  /**
+   * Alias for the `primary` prop.
+   */
+  children: PropTypes.node,
+  /**
+   * Override or extend the styles applied to the component.
+   */
+  classes: PropTypes.object,
+  /**
+   * @ignore
+   */
+  className: PropTypes.string,
+  /**
+   * If `true`, the children won't be wrapped by a Typography component.
+   * This can be useful to render an alternative Typography variant by wrapping
+   * the `children` (or `primary`) text, and optional `secondary` text
+   * with the Typography component.
+   * @default false
+   */
+  disableTypography: PropTypes.bool,
+  /**
+   * If `true`, the children are indented.
+   * This should be used if there is no left avatar or left icon.
+   * @default false
+   */
+  inset: PropTypes.bool,
+  /**
+   * The main content element.
+   */
+  primary: PropTypes.node,
+  /**
+   * These props will be forwarded to the primary typography component
+   * (as long as disableTypography is not `true`).
+   */
+  primaryTypographyProps: PropTypes.object,
+  /**
+   * The secondary content element.
+   */
+  secondary: PropTypes.node,
+  /**
+   * These props will be forwarded to the secondary typography component
+   * (as long as disableTypography is not `true`).
+   */
+  secondaryTypographyProps: PropTypes.object,
+  /**
+   * The system prop that allows defining system overrides as well as additional CSS styles.
+   */
+  sx: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.func, PropTypes.object, PropTypes.bool])), PropTypes.func, PropTypes.object])
+} : void 0;
+var ListItemText$1 = ListItemText;
 
 var Star = createSvgIcon( /*#__PURE__*/jsxRuntime.jsx("path", {
   d: "M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
@@ -14848,6 +16749,42 @@ var Button = function (_a) {
         text);
 };
 
+/**
+ * Based on MUI: {@link https://mui.com/material-ui/react-list/}
+ */
+var CookingInstructions = function (_a) {
+    var ingredients = _a.cookingInstructions;
+    return React__namespace.createElement("div", { className: 'CookingInstructions' },
+        React__namespace.createElement("h2", null, "Cooking Instructions"),
+        React__namespace.createElement(List$1, { sx: { width: '100%', bgcolor: 'background.paper' } }, ingredients.map(function (cookingInstruction, i) {
+            var _a, _b, _c, _d;
+            return React__namespace.createElement(React__namespace.Fragment, null,
+                React__namespace.createElement(ListItem$1, { alignItems: 'flex-start' },
+                    React__namespace.createElement(ListItemAvatar$1, null,
+                        React__namespace.createElement(Avatar$1, { alt: cookingInstruction.instruction, src: ((_b = (_a = cookingInstruction === null || cookingInstruction === void 0 ? void 0 : cookingInstruction.media) === null || _a === void 0 ? void 0 : _a.images) === null || _b === void 0 ? void 0 : _b.length) ? (_d = (_c = cookingInstruction === null || cookingInstruction === void 0 ? void 0 : cookingInstruction.media) === null || _c === void 0 ? void 0 : _c.images[0]) === null || _d === void 0 ? void 0 : _d.image : undefined })),
+                    React__namespace.createElement(ListItemText$1, { primary: "".concat(i + 1, ". ").concat(cookingInstruction.instruction) })),
+                React__namespace.createElement(Divider$1, { variant: 'inset', component: 'li' }));
+        })));
+};
+
+/**
+ * Based on MUI: {@link https://mui.com/material-ui/react-list/}
+ */
+var Ingredients = function (_a) {
+    var ingredients = _a.ingredients;
+    return React__namespace.createElement("div", { className: 'Ingredients' },
+        React__namespace.createElement("h2", null, "Ingredients"),
+        React__namespace.createElement(List$1, { sx: { width: '100%', maxWidth: 360, bgcolor: 'background.paper' } }, ingredients.map(function (ingredient) {
+            var _a, _b, _c;
+            return React__namespace.createElement(React__namespace.Fragment, null,
+                React__namespace.createElement(ListItem$1, { alignItems: 'flex-start' },
+                    React__namespace.createElement(ListItemAvatar$1, null,
+                        React__namespace.createElement(Avatar$1, { alt: ingredient.title, src: ((_a = ingredient.media.images) === null || _a === void 0 ? void 0 : _a.length) ? (_c = (_b = ingredient === null || ingredient === void 0 ? void 0 : ingredient.media) === null || _b === void 0 ? void 0 : _b.images[0]) === null || _c === void 0 ? void 0 : _c.image : undefined })),
+                    React__namespace.createElement(ListItemText$1, { primary: ingredient.label })),
+                React__namespace.createElement(Divider$1, { variant: 'inset', component: 'li' }));
+        })));
+};
+
 var RecipePreview = function (_a) {
     var _b;
     var recipe = _a.recipe;
@@ -14860,6 +16797,36 @@ var RecipePreview = function (_a) {
             " reviews)"));
 };
 
+var RecipeDetail = function (_a) {
+    var _b;
+    var recipe = _a.recipe;
+    return React__default["default"].createElement(React__default["default"].Fragment, null,
+        React__default["default"].createElement("h1", null, recipe.title),
+        React__default["default"].createElement("img", { src: ((_b = recipe.media.images) === null || _b === void 0 ? void 0 : _b.length) ? recipe.media.images[0].image : undefined, style: { maxWidth: '100%' } }),
+        React__default["default"].createElement(Rating$1, { name: 'simple-controlled', value: recipe.rating.average, disabled: true }),
+        recipe.rating.count,
+        " reviews",
+        React__default["default"].createElement("hr", null),
+        recipe.cuisine.title,
+        React__default["default"].createElement("hr", null),
+        "Prep time: ",
+        recipe.prep_times.for_2,
+        "mins",
+        React__default["default"].createElement("hr", null),
+        React__default["default"].createElement(Ingredients, { ingredients: recipe.ingredients || [] }),
+        React__default["default"].createElement(CookingInstructions, { cookingInstructions: recipe.cooking_instructions || [] }));
+};
+
+var Recipes = function (_a) {
+    var recipes = _a.recipes;
+    return React__default["default"].createElement(React__default["default"].Fragment, null, recipes.map(function (recipe) { return React__default["default"].createElement(RecipePreview, { recipe: recipe }); }));
+};
+
 exports.Button = Button;
+exports.CookingInstructions = CookingInstructions;
+exports.Ingredients = Ingredients;
+exports.RecipeDetail = RecipeDetail;
 exports.RecipePreview = RecipePreview;
+exports.Recipes = Recipes;
+exports.exampleRecipe = exampleRecipe;
 //# sourceMappingURL=index.js.map
