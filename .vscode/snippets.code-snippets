@@ -40,7 +40,7 @@
       "",
       "const template = storyTemplate(Component)",
       "",
-      "const defaultArgs = {",
+      "const defaultArgs: IProps = {",
       "  text: 'Button text',",
       "  onClick: action('Clicked')",
       "}",
