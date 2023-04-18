@@ -86,6 +86,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
+    "@heroicons/react": "^2.0.17",
     "@mui/icons-material": "^5.11.16",
     "@mui/joy": "^5.0.0-alpha.75",
     "@mui/material": "^5.12.0",

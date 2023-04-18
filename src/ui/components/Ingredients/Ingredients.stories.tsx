@@ -1,8 +1,7 @@
 import { ComponentMeta } from '@storybook/react'
 import { storyTemplate } from '../../../../.storybook/helpers'
 import { Ingredients } from '../../../index'
-import { exampleRecipe } from '../../../model/examples'
-import { IngredientsEntity } from '../../../model/types'
+import { recipe } from '../../../model/examples'
 
 export default {
   component: Ingredients,
@@ -12,7 +11,7 @@ export default {
 const template = storyTemplate(Ingredients)
 
 const defaultArgs = {
-  ingredients: exampleRecipe.ingredients as IngredientsEntity[]
+  recipe
 }
 
 export const Default = template({ ...defaultArgs })

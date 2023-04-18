@@ -23,7 +23,7 @@ export const Recipes: FC<IProps> = ({ recipes }: IProps) =>
   <div className='Recipes'>
     <Grid container spacing={2} sx={{ flexGrow: 1 }}>
       <Grid sm={6} lg={3}>
-        {recipes.map(recipe => <Item><RecipePreview recipe={recipe} /></Item>)}
+        {recipes.map(recipe => <Item><RecipePreview onImageClick={console.log} recipe={recipe} /></Item>)}
       </Grid>
     </Grid>
   </div>

@@ -1,16 +1,23 @@
 import { ComponentMeta } from '@storybook/react'
 import { storyTemplate } from '../../../../.storybook/helpers'
-import { IProps, RecipeDetailPage } from './RecipeDetail'
+import { recipe } from '../../../model/examples'
+import { RecipeDetailPage } from './RecipeDetailPage'
 
 export default {
   component: RecipeDetailPage,
-  title: 'Applications/RecipeDetail',
+  title: 'Demos/RecipeDetailPage',
+  parameters: {
+    viewport: {
+      defaultViewport: 'desktop',
+    },
+  },
 } as ComponentMeta<typeof RecipeDetailPage>
 
 const template = storyTemplate(RecipeDetailPage)
 
-const defaultArgs: IProps = {
-  appName: 'My recipe app'
+const defaultArgs = {
+  appName: 'RecipeUI',
+  recipe
 }
 
 export const Default = template({ ...defaultArgs })

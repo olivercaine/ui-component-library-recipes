@@ -2,7 +2,7 @@
 /* eslint-disable max-len */
 import { Recipe } from './types'
 
-export const exampleRecipe: Recipe = {
+export const recipe: Recipe = {
   url: '/classic-eggs-benedict',
   title: 'Classic Eggs Benedict',
   categories: [
