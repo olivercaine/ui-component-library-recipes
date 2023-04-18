@@ -8,9 +8,6 @@ import { Button } from '../../../index'
 export default {
   component: Button,
   title: 'Basics/Button',
-  argTypes: {
-    textColor: { control: 'color' },
-  },
 } as ComponentMeta<typeof Button>
 
 const template = storyTemplate(Button)

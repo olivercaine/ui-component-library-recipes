@@ -1,17 +1,17 @@
 import { ComponentMeta } from '@storybook/react'
 import { storyTemplate } from '../../../../.storybook/helpers'
-import { Recipes } from '../../../index'
 import { recipe } from '../../../model/examples'
+import { RecipeHero } from './RecipeHero'
 
 export default {
-  component: Recipes,
-  title: 'Features/Recipes',
-} as ComponentMeta<typeof Recipes>
+  component: RecipeHero,
+  title: 'Components/RecipeHero',
+} as ComponentMeta<typeof RecipeHero>
 
-const template = storyTemplate(Recipes)
+const template = storyTemplate(RecipeHero)
 
 const defaultArgs = {
-  recipes: [recipe, recipe, recipe]
+  recipe
 }
 
 export const Default = template({ ...defaultArgs })

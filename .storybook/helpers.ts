@@ -11,6 +11,8 @@ export const storyTemplate = <P,>(Component: (props: P) => any) => (
 
 // Based on "GE’s Predix Design System' - https://medium.com/ge-design/ges-predix-design-system-8236d47b0891
 export enum StoryTypes {
+  /** Full page demo stories */
+  Demos = "Demos",
   /** Applications are things which contain a unique set of Features, e.g. a ticket booking application */
   Applications = "Applications",
   /** Features are the interfaces that when working together, allow users to accomplish a task or solve a problem, e.g. a sign up wizard */
