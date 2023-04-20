@@ -1,4 +1,3 @@
-import Grid from '@mui/material/Unstable_Grid2'
 import * as React from 'react'
 import { recipe } from '../../../model/examples'
 import { FooterNav } from '../../components/FooterNav/FooterNav'
@@ -18,13 +17,11 @@ export const RecipeSearchPage = ({
 }) =>
   <>
     <AppHeader appName={appName}/>
-    <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+    <div className='flex flex-wrap -m-4'>
       {Array(10).fill(0).map((_, i) =>
-        <Grid xs={12} sm={6} md={3}>
-          <RecipePreview recipe={recipe} onImageClick={onImageClick}/>
-        </Grid>
+        <RecipePreview recipe={recipe} onImageClick={onImageClick}/>
       )}
-    </Grid>
+    </div>
     <Pagination/>
     <FooterNav/>
   </>

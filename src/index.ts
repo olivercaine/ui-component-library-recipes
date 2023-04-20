@@ -1,5 +1,6 @@
 import { recipe } from './model/examples'
 import { Button } from './ui/basics/Button/Button'
+import { CookingInstruction } from './ui/components/CookingInstruction/CookingInstruction'
 import { CookingInstructions } from './ui/components/CookingInstructions/CookingInstructions'
 import { FooterNav } from './ui/components/FooterNav/FooterNav'
 import { Ingredients } from './ui/components/Ingredients/Ingredients'
@@ -12,6 +13,7 @@ export {
   recipe as exampleRecipe,
   Button,
   CookingInstructions,
+  CookingInstruction,
   FooterNav,
   Ingredients,
   RecipeDetail,

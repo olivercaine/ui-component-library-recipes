@@ -1,16 +1,7 @@
-import FavoriteIcon from '@mui/icons-material/Favorite'
-import { CardActions, Link, Rating } from '@mui/material'
-import Avatar from '@mui/material/Avatar'
-import Card from '@mui/material/Card'
-import CardContent from '@mui/material/CardContent'
-import CardHeader from '@mui/material/CardHeader'
-import CardMedia from '@mui/material/CardMedia'
-import IconButton from '@mui/material/IconButton'
-import Typography from '@mui/material/Typography'
-import { blue } from '@mui/material/colors'
 import React from 'react'
+import truncate from 'truncate'
+import { Stepper } from '../../..'
 import { Recipe } from '../../../model/types'
-import { Stepper } from '../Stepper/Stepper'
 
 export const RecipePreview = ({
   recipe,
@@ -19,39 +10,32 @@ export const RecipePreview = ({
   recipe: Partial<Recipe>,
   onImageClick: any,
 }) =>
-  <Card>
-    <CardHeader
-      avatar={
-        <Avatar sx={{ bgcolor: blue[500] }} aria-label='recipe'>
-            R
-        </Avatar>
-      }
-      action={
-        <IconButton aria-label='add to favorites'>
-          <FavoriteIcon />
-        </IconButton>
-      }
-      title={recipe.title}
-      // @ts-expect-error
-      subheader={`${recipe.prep_times.for_2} minutes`}
-    />
-    <Link onClick={() => onImageClick(recipe)}>
-      <CardMedia
-        component='img'
-        height='194'
-        // @ts-expect-error
-        image={recipe.media.images?.length ? recipe.media.images[0].image : undefined}
-        alt={recipe.title}
-        sx={{ maxWidth: 345 }}
-      />
-    </Link>
-    <CardContent>
-      <Rating name='read-only' value={recipe?.rating?.average} readOnly />
-      <Typography variant='body2' color='text.secondary'>
-        {recipe?.rating?.count} reviews
-      </Typography>
-    </CardContent>
-    <CardActions>
-      <Stepper handleDecrement={console.log} handleIncrement={console.log} number={10} />
-    </CardActions>
-  </Card>
+  <div className='p-4 md:w-1/4'>
+    <div className='h-full border-2 bg-white border-gray-200 border-opacity-60 rounded-lg overflow-hidden'>
+      <img className='lg:h-48 md:h-36 w-full object-cover object-center'
+        src={recipe?.media?.images?.length ? recipe.media.images[0].image : undefined} alt='blog'/>
+      <div className='p-6'>
+        <h1 className='title-font text-lg font-medium text-gray-900 mb-3'>{recipe.title}</h1>
+        <p className='leading-relaxed mb-3'>{truncate(recipe?.description || '', 100)}</p>
+        <div className='flex items-center flex-wrap '>
+          <a className='text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0'>
+            <Stepper handleDecrement={console.log} number={1} handleIncrement={console.log} />
+          </a>
+          <span className='text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto 
+          leading-none text-sm pr-3 py-1 border-r-2 border-gray-200'>
+            <svg className='w-4 h-4 mr-1' stroke='currentColor' stroke-width='2' fill='none' stroke-linecap='round'
+              stroke-linejoin='round' viewBox='0 0 24 24'>
+              <path d='M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z'></path>
+              <circle cx='12' cy='12' r='3'></circle>
+            </svg>1.2K
+          </span>
+          <span className='text-gray-400 inline-flex items-center leading-none text-sm'>
+            <svg className='w-4 h-4 mr-1' stroke='currentColor' stroke-width='2' fill='none' stroke-linecap='round'
+              stroke-linejoin='round' viewBox='0 0 24 24'>
+              <path d='M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z'></path>
+            </svg>6
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
