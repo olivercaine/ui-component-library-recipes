@@ -8,7 +8,7 @@ export const Button: FC<{
   /**
   The callback for when the button is clicked
   */
-  onClick: MouseEventHandler<HTMLButtonElement>
+  onClick?: MouseEventHandler<HTMLButtonElement>
 }> = ({
   text = 'Button text',
   onClick,

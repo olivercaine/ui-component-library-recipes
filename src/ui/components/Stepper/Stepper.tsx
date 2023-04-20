@@ -1,6 +1,6 @@
-import Button from '@mui/material/Button'
 import ButtonGroup from '@mui/material/ButtonGroup'
 import React from 'react'
+import { Button } from '../../basics/Button/Button'
 
 export const Stepper = ({
   handleDecrement,
@@ -25,9 +25,9 @@ export const Stepper = ({
 
   return (
     <ButtonGroup size='small' aria-label='small outlined button group'>
-      <Button onClick={handleDown}>-</Button>
-      <Button disabled>{count}</Button>
-      <Button onClick={handleUp}>+</Button>
+      <Button onClick={handleDown} text='-'/>
+      <Button text={count.toString()}/>
+      <Button onClick={handleUp} text='+'/>
     </ButtonGroup>
   )
 }
