@@ -1,33 +1,48 @@
-import ButtonGroup from '@mui/material/ButtonGroup'
-import React from 'react'
+import React, { useState } from 'react'
 import { Button } from '../../basics/Button/Button'
 
 export const Stepper = ({
-  handleDecrement,
-  number,
-  handleIncrement,
-}: {
-  handleIncrement: (count: number) => void
-  number: number
-  handleDecrement: (count: number) => void
+  min = 0,
+  max = 5,
+  step = 1,
+  defaultValue = 0,
+  name = 'stepper-name',
+  id = 'stepper-id',
+  onChange = console.log
 }) => {
-  let count = number
+  const [value, setValue] = useState(defaultValue)
 
-  const handleUp = () => {
-    ++count
-    handleIncrement(count)
+  const handleDecrease = () => {
+    const newValue = Math.max(min, value - step)
+    setValue(newValue)
+    onChange(newValue)
   }
 
-  const handleDown = () => {
-    --count
-    handleDecrement(count)
+  const handleIncrease = () => {
+    const newValue = Math.min(max, value + step)
+    setValue(newValue)
+    onChange(newValue)
+  }
+
+  const handleInput = (e:any) => {
+    const inputValue = Math.min(e.target.value) || value
+    const newValue = inputValue > max ? max : inputValue < 0 ? 0 : inputValue
+    setValue(newValue)
+    onChange(newValue)
   }
 
   return (
-    <ButtonGroup size='small' aria-label='small outlined button group'>
-      <Button onClick={handleDown} text='-'/>
-      <Button text={count.toString()}/>
-      <Button onClick={handleUp} text='+'/>
-    </ButtonGroup>
+    <div data-testid='Stepper'>
+      <Button disabled={!value} text='-' onClick={handleDecrease} css='border-0 rounded-r-none cta-bg bg-amber-300'/>
+      <input type='text'
+        value={value}
+        onChange={handleInput}
+        name={name}
+        id={id}
+        className='flex-1 border-0 bg-transparent py-1.5 pl-1 text-center w-12
+      placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6'
+      />
+      <Button disabled={value === max} text='+' onClick={handleIncrease} css='border-0 rounded-l-none bg-amber-300'/>
+    </div>
   )
 }

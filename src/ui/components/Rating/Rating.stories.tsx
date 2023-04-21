@@ -1,0 +1,18 @@
+import { ComponentMeta } from '@storybook/react'
+import { storyTemplate } from '../../../../.storybook/helpers'
+import { Rating } from '../../../index'
+
+export default {
+  component: Rating,
+  title: 'Components/Rating',
+} as ComponentMeta<typeof Rating>
+
+const template = storyTemplate(Rating)
+
+const defaultArgs = {
+  // onChange: action('On Change'),
+}
+
+export const Default = template({ ...defaultArgs })
+
+export const Disabled = template({ ...defaultArgs, readOnly: true, value: 4 })
