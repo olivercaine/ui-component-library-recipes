@@ -11,9 +11,7 @@ export default {
 const template = storyTemplate(Stepper)
 
 const defaultArgs = {
-  handleIncrement: action('Increment'),
-  number: 5,
-  handleDecrement: action('Decrement'),
+  onChange: action('On Change'),
 }
 
 export const Default = template({ ...defaultArgs })

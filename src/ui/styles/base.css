@@ -14,10 +14,25 @@ h3 {
   @apply text-lg;
 }
 
-a {
-  @apply text-blue-600 underline;
+.bg-light-grey {
+  background-color: #282828;
 }
 
-#root {
-  background-color: rgb(183, 183, 183);
+body,
+#root,
+.bg-dark-grey {
+  background-color: #212121;
+}
+
+:root {
+  --primary: #FFC20D;
+  --secondary: #e53e3e;
+}
+
+.cta {
+  color: var(--primary);
+}
+
+.cta-bg {
+  color: var(--primary);
 }
