@@ -7,9 +7,9 @@ import Paper from '@mui/material/Paper'
 import * as React from 'react'
 
 export const FooterNav = () =>
-  <div data-testid='FooterNav' className='bg-light-grey'>
+  <div data-testid='FooterNav'>
     <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
-      <BottomNavigation sx={{ width: '100%', backgroundColor: '#282828' }}
+      <BottomNavigation sx={{ width: '100%', backgroundColor: '#14181b' }}
         showLabels
         value={1}
         onChange={console.log}

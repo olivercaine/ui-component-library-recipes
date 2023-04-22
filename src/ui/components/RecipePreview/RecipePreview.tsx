@@ -11,7 +11,7 @@ export const RecipePreview = ({
   onImageClick: any,
   isFavourite?: boolean
 }) =>
-  <div className='p-4 md:w-1/4 drop-shadow-xl text-neutral-400' data-testid='RecipePreview'>
+  <div className='p-4 md:w-1/4 drop-shadow-xl text-neutral-400 hover:scale-105 duration-300' data-testid='RecipePreview'>
     <div className='h-full bg-light-grey border-gray-200 border-opacity-60 rounded-lg overflow-hidden'>
       <Favourite className='absolute top-5 right-5' isFavourite={isFavourite}/>
       <img className='lg:h-48 md:h-36 w-full object-cover object-center'
