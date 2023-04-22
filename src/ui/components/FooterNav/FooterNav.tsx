@@ -17,15 +17,17 @@ export const FooterNav = () =>
         <BottomNavigationAction
           label='Search'
           value='recents'
+          sx={{ color: '#a3a3a3', font: '#a3a3a3' }}
           icon={<ManageSearchIcon />} />
         <BottomNavigationAction
           label='Favorites'
           value='favorites'
-          color={ '#6466f1'}
-          icon={<FavoriteIcon color={'primary'} />} />
+          sx={{ color: '#a3a3a3', font: '#a3a3a3' }}
+          icon={<FavoriteIcon sx={{ color: '#a3a3a3', font: '#a3a3a3' }} />} />
         <BottomNavigationAction
           label='Shopping List'
           value='nearby'
+          sx={{ color: '#a3a3a3', font: '#a3a3a3' }}
           icon={<ShoppingCartIcon />} />
       </BottomNavigation>
     </Paper>
