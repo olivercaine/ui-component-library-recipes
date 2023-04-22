@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import { Recipe } from '../../../model/types'
+import { Favourite } from '../Favourite/Favourite'
 import { Rating } from '../Rating/Rating'
 
 export const RecipeHero: FC<{
@@ -14,6 +15,7 @@ export const RecipeHero: FC<{
     <section className='body-font'>
       <div className='container mx-auto flex py-6 md:flex-row flex-col items-center'>
         <div className='lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0'>
+          <Favourite className='absolute top-5 right-5' isFavourite={false}/>
           <img className='object-cover object-center rounded-lg'
             alt='hero'
             // eslint-disable-next-line max-len

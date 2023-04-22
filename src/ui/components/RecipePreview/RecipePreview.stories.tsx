@@ -19,3 +19,5 @@ const defaultArgs = {
 export const Default = template({ ...defaultArgs })
 
 export const Demo = template({ ...defaultArgs, onImageClick: console.log })
+
+export const Favourite = template({ ...defaultArgs, isFavourite: true })
