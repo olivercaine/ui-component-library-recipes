@@ -49,7 +49,7 @@ Add the following to your dependencies:
 "@olivercaine/ui-component-library-recipes": "<VERSION>",
 ```
 
-VERSION can be found on the [packages page](https://github.com/olivercaine/ui-component-library/pkgs/npm/ui-component-library).
+VERSION can be found on the [packages page](https://github.com/olivercaine/ui-component-library-recipes/pkgs/npm/ui-component-library-recipes).
 
 Then run 
 
