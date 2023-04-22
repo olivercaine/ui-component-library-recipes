@@ -16,6 +16,6 @@
   ],
   "typescript.format.semicolons": "remove",
   "workbench.colorCustomizations": {
-    "titleBar.activeForeground": "#F6D479"
+    "titleBar.activeForeground": "#b746ef"
   }
 }
