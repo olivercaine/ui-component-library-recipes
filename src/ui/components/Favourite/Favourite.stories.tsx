@@ -15,4 +15,4 @@ const defaultArgs = {
 
 export const Default = template({ ...defaultArgs })
 
-export const Disabled = template({ ...defaultArgs })
+export const IsFavourite = template({ ...defaultArgs, isFavourite: true })

@@ -4,14 +4,16 @@ import { Recipe } from '../../../model/types'
 
 export const RecipePreview = ({
   recipe,
-  onImageClick
+  onImageClick,
+  isFavourite = false
 }: {
   recipe: Partial<Recipe>,
   onImageClick: any,
+  isFavourite?: boolean
 }) =>
   <div className='p-4 md:w-1/4 drop-shadow-xl text-neutral-400' data-testid='RecipePreview'>
     <div className='h-full bg-light-grey border-gray-200 border-opacity-60 rounded-lg overflow-hidden'>
-      <Favourite className='absolute top-5 right-5'/>
+      <Favourite className='absolute top-5 right-5' isFavourite={isFavourite}/>
       <img className='lg:h-48 md:h-36 w-full object-cover object-center'
         src={recipe?.media?.images?.length ? recipe.media.images[0].image : undefined} alt='blog'/>
       <div className='p-6'>

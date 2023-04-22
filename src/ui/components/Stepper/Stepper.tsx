@@ -33,16 +33,24 @@ export const Stepper = ({
 
   return (
     <div data-testid='Stepper'>
-      <Button disabled={!value} text='-' onClick={handleDecrease} css='border-0 rounded-r-none cta-bg bg-amber-300'/>
-      <input type='text'
-        value={value}
-        onChange={handleInput}
-        name={name}
-        id={id}
-        className='flex-1 border-0 bg-transparent py-1.5 pl-1 text-center w-12
-      placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6'
+      {value > 0 &&
+        <span>
+          <Button disabled={!value} text='-' onClick={handleDecrease} css='border-0 rounded-r-none cta-bg bg-amber-300'/>
+          <input type='text'
+            value={value}
+            onChange={handleInput}
+            name={name}
+            id={id}
+            className='flex-1 border-0 bg-transparent py-1.5 pl-1 text-center w-12 placeholder:text-gray-400
+            focus:ring-0 sm:text-sm sm:leading-6'
+          />
+        </span>
+      }
+      <Button disabled={value === max}
+        text={value ? '+' : 'Add to cart'}
+        onClick={handleIncrease}
+        css={`border-0 bg-amber-300 ${value ? 'rounded-l-none' : ''}`}
       />
-      <Button disabled={value === max} text='+' onClick={handleIncrease} css='border-0 rounded-l-none bg-amber-300'/>
     </div>
   )
 }
