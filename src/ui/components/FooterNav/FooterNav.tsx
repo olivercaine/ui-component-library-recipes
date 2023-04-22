@@ -7,9 +7,9 @@ import Paper from '@mui/material/Paper'
 import * as React from 'react'
 
 export const FooterNav = () =>
-  <div data-testid='FooterNav' className='bg-light-grey'>
+  <div data-testid='FooterNav'>
     <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
-      <BottomNavigation sx={{ width: '100%', backgroundColor: '#282828' }}
+      <BottomNavigation sx={{ width: '100%', backgroundColor: '#14181b' }}
         showLabels
         value={1}
         onChange={console.log}
@@ -17,15 +17,17 @@ export const FooterNav = () =>
         <BottomNavigationAction
           label='Search'
           value='recents'
+          sx={{ color: '#a3a3a3', font: '#a3a3a3' }}
           icon={<ManageSearchIcon />} />
         <BottomNavigationAction
           label='Favorites'
           value='favorites'
-          color={ '#6466f1'}
-          icon={<FavoriteIcon color={'primary'} />} />
+          sx={{ color: '#a3a3a3', font: '#a3a3a3' }}
+          icon={<FavoriteIcon sx={{ color: '#a3a3a3', font: '#a3a3a3' }} />} />
         <BottomNavigationAction
           label='Shopping List'
           value='nearby'
+          sx={{ color: '#a3a3a3', font: '#a3a3a3' }}
           icon={<ShoppingCartIcon />} />
       </BottomNavigation>
     </Paper>

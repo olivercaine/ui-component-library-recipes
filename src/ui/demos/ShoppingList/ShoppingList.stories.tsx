@@ -17,7 +17,7 @@ const template = storyTemplate(ShoppingList)
 
 const defaultArgs = {
   appName: 'RecipeUI',
-  recipe
+  recipes: [recipe, recipe]
 }
 
 export const Default = template({ ...defaultArgs })
