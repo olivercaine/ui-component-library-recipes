@@ -1,6 +1,6 @@
 import { ComponentMeta } from '@storybook/react'
 import { storyTemplate } from '../../../../.storybook/helpers'
-import { Pagination } from './Pagination'
+import { Pagination } from '../../../index'
 
 export default {
   component: Pagination,

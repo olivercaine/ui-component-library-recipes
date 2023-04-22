@@ -1,6 +1,5 @@
 import React from 'react'
-import truncate from 'truncate'
-import { Stepper } from '../../..'
+import { Favourite, Stepper } from '../../..'
 import { Recipe } from '../../../model/types'
 
 export const RecipePreview = ({
@@ -12,11 +11,11 @@ export const RecipePreview = ({
 }) =>
   <div className='p-4 md:w-1/4 drop-shadow-xl text-neutral-400' data-testid='RecipePreview'>
     <div className='h-full bg-light-grey border-gray-200 border-opacity-60 rounded-lg overflow-hidden'>
+      <Favourite className='absolute top-5 right-5'/>
       <img className='lg:h-48 md:h-36 w-full object-cover object-center'
         src={recipe?.media?.images?.length ? recipe.media.images[0].image : undefined} alt='blog'/>
       <div className='p-6'>
         <h1 className='title-font text-lg font-medium mb-3 text-neutral-300'>{recipe.title}</h1>
-        <p className='leading-relaxed mb-3'>{truncate(recipe?.description || '', 100)}</p>
         <div className='flex items-center flex-wrap '>
           <a className='text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0'>
             <Stepper onChange={console.log} />

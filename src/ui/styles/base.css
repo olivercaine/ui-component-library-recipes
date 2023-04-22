@@ -36,3 +36,7 @@ body,
 .cta-bg {
   color: var(--primary);
 }
+
+.bg-indigo {
+  background-color: #6466f1;
+}
