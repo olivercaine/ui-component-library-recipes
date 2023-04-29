@@ -1,6 +1,6 @@
+import { recipes } from '@olivercaine/recipe-data'
 import { ComponentMeta } from '@storybook/react'
 import { storyTemplate } from '../../../../.storybook/helpers'
-import { recipe } from '../../../model/examples'
 import { ShoppingList } from './ShoppingList'
 
 export default {
@@ -17,7 +17,7 @@ const template = storyTemplate(ShoppingList)
 
 const defaultArgs = {
   appName: 'RecipeUI',
-  recipes: [recipe, recipe]
+  recipes
 }
 
 export const Default = template({ ...defaultArgs })

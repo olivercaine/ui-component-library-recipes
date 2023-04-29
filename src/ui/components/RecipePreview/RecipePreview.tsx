@@ -1,13 +1,13 @@
+import { IRecipe } from '@olivercaine/recipe-data/types'
 import React from 'react'
 import { Favourite, Stepper } from '../../..'
-import { Recipe } from '../../../model/types'
 
 export const RecipePreview = ({
   recipe,
   onImageClick,
   isFavourite = false
 }: {
-  recipe: Partial<Recipe>,
+  recipe: Partial<IRecipe>,
   onImageClick: any,
   isFavourite?: boolean
 }) =>
@@ -15,7 +15,7 @@ export const RecipePreview = ({
     <div className='h-full bg-light-grey border-gray-200 border-opacity-60 rounded-lg overflow-hidden'>
       <Favourite className='absolute top-5 right-5' isFavourite={isFavourite}/>
       <img className='lg:h-48 md:h-36 w-full object-cover object-center'
-        src={recipe?.media?.images?.length ? recipe.media.images[0].image : undefined} alt='blog'/>
+        src={recipe?.media?.images?.length ? recipe?.media?.images[0]?.image : undefined} alt='blog'/>
       <div className='p-6'>
         <h1 className='title-font text-lg font-medium mb-3 text-neutral-300'>{recipe.title}</h1>
         <div className='flex items-center flex-wrap '>

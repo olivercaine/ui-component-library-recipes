@@ -1,12 +1,12 @@
+import { IRecipe } from '@olivercaine/recipe-data/types'
 import React, { FC } from 'react'
-import { Recipe } from '../../../model/types'
 import { RecipePreview } from '../../components/RecipePreview/RecipePreview'
 
 export interface IProps {
   /**
   Text to be shown in the button
   */
-  recipes: Recipe[]
+  recipes: IRecipe[]
 }
 
 export const Recipes: FC<IProps> = ({ recipes }: IProps) =>

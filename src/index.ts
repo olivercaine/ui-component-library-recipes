@@ -1,4 +1,3 @@
-import { recipe } from './model/examples'
 import { Button } from './ui/basics/Button/Button'
 import { Checkbox } from './ui/basics/Checkbox/Checkbox'
 import { CookingInstruction } from './ui/components/CookingInstruction/CookingInstruction'
@@ -14,7 +13,6 @@ import { RecipeDetail } from './ui/features/RecipeDetail/RecipeDetail'
 import { Recipes } from './ui/features/Recipes/Recipes'
 
 export {
-  recipe as exampleRecipe,
   Button,
   Checkbox,
   CookingInstructions,

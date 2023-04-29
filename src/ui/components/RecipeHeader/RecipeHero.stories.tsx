@@ -1,6 +1,6 @@
+import { recipes } from '@olivercaine/recipe-data'
 import { ComponentMeta } from '@storybook/react'
 import { storyTemplate } from '../../../../.storybook/helpers'
-import { recipe } from '../../../model/examples'
 import { RecipeHero } from './RecipeHero'
 
 export default {
@@ -11,7 +11,7 @@ export default {
 const template = storyTemplate(RecipeHero)
 
 const defaultArgs = {
-  recipe
+  recipe: recipes[0]
 }
 
 export const Default = template({ ...defaultArgs })

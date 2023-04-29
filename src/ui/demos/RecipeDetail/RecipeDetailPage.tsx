@@ -1,5 +1,5 @@
+import { IRecipe } from '@olivercaine/recipe-data/types'
 import * as React from 'react'
-import { Recipe } from '../../../model/types'
 import { FooterNav } from '../../components/FooterNav/FooterNav'
 import { RecipeDetail } from '../../features/RecipeDetail/RecipeDetail'
 import { AppHeader } from '../../templates/AppHeader'
@@ -12,7 +12,7 @@ export const RecipeDetailPage: React.FC<{
     /**
   The recipe to use
   */
-  recipe: Recipe
+  recipe: IRecipe
 }> = ({
   appName,
   recipe

@@ -1,5 +1,5 @@
+import { IRecipe } from '@olivercaine/recipe-data/types'
 import * as React from 'react'
-import { Recipe } from '../../../model/types'
 import { Checkbox } from '../../basics/Checkbox/Checkbox'
 import { FooterNav } from '../../components/FooterNav/FooterNav'
 import { AppHeader } from '../../templates/AppHeader'
@@ -12,7 +12,7 @@ export const ShoppingList: React.FC<{
     /**
   The recipe to use
   */
-  recipes: Recipe[]
+  recipes: IRecipe[]
 }> = ({
   appName,
   recipes
