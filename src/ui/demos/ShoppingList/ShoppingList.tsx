@@ -1,9 +1,10 @@
 import { IRecipe } from '@olivercaine/recipe-data/types'
 import * as React from 'react'
+import { ShoppingList } from '../../../index'
 import { AppHeader } from '../../templates/AppHeader/AppHeader'
 import { FooterNav } from '../../templates/FooterNav/FooterNav'
 
-export const ShoppingList: React.FC<{
+export const ShoppingListDemo: React.FC<{
   /**
   The name of the app
   */
