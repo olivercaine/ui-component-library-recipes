@@ -1,5 +1,5 @@
 import { ComponentMeta } from '@storybook/react'
-import { storyTemplate } from '../../../.storybook/helpers'
+import { storyTemplate } from '../../../../.storybook/helpers'
 import { AppHeader } from './AppHeader'
 
 export default {

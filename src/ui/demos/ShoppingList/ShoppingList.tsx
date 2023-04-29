@@ -1,8 +1,8 @@
 import { IRecipe } from '@olivercaine/recipe-data/types'
 import * as React from 'react'
 import { Checkbox } from '../../basics/Checkbox/Checkbox'
-import { FooterNav } from '../../components/FooterNav/FooterNav'
-import { AppHeader } from '../../templates/AppHeader'
+import { AppHeader } from '../../templates/AppHeader/AppHeader'
+import { FooterNav } from '../../templates/FooterNav/FooterNav'
 
 export const ShoppingList: React.FC<{
   /**
