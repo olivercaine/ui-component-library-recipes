@@ -1,4 +1,5 @@
 import { recipes } from '@olivercaine/recipe-data'
+import { action } from '@storybook/addon-actions'
 import { ComponentMeta } from '@storybook/react'
 import { storyTemplate } from '../../../../.storybook/helpers'
 import { Recipes } from '../../../index'
@@ -11,7 +12,9 @@ export default {
 const template = storyTemplate(Recipes)
 
 const defaultArgs = {
-  recipes
+  recipes,
+  onStepperChange: action,
+  onImageClick: action
 }
 
 export const Default = template({ ...defaultArgs })

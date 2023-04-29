@@ -7,9 +7,11 @@ export interface IProps {
   Text to be shown in the button
   */
   recipes: IRecipe[]
+  onImageClick: any,
+  onStepperChange: any,
 }
 
-export const Recipes: FC<IProps> = ({ recipes }: IProps) =>
+export const Recipes: FC<IProps> = ({ recipes, onImageClick, onStepperChange }: IProps) =>
   <div className='Recipes'>
-    {recipes.map(recipe => <RecipePreview onImageClick={console.log} recipe={recipe} />)}
+    {recipes.map(recipe => <RecipePreview onStepperChange={onStepperChange} onImageClick={onImageClick} recipe={recipe} />)}
   </div>
