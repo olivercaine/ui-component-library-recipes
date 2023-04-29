@@ -1,3 +1,4 @@
+import { action } from '@storybook/addon-actions'
 import { linkTo } from '@storybook/addon-links'
 import { ComponentMeta } from '@storybook/react'
 import { storyTemplate } from '../../../../.storybook/helpers'
@@ -16,7 +17,8 @@ export default {
 const template = storyTemplate(RecipeSearchPage)
 
 const defaultArgs = {
-  onImageClick: linkTo('Demos/RecipeDetailPage')
+  onImageClick: linkTo('Demos/RecipeDetailPage'),
+  onStepperChange: action
 }
 
 export const Default = template({ ...defaultArgs })
