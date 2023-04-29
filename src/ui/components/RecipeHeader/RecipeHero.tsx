@@ -1,5 +1,5 @@
+import { IRecipe } from '@olivercaine/recipe-data/types'
 import React, { FC } from 'react'
-import { Recipe } from '../../../model/types'
 import { Favourite } from '../Favourite/Favourite'
 import { Rating } from '../Rating/Rating'
 
@@ -7,7 +7,7 @@ export const RecipeHero: FC<{
   /**
   The recipe to show
   */
-  recipe: Partial<Recipe>
+  recipe: Partial<IRecipe>
 }> = ({
   recipe
 }) =>

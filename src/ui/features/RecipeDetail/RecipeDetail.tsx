@@ -1,5 +1,5 @@
+import { IRecipe } from '@olivercaine/recipe-data/types'
 import React, { FC } from 'react'
-import { Recipe } from '../../../model/types'
 import { CookingInstructions } from '../../components/CookingInstructions/CookingInstructions'
 import { Ingredients } from '../../components/Ingredients/Ingredients'
 import { RecipeHero } from '../../components/RecipeHeader/RecipeHero'
@@ -8,7 +8,7 @@ export interface IProps {
   /**
   The recipe to display
   */
-  recipe: Recipe
+  recipe: IRecipe
 }
 
 export const RecipeDetail: FC<IProps> = ({ recipe }: IProps) =>

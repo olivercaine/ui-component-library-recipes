@@ -1,11 +1,11 @@
+import { IRecipe } from '@olivercaine/recipe-data/types'
 import * as React from 'react'
 import { CookingInstruction } from '../../..'
-import { Recipe } from '../../../model/types'
 
 export const CookingInstructions = ({
   recipe
 }: {
-  recipe: Partial<Recipe>
+  recipe: Partial<IRecipe>
 }) =>
   <div className='CookingInstructions p-10' data-testid='CookingInstructions'>
     <h2 className='text-center title-font text-2xl text-neutral-300'>Cooking Instructions</h2>
