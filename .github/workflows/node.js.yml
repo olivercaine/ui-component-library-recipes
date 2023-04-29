@@ -24,6 +24,8 @@ jobs:
         cache: 'npm'
         node-version: ${{ matrix.node }}
     - run: npm ci
+      env:
+        MY_GITHUB_TOKEN_CLASSIC: ${{secrets.GITHUB_TOKEN}}   
     - run: npm run health-check
 
   package:
