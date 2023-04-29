@@ -1,23 +1,18 @@
-import { recipes } from '@olivercaine/recipe-data'
+import { recipes as recipesData } from '@olivercaine/recipe-data'
 import { ComponentMeta } from '@storybook/react'
 import { storyTemplate } from '../../../../.storybook/helpers'
-import { ShoppingList } from './ShoppingList'
+import { ShoppingListDemo } from './ShoppingList'
 
 export default {
-  component: ShoppingList,
+  component: ShoppingListDemo,
   title: 'Demos/ShoppingList',
-  parameters: {
-    viewport: {
-      defaultViewport: 'desktop',
-    },
-  },
-} as ComponentMeta<typeof ShoppingList>
+} as ComponentMeta<typeof ShoppingListDemo>
 
-const template = storyTemplate(ShoppingList)
+const template = storyTemplate(ShoppingListDemo)
 
 const defaultArgs = {
   appName: 'RecipeUI',
-  recipes
+  recipes: recipesData
 }
 
 export const Default = template({ ...defaultArgs })
