@@ -11,6 +11,7 @@ import { RecipePreview } from './ui/components/RecipePreview/RecipePreview'
 import { Stepper } from './ui/components/Stepper/Stepper'
 import { RecipeDetail } from './ui/features/RecipeDetail/RecipeDetail'
 import { Recipes } from './ui/features/Recipes/Recipes'
+import { ShoppingList } from './ui/features/ShoppingList/ShoppingList'
 import { FooterNav } from './ui/templates/FooterNav/FooterNav'
 
 export {
@@ -26,6 +27,7 @@ export {
   RecipePreview,
   Recipes,
   recipes as exampleRecipes,
+  ShoppingList,
   Stepper,
   Rating,
 }

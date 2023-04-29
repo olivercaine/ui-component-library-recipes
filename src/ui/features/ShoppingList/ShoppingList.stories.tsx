@@ -1,7 +1,7 @@
 import { recipes } from '@olivercaine/recipe-data'
 import { ComponentMeta } from '@storybook/react'
 import { storyTemplate } from '../../../../.storybook/helpers'
-import { ShoppingList } from './ShoppingList'
+import { ShoppingList } from '../../../index'
 
 export default {
   component: ShoppingList,
