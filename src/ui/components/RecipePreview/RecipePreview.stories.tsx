@@ -1,5 +1,5 @@
 import { recipes } from '@olivercaine/recipe-data'
-import { linkTo } from '@storybook/addon-links'
+import { action } from '@storybook/addon-actions'
 import { ComponentMeta } from '@storybook/react'
 import { storyTemplate } from '../../../../.storybook/helpers'
 import { RecipePreview } from '../../../index'
@@ -13,11 +13,10 @@ const template = storyTemplate(RecipePreview)
 
 const defaultArgs = {
   recipe: recipes[0],
-  onImageClick: linkTo('Components/Stepper', 'Default')
+  onImageClick: action,
+  onStepperChange: action,
 }
 
 export const Default = template({ ...defaultArgs })
-
-export const Demo = template({ ...defaultArgs, onImageClick: console.log })
 
 export const Favourite = template({ ...defaultArgs, isFavourite: true })
