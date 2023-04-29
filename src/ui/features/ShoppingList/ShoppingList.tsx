@@ -1,24 +1,17 @@
 import { IRecipe } from '@olivercaine/recipe-data/types'
 import * as React from 'react'
 import { Checkbox } from '../../basics/Checkbox/Checkbox'
-import { AppHeader } from '../../templates/AppHeader/AppHeader'
-import { FooterNav } from '../../templates/FooterNav/FooterNav'
 
 export const ShoppingList: React.FC<{
-  /**
-  The name of the app
-  */
   appName?: string
     /**
   The recipe to use
   */
   recipes: IRecipe[]
 }> = ({
-  appName,
   recipes
 }) =>
   <>
-    <AppHeader appName={appName}/>
     <div className='h-screen text-neutral-400'>
       <div className='max-w-md mx-auto shadow-lg md:max-w-5xl pb-20'>
         <div className='md:flex'>
@@ -28,7 +21,6 @@ export const ShoppingList: React.FC<{
                 <h1 className='text-xl font-medium text-neutral-300'>Shopping Cart</h1>
                 {recipes.map((recipe) =>
                   recipe.ingredients?.map((ingredient) =>
-
                     <div className='flex justify-between items-center pt-6'>
                       <div className='flex  items-center'>
                         <img src={ingredient.media.images?.length ? ingredient?.media?.images[0]?.image : undefined}
@@ -51,5 +43,4 @@ export const ShoppingList: React.FC<{
         </div>
       </div>
     </div>
-    <FooterNav />
   </>

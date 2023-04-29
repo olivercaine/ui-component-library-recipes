@@ -1,9 +1,9 @@
 import { recipes } from '@olivercaine/recipe-data'
 import * as React from 'react'
-import { FooterNav } from '../../components/FooterNav/FooterNav'
 import { Pagination } from '../../components/Pagination/Pagination'
 import { RecipePreview } from '../../components/RecipePreview/RecipePreview'
-import { AppHeader } from '../../templates/AppHeader'
+import { AppHeader } from '../../templates/AppHeader/AppHeader'
+import { FooterNav } from '../../templates/FooterNav/FooterNav'
 
 export const RecipeSearchPage = ({
   appName,

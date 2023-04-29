@@ -5,7 +5,7 @@ import { FooterNav } from '../../../index'
 
 export default {
   component: FooterNav,
-  title: 'Components/FooterNav',
+  title: 'Templates/FooterNav',
 } as ComponentMeta<typeof FooterNav>
 
 const template = storyTemplate(FooterNav)
