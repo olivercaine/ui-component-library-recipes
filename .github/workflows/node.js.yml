@@ -61,6 +61,7 @@ jobs:
         with:
           cache: 'npm'
           node-version: ${{ matrix.node }}
+      - run: env
       - run: npm ci
       - run: npm run build
       - run: npm version prerelease --preid=$GITHUB_RUN_ID --no-git-tag-version
