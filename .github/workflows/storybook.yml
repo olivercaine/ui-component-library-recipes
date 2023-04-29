@@ -12,6 +12,8 @@ jobs:
           persist-credentials: false
       - name: Install Dependencies
         run: npm ci
+        env:
+          MY_GITHUB_TOKEN_CLASSIC: ${{secrets.GITHUB_TOKEN}}  
       - name: Build Static Storybook
         run: npm run storybook:build
       - name: Deploy to GitHub Pages
