@@ -1,5 +1,5 @@
+import { ICookingInstructionsEntity } from '@olivercaine/recipe-data/types'
 import * as React from 'react'
-import { CookingInstructionsEntity } from '../../../model/types'
 
 export const CookingInstruction = ({
   index,
@@ -8,7 +8,7 @@ export const CookingInstruction = ({
   // last,
 }: {
   index: number
-  cookingInstruction: Partial<CookingInstructionsEntity>
+  cookingInstruction: Partial<ICookingInstructionsEntity>
   // first: boolean
   // last: boolean
 }) =>
