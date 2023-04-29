@@ -11,6 +11,7 @@ on:
 
 jobs:
   build:
+    name: Build and test package
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -38,7 +39,6 @@ jobs:
         with:
           cache: 'npm'
           node-version: ${{ matrix.node }}
-      - run: env
       - run: npm ci
         env:
           MY_GITHUB_TOKEN_CLASSIC: ${{secrets.GITHUB_TOKEN}}   
@@ -49,8 +49,8 @@ jobs:
       - name: Upload
         uses: actions/upload-artifact@v2
         with:
-            name: package
-            path: "./*.tgz"
+          name: package
+          path: "./*.tgz"
 
   publish:
     name: "Publish to GitHub Packages"

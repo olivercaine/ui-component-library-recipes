@@ -1,3 +1,4 @@
+import { recipes } from '@olivercaine/recipe-data'
 import { Button } from './ui/basics/Button/Button'
 import { Checkbox } from './ui/basics/Checkbox/Checkbox'
 import { CookingInstruction } from './ui/components/CookingInstruction/CookingInstruction'
@@ -24,6 +25,7 @@ export {
   RecipeDetail,
   RecipePreview,
   Recipes,
+  recipes as exampleRecipes,
   Stepper,
   Rating,
 }
