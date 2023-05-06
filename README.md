@@ -70,6 +70,8 @@ export const Button = () =>
   </>
 ```
 
+4. Example recipe data can be installed from https://github.com/olivercaine/recipe-data
+
 ## How to run locally
 
 1. `npm ci`
@@ -77,9 +79,7 @@ export const Button = () =>
 
 ## Credits
 
-1. https://labs.openai.com for generating to recipe
-2. https://chat.openai.com for generating the recipe images (https://labs.openai.com/sc/dE4xFAJiJysVYdHW4ds4Fgmb)
-3. https://tailblocks.cc for providing helpful pre-built components
+1. https://tailblocks.cc for providing helpful pre-built components
 
 ## Troubleshooting
 
