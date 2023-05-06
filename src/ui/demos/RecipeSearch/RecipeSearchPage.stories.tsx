@@ -1,3 +1,4 @@
+import { recipes } from '@olivercaine/recipe-data'
 import { action } from '@storybook/addon-actions'
 import { linkTo } from '@storybook/addon-links'
 import { ComponentMeta } from '@storybook/react'
@@ -18,7 +19,8 @@ const template = storyTemplate(RecipeSearchPage)
 
 const defaultArgs = {
   onImageClick: linkTo('Demos/RecipeDetailPage'),
-  onStepperChange: action
+  onStepperChange: action,
+  recipes: [recipes[0], recipes[0], recipes[0], recipes[0], recipes[0], recipes[0]]
 }
 
 export const Default = template({ ...defaultArgs })

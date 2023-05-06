@@ -18,3 +18,8 @@ const defaultArgs: IProps = {
 }
 
 export const Default = template({ ...defaultArgs })
+
+export const MissingImage = template({
+  ...defaultArgs,
+  src: 'https://non-existent-url',
+})
