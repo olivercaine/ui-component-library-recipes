@@ -103,8 +103,8 @@ Solution2: Make sure that the name in package.json starts with `@[GitHub usernam
 
 ## Todo
 
-1. Recipe detail component responsiveness
-2. Placeholder images    
+1. Placeholder images    
    1. Rename Placeholders.stories-disabled.tsx to enable it
    2. Fix import of placeholder images
+2. Gracefully handle missing images
 3. Change main logo

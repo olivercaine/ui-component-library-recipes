@@ -19,6 +19,7 @@
     "storybook:start-and-test": "start-server-and-test storybook 6006 'storybook:test'",
     "build": "rollup -c",
     "health-check": "time concurrently --group --kill-others-on-fail --timings 'npm run lint --quiet' 'npm run build' 'npm run storybook:build' 'npm run storybook:start-and-test'",
+    "update-recipe-data": "npm install --save-dev @olivercaine/recipe-data@latest",
     "prepublishOnly": "yarn build"
   },
   "husky": {
@@ -38,7 +39,7 @@
   ],
   "devDependencies": {
     "@babel/core": "^7.21.4",
-    "@olivercaine/recipe-data": "0.0.1-4900779009.0",
+    "@olivercaine/recipe-data": "0.0.1-4900855264.0",
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^15.0.2",
     "@storybook/addon-actions": "^6.5.16",
