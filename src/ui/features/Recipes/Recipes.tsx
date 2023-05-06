@@ -1,3 +1,4 @@
+import { Stepper } from '@mui/material'
 import { IRecipe } from '@olivercaine/recipe-data/types'
 import React, { FC } from 'react'
 import { RecipePreview } from '../../components/RecipePreview/RecipePreview'
@@ -8,10 +9,9 @@ export interface IProps {
   */
   recipes: IRecipe[]
   onImageClick: any,
-  onStepperChange: any,
 }
 
-export const Recipes: FC<IProps> = ({ recipes, onImageClick, onStepperChange }: IProps) =>
+export const Recipes: FC<IProps> = ({ recipes, onImageClick }: IProps) =>
   <div className='Recipes'>
-    {recipes.map(recipe => <RecipePreview onStepperChange={onStepperChange} onImageClick={onImageClick} recipe={recipe} />)}
+    {recipes.map(recipe => <RecipePreview stepperComponent={<Stepper />} onImageClick={onImageClick} recipe={recipe} />)}
   </div>

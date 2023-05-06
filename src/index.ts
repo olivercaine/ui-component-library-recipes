@@ -1,6 +1,7 @@
 import { recipes } from '@olivercaine/recipe-data'
 import { Button } from './ui/basics/Button/Button'
 import { Checkbox } from './ui/basics/Checkbox/Checkbox'
+import { Image } from './ui/basics/Image/Image'
 import { CookingInstruction } from './ui/components/CookingInstruction/CookingInstruction'
 import { CookingInstructions } from './ui/components/CookingInstructions/CookingInstructions'
 import { Favourite } from './ui/components/Favourite/Favourite'
@@ -21,6 +22,7 @@ export {
   CookingInstruction,
   Favourite,
   FooterNav,
+  Image,
   Ingredients,
   Pagination,
   RecipeDetail,

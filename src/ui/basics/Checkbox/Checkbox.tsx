@@ -2,9 +2,8 @@ import React, { ChangeEventHandler, FC } from 'react'
 
 export const Checkbox: FC<{
   /**
-  The text to be shown in the button
+  Any custom CSS
   */
-  text?: string
   css?: string
   /**
   The callback for when the button is clicked
@@ -12,7 +11,6 @@ export const Checkbox: FC<{
   onChange?: ChangeEventHandler<HTMLInputElement>
   disabled?: boolean
 }> = ({
-  text = 'Button text',
   onChange,
   css,
   disabled = false

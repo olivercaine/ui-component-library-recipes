@@ -12,9 +12,9 @@ export default {
 const template = storyTemplate(Checkbox)
 
 const defaultArgs = {
-  onChange: action('Clicked'),
+  onChange: action('onChange'),
 }
 
 export const Default = template({ ...defaultArgs })
 
-export const CustomText = template({ ...defaultArgs, text: 'Custom Checkbox text', onChange: jest.fn() })
+export const CustomText = template({ ...defaultArgs, onChange: jest.fn() })

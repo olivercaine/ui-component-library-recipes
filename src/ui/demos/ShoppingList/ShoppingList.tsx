@@ -19,6 +19,6 @@ export const ShoppingListDemo: React.FC<{
 }) =>
   <>
     <AppHeader appName={appName}/>
-    <ShoppingList recipes={recipes} />
+    <ShoppingList onCheckboxChange={console.log} recipes={recipes} />
     <FooterNav />
   </>
