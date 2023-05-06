@@ -30,7 +30,7 @@ React Storybook containing recipe components
    
    1. Enable "Read and write permissions" in [GitHub Repo] > Settings > Actions > General to allow this
 
-## How to Use in an app
+## How to use in an app
 
 1. Register the GitHub Package Registry in your .npmrc file ([additional docs](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry)):
 
@@ -60,14 +60,13 @@ npm install / yarn install
 3. Import the package into your app:
 
 ```typescript
-// CustomComponentWrapper.tsx
-import { CustomComponent } from '@olivercaine/ui-component-library-recipes'
+// IngredientsWrapper.tsx
+import { Ingredients } from '@olivercaine/ui-component-library-recipes'
+import { recipes } from '@olivercaine/recipe-data'
 import React from 'react'
 
-export const Button = () =>
-  <>
-    <CustomComponent key={1} />
-  </>
+export const IngredientsWrapper = () =>
+  <Ingredients recipe={recipe}/>
 ```
 
 4. Example recipe data can be installed from https://github.com/olivercaine/recipe-data
