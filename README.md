@@ -89,3 +89,10 @@ Cause: GitHub Actions does not have permission to publish the package
 Solution: Enable [GitHub Repo] > Settings > Actions > General > "Read and write permissions"
 
 Solution2: Make sure that the name in package.json starts with `@[GitHub username]/`
+
+## Todo
+
+1. Recipe detail component responsiveness
+2. Placeholder images    
+   1. Rename Placeholders.stories-disabled.tsx to enable it
+   2. Fix import of placeholder images
