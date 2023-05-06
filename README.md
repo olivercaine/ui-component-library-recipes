@@ -30,7 +30,7 @@ React Storybook containing recipe components
    
    1. Enable "Read and write permissions" in [GitHub Repo] > Settings > Actions > General to allow this
 
-## How to Use
+## How to Use in an app
 
 1. Register the GitHub Package Registry in your .npmrc file ([additional docs](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry)):
 
@@ -69,6 +69,17 @@ export const Button = () =>
     <CustomComponent key={1} />
   </>
 ```
+
+## How to run locally
+
+1. `npm ci`
+2. `npm run dev`
+
+## Credits
+
+1. https://labs.openai.com for generating to recipe
+2. https://chat.openai.com for generating the recipe images (https://labs.openai.com/sc/dE4xFAJiJysVYdHW4ds4Fgmb)
+3. https://tailblocks.cc for providing helpful pre-built components
 
 ## Troubleshooting
 
