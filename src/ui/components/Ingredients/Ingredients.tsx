@@ -1,5 +1,6 @@
 import { IRecipe } from '@olivercaine/recipe-data/types'
 import * as React from 'react'
+import { Image } from '../../../index'
 
 export const Ingredients = ({
   recipe
@@ -13,8 +14,14 @@ export const Ingredients = ({
         <div className='flex relative pt-10 sm:items-center md:w-2/3 mx-auto'>
           <div className='flex-grow flex sm:items-center items-start flex-col sm:flex-row'>
             <div className='flex-shrink-0 w-24 h-24 rounded-full inline-flex items-center justify-center'>
-              <img className='h-auto max-w-full rounded-full shadow-xl'
-                src={ingredient.media.images?.length ? ingredient?.media?.images[0]?.image : undefined}/>
+              <Image
+                alt={ingredient.name}
+                // height={image.height}
+                placeholder={<span>Loading!</span>}
+                src={ingredient.media.images?.length ? ingredient?.media?.images[0]?.image : undefined}
+                width={100} />
+              {/* <img className='h-auto max-w-full rounded-full shadow-xl'
+                src={ingredient.media.images?.length ? ingredient?.media?.images[0]?.image : undefined}/> */}
             </div>
             <div className='flex-grow sm:pl-6 mt-6 sm:mt-0'>
               <p className='mb-1'>{ingredient.label}</p>

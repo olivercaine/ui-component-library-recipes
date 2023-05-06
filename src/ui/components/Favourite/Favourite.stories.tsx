@@ -1,3 +1,4 @@
+import { action } from '@storybook/addon-actions'
 import { ComponentMeta } from '@storybook/react'
 import { storyTemplate } from '../../../../.storybook/helpers'
 import { Favourite } from '../../../index'
@@ -10,7 +11,7 @@ export default {
 const template = storyTemplate(Favourite)
 
 const defaultArgs = {
-  // onChange: action('On Change'),
+  onClick: action('On click')
 }
 
 export const Default = template({ ...defaultArgs })

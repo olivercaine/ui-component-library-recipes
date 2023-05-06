@@ -1,4 +1,5 @@
 import { recipes } from '@olivercaine/recipe-data'
+import { action } from '@storybook/addon-actions'
 import { ComponentMeta } from '@storybook/react'
 import { storyTemplate } from '../../../../.storybook/helpers'
 import { ShoppingList } from '../../../index'
@@ -12,7 +13,8 @@ const template = storyTemplate(ShoppingList)
 
 const defaultArgs = {
   appName: 'RecipeUI',
-  recipes
+  recipes,
+  onCheckboxChange: action('onChange'),
 }
 
 export const Default = template({ ...defaultArgs })

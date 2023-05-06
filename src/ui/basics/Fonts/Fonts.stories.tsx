@@ -3,7 +3,7 @@ import React, { FC } from 'react'
 import { storyTemplate } from '../../../../.storybook/helpers'
 
 const Fonts: FC = () =>
-  <>
+  <div className='text-white'>
     <h2>H1 Text</h2>
     <h1>Some example H1 text</h1>
 
@@ -50,7 +50,7 @@ const Fonts: FC = () =>
 
     <h2>Link</h2>
     <a href='/'>This is a regular link</a>
-  </>
+  </div>
 
 export default {
   component: Fonts,

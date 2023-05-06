@@ -1,5 +1,6 @@
 import { ICookingInstructionsEntity } from '@olivercaine/recipe-data/types'
 import * as React from 'react'
+import { Image } from '../../../index'
 
 export const CookingInstruction = ({
   index,
@@ -20,7 +21,7 @@ export const CookingInstruction = ({
         </div>
         <div className='flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row'>
           <div className='flex-shrink-0 w-36 inline-flex items-center justify-center'>
-            <img
+            <Image
               className='rounded-lg shadow-xl'
               src={cookingInstruction?.media?.images?.length ? cookingInstruction?.media?.images[0]?.image : undefined} />
           </div>

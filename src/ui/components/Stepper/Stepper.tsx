@@ -35,9 +35,14 @@ export const Stepper = ({
     <div data-testid='Stepper'>
       {value > 0 &&
         <span>
-          <Button disabled={!value} text='-' onClick={handleDecrease} css='border-0 rounded-r-none cta-bg bg-amber-300'/>
+          <Button disabled={!value}
+            dataTestId='Stepper_button--decrement'
+            text='-'
+            onClick={handleDecrease} css='border-0 rounded-r-none bg-amber-300'
+          />
           <input type='text'
             value={value}
+            data-testId='Stepper_input'
             onChange={handleInput}
             name={name}
             id={id}
@@ -47,6 +52,7 @@ export const Stepper = ({
         </span>
       }
       <Button disabled={value === max}
+        dataTestId='Stepper_button--increment'
         text={value ? '+' : 'Add to cart'}
         onClick={handleIncrease}
         css={`border-0 bg-amber-300 ${value ? 'rounded-l-none' : ''}`}

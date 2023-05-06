@@ -1,29 +1,35 @@
 import { IRecipe } from '@olivercaine/recipe-data/types'
 import React from 'react'
-import { Favourite, Stepper } from '../../..'
+import { Image } from '../../../index'
 
 export const RecipePreview = ({
   recipe,
   onImageClick,
-  onStepperChange,
-  isFavourite = false
+  favouriteComponent,
+  stepperComponent
 }: {
   recipe: Partial<IRecipe>,
-  onImageClick: any,
-  onStepperChange: any,
-  isFavourite?: boolean
+  onImageClick: UIEvent | any,
+  favouriteComponent?: React.ReactNode | false
+  stepperComponent?: React.ReactNode
 }) =>
   <div className='p-4 md:w-1/4 drop-shadow-xl text-neutral-400 hover:scale-105 duration-300' data-testid='RecipePreview'>
     <div className='h-full bg-light-grey border-gray-200 border-opacity-60 rounded-lg overflow-hidden'>
-      <Favourite className='absolute top-5 right-5' isFavourite={isFavourite}/>
-      <img className='lg:h-48 md:h-36 w-full object-cover object-center' onClick={onImageClick(recipe.uid)}
-        src={recipe?.media?.images?.length ? recipe?.media?.images[0]?.image : undefined} alt='blog'/>
+      {favouriteComponent}
+      <Image
+        alt='blog'
+        className='lg:h-48 md:h-36 w-full object-cover object-center'
+        onClick={onImageClick(recipe.uid)}
+        src={recipe?.media?.images?.length ? recipe?.media?.images[0]?.image : undefined}
+      />
       <div className='p-6'>
         <h1 className='title-font text-lg font-medium mb-3 text-neutral-300'>{recipe.title}</h1>
         <div className='flex items-center flex-wrap '>
+          {stepperComponent &&
           <a className='text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0'>
-            <Stepper onChange={onStepperChange} />
+            {stepperComponent}
           </a>
+          }
           <span className='text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto
           leading-none text-sm pr-3 py-1 border-r-2 border-gray-200'>
             <svg className='w-4 h-4 mr-1' stroke='currentColor' stroke-width='2' fill='none' stroke-linecap='round'

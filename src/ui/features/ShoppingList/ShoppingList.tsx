@@ -1,5 +1,6 @@
 import { IRecipe } from '@olivercaine/recipe-data/types'
-import * as React from 'react'
+import React from 'react'
+import { Image } from '../../../index'
 import { Checkbox } from '../../basics/Checkbox/Checkbox'
 
 export const ShoppingList: React.FC<{
@@ -7,9 +8,11 @@ export const ShoppingList: React.FC<{
     /**
   The recipe to use
   */
-  recipes: IRecipe[]
+  recipes: IRecipe[],
+  onCheckboxChange: any
 }> = ({
-  recipes
+  recipes,
+  onCheckboxChange
 }) =>
   <>
     <div className='h-screen text-neutral-400'>
@@ -23,7 +26,7 @@ export const ShoppingList: React.FC<{
                   recipe.ingredients?.map((ingredient) =>
                     <div className='flex justify-between items-center pt-6'>
                       <div className='flex  items-center'>
-                        <img src={ingredient.media.images?.length ? ingredient?.media?.images[0]?.image : undefined}
+                        <Image src={ingredient.media.images?.length ? ingredient?.media?.images[0]?.image : undefined}
                           width='60'
                           className='rounded-full'
                         />
@@ -32,7 +35,7 @@ export const ShoppingList: React.FC<{
                         </div>
                       </div>
                       <div className='flex justify-center items-center'>
-                        <Checkbox/>
+                        <Checkbox onChange={onCheckboxChange}/>
                       </div>
                     </div>
                   )

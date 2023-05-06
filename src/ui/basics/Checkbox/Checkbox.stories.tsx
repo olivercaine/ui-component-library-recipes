@@ -12,7 +12,7 @@ export default {
 const template = storyTemplate(Checkbox)
 
 const defaultArgs = {
-  onChange: action('Clicked'),
+  onChange: action('onChange'),
 }
 
 export const Default = template({ ...defaultArgs })
