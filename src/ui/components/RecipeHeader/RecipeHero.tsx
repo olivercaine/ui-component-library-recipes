@@ -23,8 +23,8 @@ export const RecipeHero: FC<{
           {favouriteComponent}
           <Image className='object-cover object-center rounded-lg'
             alt='hero'
-            // eslint-disable-next-line max-len
-            src='https://raw.githubusercontent.com/olivercaine/ui-component-library-recipes/main/src/images/eggs-benedict/dalle-2023-04-15-122313-close-up-of-eggs-benedict-on-a-blue-plate-in-a-sunny-kitchen.png'/>
+            src={recipe.media?.images ? recipe.media?.images[0]?.image : undefined}
+          />
         </div>
         <div className='lg:flex-grow md:w-1/2 lg:pl-12 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center'>
           <h1 className='title-font sm:text-4xl text-3xl mb-4 font-medium text-neutral-300'>

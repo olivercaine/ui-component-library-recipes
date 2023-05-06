@@ -1,30 +1,24 @@
-import { Stepper } from '@mui/material'
-import { recipes } from '@olivercaine/recipe-data'
+import { IRecipe } from '@olivercaine/recipe-data/types'
 import React from 'react'
-import { Pagination } from '../../components/Pagination/Pagination'
-import { RecipePreview } from '../../components/RecipePreview/RecipePreview'
-import { AppHeader } from '../../templates/AppHeader/AppHeader'
-import { FooterNav } from '../../templates/FooterNav/FooterNav'
+import { AppHeader, FooterNav, Pagination, Recipes } from '../../../index'
 
 export const RecipeSearchPage = ({
   appName,
   onImageClick,
-  onStepperChange
+  onStepperChange,
+  recipes,
 }: {
   /**
   The name of the app
   */
   appName?: string
   onImageClick: any,
-  onStepperChange: any
+  onStepperChange: any,
+  recipes: IRecipe[]
 }) =>
   <>
     <AppHeader appName={appName}/>
-    <div className='flex flex-wrap -m-4'>
-      {Array(10).fill(0).map((_, i) =>
-        <RecipePreview stepperComponent={<Stepper />} recipe={recipes[0]} onImageClick={onImageClick}/>
-      )}
-    </div>
+    <Recipes onImageClick={console.log} recipes={recipes}/>
     <Pagination/>
     <FooterNav/>
   </>

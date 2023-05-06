@@ -13,9 +13,11 @@ import { Stepper } from './ui/components/Stepper/Stepper'
 import { RecipeDetail } from './ui/features/RecipeDetail/RecipeDetail'
 import { Recipes } from './ui/features/Recipes/Recipes'
 import { ShoppingList } from './ui/features/ShoppingList/ShoppingList'
+import { AppHeader } from './ui/templates/AppHeader/AppHeader'
 import { FooterNav } from './ui/templates/FooterNav/FooterNav'
 
 export {
+  AppHeader,
   Button,
   Checkbox,
   CookingInstructions,
