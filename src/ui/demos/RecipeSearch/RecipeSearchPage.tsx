@@ -1,3 +1,4 @@
+import { Stepper } from '@mui/material'
 import { recipes } from '@olivercaine/recipe-data'
 import * as React from 'react'
 import { Pagination } from '../../components/Pagination/Pagination'
@@ -21,7 +22,7 @@ export const RecipeSearchPage = ({
     <AppHeader appName={appName}/>
     <div className='flex flex-wrap -m-4'>
       {Array(10).fill(0).map((_, i) =>
-        <RecipePreview onStepperChange={onStepperChange} recipe={recipes[0]} onImageClick={onImageClick}/>
+        <RecipePreview stepperComponent={<Stepper />} recipe={recipes[0]} onImageClick={onImageClick}/>
       )}
     </div>
     <Pagination/>
