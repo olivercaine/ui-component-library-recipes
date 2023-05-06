@@ -12,8 +12,8 @@ export interface IProps {
 }
 
 export const RecipeDetail: FC<IProps> = ({ recipe }: IProps) =>
-  <div className='grid grid-cols-3 gap-8 py-10 px-16 pb-20'>
-    <div className='col-span-3'>
+  <div className='grid grid-cols-6 gap-8 py-10 md:px-16 pb-20'>
+    <div className='col-span-6'>
       <RecipeHero recipe={recipe}/>
     </div>
     {/* <div className='rounded-lg'>
@@ -22,10 +22,10 @@ export const RecipeDetail: FC<IProps> = ({ recipe }: IProps) =>
         <li>Prep time 20 mins</li>
       </ul>
     </div> */}
-    <div className='bg-light-grey self-start rounded-lg shadow-xl'>
+    <div className='col-span-6 md:col-span-3 lg:col-span-2 bg-light-grey self-start rounded-lg shadow-xl'>
       <Ingredients recipe={recipe}/>
     </div>
-    <div className='col-span-2 bg-light-grey rounded-lg shadow-xl'>
+    <div className='col-span-6 md:col-span-3 lg:col-span-4 bg-light-grey rounded-lg shadow-xl'>
       <CookingInstructions recipe={recipe} />
     </div>
   </div>

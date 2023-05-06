@@ -1,12 +1,14 @@
-import * as React from 'react'
+import React from 'react'
 
 export const AppHeader = ({
-  appName = 'RecipeUI'
+  appName = 'RecipeUI',
+  children
 }: {
   /**
   The name of the app
   */
-  appName?: string
+  appName?: string,
+  children?: React.ReactNode[]
 }) =>
   <header className='white-neutral-50 bg-dark-grey body-font' data-testid='AppHeader'>
     <div className='container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center'>
@@ -23,13 +25,6 @@ export const AppHeader = ({
           <a className='mr-5 hover:text-white'>Third Link</a>
           <a className='mr-5 hover:text-white'>Fourth Link</a> */}
       </nav>
-      <button className='inline-flex items-center bg-indigo border-0 py-1 px-3 focus:outline-none
-        hover:bg-gray-700 rounded text-base mt-4 md:mt-0'>
-          Sign in
-        <svg fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'
-          className='w-4 h-4 ml-1' viewBox='0 0 24 24'>
-          <path d='M5 12h14M12 5l7 7-7 7'></path>
-        </svg>
-      </button>
+      {children}
     </div>
   </header>
