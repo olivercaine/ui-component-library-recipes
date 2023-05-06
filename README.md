@@ -1,8 +1,8 @@
-# ui-component-library-recipes
+# Recipe UI Components
 
 [![Node.js CI](https://github.com/olivercaine/ui-component-library/actions/workflows/node.js.yml/badge.svg)](https://github.com/olivercaine/ui-component-library/actions/workflows/node.js.yml) [![Deploy Static Storybook](https://github.com/olivercaine/ui-component-library/actions/workflows/storybook.yml/badge.svg)](https://github.com/olivercaine/ui-component-library/actions/workflows/storybook.yml)
 
-React Storybook containing recipe components
+Recipe components built on React Storybook
 
 [Demo](https://olivercaine.github.io/ui-component-library-recipes)
 
@@ -40,33 +40,28 @@ React Storybook containing recipe components
 //npm.pkg.github.com/:_authToken=<YOUR_GITHUB_TOKEN>
 ```
 
-2. Install the package
-
-Add the following to your dependencies:
+2. Install the package:
 
 ```
-# package.json
-"@olivercaine/ui-component-library-recipes": "<VERSION>",
+npm install @olivercaine/ui-component-library-recipes@latest
+# or
+yarn install @olivercaine/ui-component-library-recipes@latest
 ```
 
-VERSION can be found on the [packages page](https://github.com/olivercaine/ui-component-library-recipes/pkgs/npm/ui-component-library-recipes).
-
-Then run 
-
-```
-npm install / yarn install
-```
+Note: to install a previous release, replace `latest` with one of the versions on the [packages page](https://github.com/users/olivercaine/packages?repo_name=ui-component-library-recipes).
 
 3. Import the package into your app:
 
 ```typescript
-// IngredientsWrapper.tsx
 import { Ingredients } from '@olivercaine/ui-component-library-recipes'
 import { recipes } from '@olivercaine/recipe-data'
-import React from 'react'
+import * as React from 'react'
 
-export const IngredientsWrapper = () =>
-  <Ingredients recipe={recipe}/>
+export const MyComponent = () =>
+  <>
+    {/* Your custom code */}
+   <Ingredients recipe={recipe}/>
+  </>
 ```
 
 4. Example recipe data can be installed from https://github.com/olivercaine/recipe-data
