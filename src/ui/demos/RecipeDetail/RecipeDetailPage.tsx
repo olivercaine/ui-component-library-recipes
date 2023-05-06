@@ -1,5 +1,5 @@
 import { IRecipe } from '@olivercaine/recipe-data/types'
-import * as React from 'react'
+import React from 'react'
 import { RecipeDetail } from '../../features/RecipeDetail/RecipeDetail'
 import { AppHeader } from '../../templates/AppHeader/AppHeader'
 import { FooterNav } from '../../templates/FooterNav/FooterNav'

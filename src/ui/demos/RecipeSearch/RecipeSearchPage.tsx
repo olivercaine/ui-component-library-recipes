@@ -1,6 +1,6 @@
 import { Stepper } from '@mui/material'
 import { recipes } from '@olivercaine/recipe-data'
-import * as React from 'react'
+import React from 'react'
 import { Pagination } from '../../components/Pagination/Pagination'
 import { RecipePreview } from '../../components/RecipePreview/RecipePreview'
 import { AppHeader } from '../../templates/AppHeader/AppHeader'
