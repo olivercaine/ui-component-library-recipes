@@ -44,7 +44,9 @@ Recipe components built on React Storybook
 
 ```
 npm install @olivercaine/ui-component-library-recipes@latest
-# or
+```
+or
+```
 yarn install @olivercaine/ui-component-library-recipes@latest
 ```
 
@@ -87,13 +89,20 @@ Solution: Make sure that the name in package.json starts with `@[GitHub username
 
 ### Not allowed to write organization package
 
-Error message: `Permission installation not allowed to Write organization package`
+Error message: 
+```
+Permission installation not allowed to Write organization package
+```
 
-Cause: GitHub Actions does not have permission to publish the package
+Cause: 
 
-Solution: Enable [GitHub Repo] > Settings > Actions > General > "Read and write permissions"
+GitHub Actions does not have permission to publish the package
 
-Solution2: Make sure that the name in package.json starts with `@[GitHub username]/`
+Solution:
+
+1. Enable [GitHub Repo] > Settings > Actions > General > "Read and write permissions"
+
+2. Solution2: Make sure that the name in package.json starts with `@[GitHub username]/`
 
 ## Todo
 
