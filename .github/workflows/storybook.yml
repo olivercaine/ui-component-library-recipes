@@ -2,8 +2,6 @@ name: Storybook Deployment
 on: 
   push:
     paths: ["src/**"] # Trigger the action only when files change in the folders defined here
-  schedule:
-    - cron: '0 18 * * FRI' # Every Friday at 6pm
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
