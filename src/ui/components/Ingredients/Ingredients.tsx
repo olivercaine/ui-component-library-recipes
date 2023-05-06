@@ -7,7 +7,7 @@ export const Ingredients = ({
 }: {
   recipe: Partial<IRecipe>
 }) =>
-  <div data-testid='Ingredients' className='Ingredients text-neutral-400 pt-10'>
+  <div data-testid='Ingredients' className='text-neutral-400 pt-10'>
     <h2 className='text-center title-font text-2xl text-neutral-300'>Ingredients</h2>
     <div className='container px-5 mx-auto'>
       {recipe.ingredients && recipe.ingredients.map((ingredient) =>
