@@ -1,5 +1,5 @@
 import { ICookingInstructionsEntity } from '@olivercaine/recipe-data/types'
-import * as React from 'react'
+import React from 'react'
 import { Image } from '../../../index'
 
 export const CookingInstruction = ({
