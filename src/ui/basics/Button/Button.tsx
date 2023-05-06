@@ -5,12 +5,21 @@ export const Button: FC<{
   The text to be shown in the button
   */
   text?: string
+  /**
+ The custom CSS
+  */
   css?: string
   /**
   The callback for when the button is clicked
   */
   onClick?: MouseEventHandler<HTMLButtonElement>
+  /**
+ Whether the button is disabled
+  */
   disabled?: boolean,
+  /**
+  The unique data test id
+  */
   dataTestId?: string
 }> = ({
   text = 'Button text',
