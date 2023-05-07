@@ -13,8 +13,8 @@ const template = storyTemplate(Recipes)
 
 const defaultArgs = {
   recipes,
-  onStepperChange: action,
-  onImageClick: action,
+  onStepperChange: action('onStepperChange'),
+  onImageClick: action('onStepperChange'),
 }
 
 export const Default = template({ ...defaultArgs })
