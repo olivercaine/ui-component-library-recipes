@@ -21,9 +21,9 @@ export const RecipeSearchPage = ({
   recipes: IRecipe[]
 }) =>
   <>
-    <AppHeader appName={appName}/>
-    <Recipes onImageClick={console.log} recipes={recipes}/>
-    <Pagination/>
+    <AppHeader appName={appName} />
+    <Recipes onImageClick={console.log} recipes={recipes} onStepperChange={console.log} />
+    <Pagination />
     <FooterNav>
       <BottomNavigationAction
         data-testid={'search'}
