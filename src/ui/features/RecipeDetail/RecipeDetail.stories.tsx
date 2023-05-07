@@ -15,3 +15,5 @@ const defaultArgs = {
 }
 
 export const Default = template({ ...defaultArgs })
+
+export const CremeBrulee = template({ ...defaultArgs, recipe: recipes[1] })

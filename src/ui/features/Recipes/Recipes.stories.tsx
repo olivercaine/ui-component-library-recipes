@@ -12,9 +12,9 @@ export default {
 const template = storyTemplate(Recipes)
 
 const defaultArgs = {
-  recipes: [recipes[0], recipes[0], recipes[0], recipes[0], recipes[0], recipes[0]],
+  recipes,
   onStepperChange: action,
-  onImageClick: action
+  onImageClick: action,
 }
 
 export const Default = template({ ...defaultArgs })
