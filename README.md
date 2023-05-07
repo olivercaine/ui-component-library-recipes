@@ -28,7 +28,7 @@ Recipe components built on React Storybook
 
 4. Auto-deploy Storybook to GitHub pages
    
-   1. Enable "Read and write permissions" in [GitHub Repo] > Settings > Actions > General to allow this
+   1. Enable "Read and write permissions" in [GitHub Repo] > Settings > Actions > General to allow this.
 
 ## How to use in an app
 

@@ -20,7 +20,7 @@ const template = storyTemplate(RecipeSearchPage)
 const defaultArgs = {
   onImageClick: linkTo('Demos/RecipeDetailPage'),
   onStepperChange: action,
-  recipes: [recipes[0], recipes[0], recipes[0], recipes[0], recipes[0], recipes[0]]
+  recipes,
 }
 
 export const Default = template({ ...defaultArgs })
