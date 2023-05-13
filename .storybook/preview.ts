@@ -1,7 +1,9 @@
-import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
-import '../src/ui/styles/base.css'
-import '../src/ui/styles/tailwinds-generated.css'
 import { StoryTypes } from '@olliecaine/storybook-utils'
+import { withTests } from '@storybook/addon-jest'
+import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
+import results from '../.jest-test-results.json'
+import '../src/ui/styles/base.css'
+import '../src/ui/styles/styles.css'
 
 export const parameters = {
   layout: 'fullscreen',
@@ -13,7 +15,6 @@ export const parameters = {
   options: {
     storySort: {
       order: [
-        'Demos',
         StoryTypes.Applications,
         StoryTypes.Features,
         StoryTypes.Templates,
@@ -24,4 +25,10 @@ export const parameters = {
       ],
     },
   },
-} 
+}
+
+export const decorators = [
+  withTests({
+    results,
+  }),
+]
