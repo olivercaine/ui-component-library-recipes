@@ -7,20 +7,26 @@
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
   "types": "lib/src/index.d.ts",
+  "files": [
+    "lib"
+  ],
   "scripts": {
+    "dev": "concurrently 'npm install' 'npm run storybook:start-and-test:watch' 'npx tailwindcss -i ./src/ui/styles/base.css -o ./src/ui/styles/tailwinds-generated.css --watch'",
+    "dev:docker": "docker run --rm -it -w /app -v ${PWD}:/app -p 6006:6006 $(docker build . -q) sh -c 'npm run dev'",
     "lint": "eslint -c .eslintrc --ext .ts src",
     "lint:fix": "npm run lint -- --fix",
-    "dev": "npm i && concurrently 'npm run storybook' 'npm run storybook:test:watch' 'npx tailwindcss -i ./src/ui/styles/base.css -o ./src/ui/styles/tailwinds-generated.css --watch'",
-    "test": "echo \"Error - tests have not been configured yet\" && exit 1",
     "storybook": "start-storybook -p 6006",
-    "storybook:build": "build-storybook",
     "storybook:test": "test-storybook --browsers chromium",
     "storybook:test:watch": "npm run storybook:test -- --watch",
-    "storybook:start-and-test": "start-server-and-test storybook 6006 'storybook:test'",
+    "storybook:start-and-test": "start-test storybook 6006 'storybook:test'",
+    "storybook:start-and-test:watch": "start-test storybook 6006 'storybook:test:watch'",
+    "storybook:build": "build-storybook",
+    "test": "echo \"Error - tests have not been configured yet\" && exit 1",
+    "test:watch": "npm test -- --watch",
     "build": "rollup -c",
     "health-check": "time concurrently --group --kill-others-on-fail --timings 'npm run lint --quiet' 'npm run build' 'npm run storybook:build' 'npm run storybook:start-and-test'",
     "update-recipe-data": "npm install --save-dev @olivercaine/recipe-data@latest",
-    "prepublishOnly": "yarn build"
+    "prepublishOnly": "npm build"
   },
   "husky": {
     "hooks": {
@@ -40,6 +46,7 @@
   "devDependencies": {
     "@babel/core": "^7.21.4",
     "@olivercaine/recipe-data": "0.0.1-4907933064.0",
+    "@olliecaine/storybook-utils": "0.0.1",
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^15.0.2",
     "@storybook/addon-actions": "^6.5.16",
