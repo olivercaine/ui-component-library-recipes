@@ -10,7 +10,7 @@ Recipe components built on React Storybook
 
 1. [React Storybook](https://storybook.js.org/) for UI components
 
-2. [TypeScript](https://www.typescriptlang.org/) for type-safety on code
+2. [TypeScript](https://www.typescriptlang.org/) for type-safety
 
 3. [Rollup](https://rollupjs.org/) for bundling the package
 
@@ -24,13 +24,13 @@ Recipe components built on React Storybook
 
 2. [Storybook Story snippet](.vscode/snippets.code-snippets)
 
-3. [Story interaction test example](src/ui/basics/Button.stories.tsx)
+3. [Story interaction test example](src/ui/basics/Button/Button.stories.tsx)
 
-4. Auto-deploy Storybook to GitHub pages
-   
-   1. Enable "Read and write permissions" in [GitHub Repo] > Settings > Actions > General to allow this.
+4. [@storybook/addon-links](https://www.npmjs.com/package/@storybook/addon-links) for linking from one story to another
 
-## How to use in an app
+5. Auto-deploy Storybook to GitHub pages (demo above)
+
+## How to use
 
 1. Register the GitHub Package Registry in your .npmrc file ([additional docs](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry)):
 
@@ -45,12 +45,14 @@ Recipe components built on React Storybook
 ```
 npm install @olivercaine/ui-component-library-recipes@latest
 ```
+
 or
+
 ```
 yarn install @olivercaine/ui-component-library-recipes@latest
 ```
 
-Note: to install a previous release, replace `latest` with one of the versions on the [packages page](https://github.com/users/olivercaine/packages?repo_name=ui-component-library-recipes).
+*Older versions can be found in the [packages page](https://github.com/olivercaine/ui-component-library/pkgs/npm/ui-component-library-recipes).*
 
 3. Import the package into your app:
 
@@ -66,7 +68,7 @@ export const MyComponent = () =>
   </>
 ```
 
-4. Example recipe data can be installed from https://github.com/olivercaine/recipe-data
+4. Example recipe data can be installed from [olivercaine/recipe-data](https://github.com/olivercaine/recipe-data)
 
 ## How to run locally
 
@@ -79,30 +81,37 @@ export const MyComponent = () =>
 
 ## Troubleshooting
 
-### Write package permission denied
-
-Error message: `Permission permission_denied: write_package`
-
-Cause: GitHub Actions does not have permission to publish the package
-
-Solution: Make sure that the name in package.json starts with `@[GitHub username]/`
-
 ### Not allowed to write organization package
 
 Error message: 
+
 ```
 Permission installation not allowed to Write organization package
 ```
 
 Cause: 
 
+You may be trying to publish to an NPM repositoryw which doesn't belong to you
+
+Solution: 
+
+Make sure that the name in package.json starts with `@[GitHub username]/`
+
+### Write package permission denied
+
+Error message: 
+
+```
+Permission permission_denied: write_package
+```
+
+Cause: 
+
 GitHub Actions does not have permission to publish the package
 
-Solution:
+Solution: 
 
-1. Enable [GitHub Repo] > Settings > Actions > General > "Read and write permissions"
-
-2. Solution2: Make sure that the name in package.json starts with `@[GitHub username]/`
+Enable [GitHub Repo] > Settings > Actions > General > "Read and write permissions"
 
 ## Todo
 
