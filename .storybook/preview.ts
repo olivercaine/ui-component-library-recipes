@@ -1,7 +1,7 @@
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 import '../src/ui/styles/base.css'
 import '../src/ui/styles/tailwinds-generated.css'
-import { StoryTypes } from './helpers'
+import { StoryTypes } from '@olliecaine/storybook-utils'
 
 export const parameters = {
   layout: 'fullscreen',
@@ -13,7 +13,7 @@ export const parameters = {
   options: {
     storySort: {
       order: [
-        StoryTypes.Demos,
+        'Demos',
         StoryTypes.Applications,
         StoryTypes.Features,
         StoryTypes.Templates,
