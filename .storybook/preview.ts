@@ -15,6 +15,7 @@ export const parameters = {
   options: {
     storySort: {
       order: [
+        'Demos',
         StoryTypes.Applications,
         StoryTypes.Features,
         StoryTypes.Templates,

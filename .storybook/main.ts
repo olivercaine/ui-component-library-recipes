@@ -7,12 +7,12 @@ const config = {
   },
   stories: ['../src/**/*.stories.tsx'],
   addons: [
+    '@storybook/addon-actions',
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
+    '@storybook/addon-jest',
     '@storybook/addon-links',
     '@storybook/addon-postcss',
-    '@storybook/addon-actions',
-    '@storybook/addon-jest'
   ],
   features: {
     interactionsDebugger: true, // Enable playback controls
