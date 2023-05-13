@@ -35,6 +35,7 @@ export const ShoppingList: React.FC<{
                         </div>
                       </div>
                       <div className='flex justify-center items-center'>
+                        {/* <Checkbox value={ingredient.uid} onChangeCallback={onCheckboxChange}/> */}
                         <Checkbox onChange={onCheckboxChange}/>
                       </div>
                     </div>
