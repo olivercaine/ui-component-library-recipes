@@ -36,8 +36,8 @@ ToggleFavourites.play = async ({ args, canvasElement }) => {
   await userEvent.click(await favRecipeBtn(recipes[0].uid))
   await waitFor(() => {
     expect(args.onFavouriteToggle).toHaveBeenCalledWith({
-      checked: true,
-      value: recipes[0].uid
+      isFavourite: true,
+      recipeId: recipes[0].uid
     })
   })
 
@@ -45,8 +45,8 @@ ToggleFavourites.play = async ({ args, canvasElement }) => {
   await userEvent.click(await favRecipeBtn(recipes[1].uid))
   await waitFor(() => {
     expect(args.onFavouriteToggle).toHaveBeenCalledWith({
-      checked: true,
-      value: recipes[1].uid
+      isFavourite: true,
+      recipeId: recipes[1].uid
     })
   })
 }

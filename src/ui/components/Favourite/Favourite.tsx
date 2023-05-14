@@ -3,11 +3,6 @@ import React, { FC } from 'react'
 import { testIds } from './Favourite.selectors'
 const { useState } = React
 
-export interface IChangeCallbackValue {
-  value: string | number,
-  checked: boolean
-}
-
 export const Favourite: FC<{
   initialValue?: boolean
   /**
@@ -17,7 +12,7 @@ export const Favourite: FC<{
   /**
   The callback which takes an object in the form `{ value, checked }`
   */
-  onChangeCallback: ({ value, checked }: IChangeCallbackValue | any) => any
+  onChangeCallback: ({ value, isFavourite }: { value: string | number, isFavourite: boolean }) => void
   value: string | number,
 }> = ({
   initialValue: checkedInit = false,
@@ -34,7 +29,7 @@ export const Favourite: FC<{
   const onClickHandler = (/* e: UIEvent */) => {
     setChecked(!checked)
     onChangeCallback({
-      checked: !checked,
+      isFavourite: !checked,
       value
     })
   }
