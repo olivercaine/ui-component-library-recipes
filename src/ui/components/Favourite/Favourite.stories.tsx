@@ -5,7 +5,7 @@ import { userEvent, within } from '@storybook/testing-library'
 import { waitFor } from '@testing-library/react'
 import { storyTemplate } from '../../../../.storybook/helpers'
 import { Favourite } from '../../../index'
-import { selectors } from './Favourite.selectors'
+import { testIds } from './Favourite.selectors'
 
 export default {
   component: Favourite,
@@ -29,8 +29,8 @@ export const InitialValueTrue = template({
   initialValue: true,
 })
 InitialValueTrue.play = async ({ canvasElement }) => {
-  const canvas = await within(canvasElement)
-  expect(canvas.getByTestId(selectors().button(defaultArgs.value))).toHaveClass('bg-red-200')
+  const canvas = within(canvasElement)
+  expect(canvas.getByTestId(testIds({ uniqueId: defaultArgs.value }).button)).toHaveClass('bg-red-200')
 }
 
 export const InitialValueFalse = template({
@@ -38,8 +38,8 @@ export const InitialValueFalse = template({
   initialValue: false,
 })
 InitialValueFalse.play = async ({ canvasElement }) => {
-  const canvas = await within(canvasElement)
-  expect(canvas.getByTestId(selectors().button(defaultArgs.value))).toHaveClass('bg-gray-200')
+  const canvas = within(canvasElement)
+  expect(canvas.getByTestId(testIds({ uniqueId: defaultArgs.value }).button)).toHaveClass('bg-gray-200')
 }
 
 export const Toggle = template({
@@ -47,8 +47,8 @@ export const Toggle = template({
   onChangeCallback: jest.fn()
 })
 Toggle.play = async ({ args, canvasElement }) => {
-  const canvas = await within(canvasElement)
-  const btn = canvas.getByTestId(selectors().button(defaultArgs.value))
+  const canvas = within(canvasElement)
+  const btn = canvas.getByTestId(testIds({ uniqueId: defaultArgs.value }).button)
   expect(btn).toHaveClass('bg-gray-200') // Start gray
 
   await userEvent.click(btn)

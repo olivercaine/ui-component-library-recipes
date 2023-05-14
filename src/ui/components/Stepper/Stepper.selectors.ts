@@ -1,6 +1,9 @@
-export const selectors = (componentName = 'Stepper') => ({
-  wrapper: () => `${componentName}`,
-  increment: () => `${componentName}_button--increment`,
-  input: () => `${componentName}_input`,
-  decrement: () => `${componentName}_button--decrement`,
-})
+export const testIds = ({ uniqueId = 'Error: missing id' }) => {
+  const wrapper = `Stepper-${uniqueId}`
+  return {
+    wrapper,
+    increment: `${wrapper}_button--increment`,
+    input: `${wrapper}_input`,
+    decrement: `${wrapper}_button--decrement`,
+  }
+}

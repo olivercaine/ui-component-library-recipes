@@ -6,8 +6,7 @@ import { ComponentMeta } from '@storybook/react'
 import { userEvent, waitFor, within } from '@storybook/testing-library'
 import React from 'react'
 import { storyTemplate } from '../../../../.storybook/helpers'
-import { Favourite as Favorite, RecipePreview, Stepper } from '../../../index'
-import { selectors } from '../Favourite/Favourite.selectors'
+import { Favourite as Favorite, RecipePreview, Stepper, favouriteSelectors, recipePreviewSelectors } from '../../../index'
 
 export default {
   component: RecipePreview,
@@ -38,8 +37,8 @@ export const WithFavouriteAction = template({
   })
 })
 WithFavouriteAction.play = async ({ args, canvasElement }) => {
-  const canvas = await within(canvasElement)
-  const favBtn = canvas.getByTestId(selectors().button(defaultArgs.recipe.uid))
+  const canvas = within(canvasElement)
+  const favBtn = canvas.getByTestId(favouriteSelectors({ uniqueId: defaultArgs.recipe.uid }).button)
   await userEvent.click(favBtn)
   expect(favBtn).toHaveClass('bg-red-200')
   expect(favouriteCallback).toHaveBeenCalledWith({
@@ -61,7 +60,7 @@ export const WithCustomAction = template({
 
 export const WithStepperComponent = template({
   ...defaultArgs,
-  stepperComponent: <Stepper onChange={action('Setting portion count')} />
+  stepperComponent: <Stepper id={defaultArgs.recipe.uid} onChange={action('Setting portion count')} />
 })
 
 export const ClickingImage = template({
@@ -69,9 +68,12 @@ export const ClickingImage = template({
   onImageClick: jest.fn()
 })
 ClickingImage.play = async ({ args, canvasElement }) => {
-  const canvas = await within(canvasElement)
+  const canvas = within(canvasElement)
   await canvas.findByRole('img')
-  const image = await waitFor(() => canvas.getByTestId('RecipePreview_img--main'))
+
+  const image = await waitFor(() => canvas.getByTestId(
+    recipePreviewSelectors({ uniqueId: defaultArgs.recipe.uid }).image
+  ))
   await userEvent.click(image)
   await waitFor(() => {
     expect(args.onImageClick).toHaveBeenCalledTimes(1)

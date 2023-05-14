@@ -25,7 +25,7 @@ export const Default = template({
   ...defaultArgs
 })
 Default.play = async ({ canvasElement }) => {
-  const canvas = await within(canvasElement)
+  const canvas = within(canvasElement)
   await expect(select(canvas).checkbox).not.toHaveAttribute('checked')
 }
 
@@ -34,7 +34,7 @@ export const Unchecked = template({
   onChangeCallback: jest.fn(),
 })
 Unchecked.play = async ({ args, canvasElement }) => {
-  const canvas = await within(canvasElement)
+  const canvas = within(canvasElement)
   await expect(select(canvas).checkbox).not.toHaveAttribute('checked')
   await userEvent.click(select(canvas).checkbox)
   await waitFor(() => {

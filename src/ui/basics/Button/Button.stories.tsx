@@ -20,7 +20,7 @@ export const Default = template({ ...defaultArgs })
 
 export const CustomText = template({ ...defaultArgs, text: 'Custom text', onClick: jest.fn() })
 CustomText.play = async ({ args, canvasElement }) => {
-  const canvas = await within(canvasElement)
+  const canvas = within(canvasElement)
   await userEvent.click(canvas.getByRole('button'))
   await waitFor(() => {
     expect(args.onClick).toHaveBeenCalledTimes(1)

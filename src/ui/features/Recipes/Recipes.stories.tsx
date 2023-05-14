@@ -2,18 +2,11 @@ import { recipes } from '@olivercaine/recipe-data'
 import { action } from '@storybook/addon-actions'
 import { expect, jest } from '@storybook/jest'
 import { ComponentMeta } from '@storybook/react'
-import { storyTemplate } from '../../../../.storybook/helpers'
-import { Recipes } from '../../../index'
-// import { action } from '@storybook/addon-actions'
-// import { ComponentMeta } from '@storybook/react'
 import { userEvent, within } from '@storybook/testing-library'
 import { waitFor } from '@testing-library/react'
-import { selectors } from '../../components/Favourite/Favourite.selectors'
+import { storyTemplate } from '../../../../.storybook/helpers'
+import { Recipes, favouriteSelectors, recipePreviewSelectors, stepperSelectors } from '../../../index'
 import { IProps } from './Recipes'
-// import { userEvent, within } from '@storybook/testing-library'
-// import { storyTemplate } from '../../../../.storybook/helpers'
-// import { Favourite } from '../../../index'
-// import { selectors } from './Favourite.selectors'
 
 export default {
   component: Recipes,
@@ -24,27 +17,25 @@ const template = storyTemplate(Recipes)
 
 const defaultArgs: IProps = {
   recipes,
-  // onStepperChange: action('onStepperChange'),
-  // onImageClick: action('onStepperChange'),
-  dispatch: action('Dispatch')
+  onFavouriteToggle: action('onFavouriteToggle'),
+  onImageClick: action('onImageClick'),
+  onPortionChange: action('onPortionChange'),
 }
-
-// const favComponent = (props: IProps): Favourite => <Favourite css='absolute top-5 right-5' {...props} />
 
 export const Default = template({ ...defaultArgs })
 
 export const ToggleFavourites = template({
   ...defaultArgs,
-  dispatch: jest.fn()
+  onFavouriteToggle: jest.fn()
 })
 ToggleFavourites.play = async ({ args, canvasElement }) => {
-  const canvas = await within(canvasElement)
-  const favRecipeBtn = (recipeUid: string) => canvas.getByTestId(selectors().button(recipeUid))
+  const canvas = within(canvasElement)
+  const favRecipeBtn = (uniqueId: string) => canvas.getByTestId(favouriteSelectors({ uniqueId }).button)
 
   // Favourite recipe 1
   await userEvent.click(await favRecipeBtn(recipes[0].uid))
   await waitFor(() => {
-    expect(args.dispatch).toHaveBeenCalledWith({
+    expect(args.onFavouriteToggle).toHaveBeenCalledWith({
       checked: true,
       value: recipes[0].uid
     })
@@ -53,36 +44,57 @@ ToggleFavourites.play = async ({ args, canvasElement }) => {
   // Favourite recipe 2
   await userEvent.click(await favRecipeBtn(recipes[1].uid))
   await waitFor(() => {
-    expect(args.dispatch).toHaveBeenCalledWith({
+    expect(args.onFavouriteToggle).toHaveBeenCalledWith({
       checked: true,
       value: recipes[1].uid
     })
   })
 }
 
-export const WithAllActions = template({
+export const ChangePortion = template({
   ...defaultArgs,
-  // dispatch: jest.fn()
+  onPortionChange: jest.fn()
 })
-// WithAllActions.play = async ({ args, canvasElement }) => {
-//   const canvas = await within(canvasElement)
-//   const favRecipeBtn = (recipeUid: string) => canvas.getByTestId(selectors().button(recipeUid))
+ChangePortion.play = async ({ args, canvasElement }) => {
+  const canvas = within(canvasElement)
 
-//   // Favourite recipe 1
-//   await userEvent.click(await favRecipeBtn(recipes[0].uid))
-//   await waitFor(() => {
-//     expect(args.dispatch).toHaveBeenCalledWith({
-//       checked: true,
-//       value: recipes[0].uid
-//     })
-//   })
+  const getStepperSelectors = (uniqueId: string) => stepperSelectors({ uniqueId })
 
-//   // Favourite recipe 2
-//   await userEvent.click(await favRecipeBtn(recipes[1].uid))
-//   await waitFor(() => {
-//     expect(args.dispatch).toHaveBeenCalledWith({
-//       checked: true,
-//       value: recipes[1].uid
-//     })
-//   })
-// }
+  // Add portion to recipe 1
+  await userEvent.click(await canvas.getByTestId(getStepperSelectors(recipes[0].uid).increment))
+  await waitFor(() => {
+    expect(args.onPortionChange).toHaveBeenCalledWith({
+      portionCount: 1,
+      recipeId: recipes[0].uid
+    })
+  })
+
+  // Add portion to recipe 1
+  await userEvent.click(await canvas.getByTestId(getStepperSelectors(recipes[1].uid).increment))
+  await waitFor(() => {
+    expect(args.onPortionChange).toHaveBeenCalledWith({
+      portionCount: 1,
+      recipeId: recipes[1].uid
+    })
+  })
+}
+
+export const ClickImage = template({
+  ...defaultArgs,
+  onImageClick: jest.fn()
+})
+ClickImage.play = async ({ args, canvasElement }) => {
+  const canvas = within(canvasElement)
+
+  const getRecipePreviewSelectors = (uniqueId: string) => recipePreviewSelectors({ uniqueId })
+  const getImage = (recipeId: string) => waitFor(async () => await canvas.findByTestId(getRecipePreviewSelectors(recipeId).image))
+
+  defaultArgs.recipes.forEach(async (recipe) => {
+    const image = await waitFor(() => getImage(recipe.uid))
+    await userEvent.click(image)
+    await waitFor(() => {
+      expect(args.onImageClick).toHaveBeenCalled()
+      expect(args.onImageClick).toHaveBeenCalledWith(recipe.uid)
+    })
+  })
+}
