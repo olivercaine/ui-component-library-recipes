@@ -32,7 +32,7 @@ export const RecipePreview = ({
         <h1 className='title-font text-lg font-medium mb-3 text-neutral-300'>{recipe.title}</h1>
         <div className='flex items-center flex-wrap justify-between'>
           {recipe?.rating &&
-            <Rating name='read-only' value={recipe?.rating.average} readOnly key={recipe.uid} />
+            <Rating key={recipe.uid} />
           }
           {stepperComponent &&
             <div className={'self-right'}>
