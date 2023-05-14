@@ -9,9 +9,7 @@ export default {
 
 const template = storyTemplate(Rating)
 
-const defaultArgs = {
-  // onChange: action('On Change'),
-}
+const defaultArgs = {}
 
 export const Default = template({ ...defaultArgs })
 

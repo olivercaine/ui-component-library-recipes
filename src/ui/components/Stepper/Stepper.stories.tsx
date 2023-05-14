@@ -4,6 +4,7 @@ import { ComponentMeta } from '@storybook/react'
 import { userEvent, waitFor, within } from '@storybook/testing-library'
 import { storyTemplate } from '../../../../.storybook/helpers'
 import { Stepper } from '../../../index'
+import { selectors } from './Stepper.selectors'
 
 export default {
   component: Stepper,
@@ -20,7 +21,7 @@ export const Default = template({ ...defaultArgs })
 Default.play = async ({ args, canvasElement }) => {
   const canvas = await within(canvasElement)
 
-  const incrementButton = await canvas.findByTestId('Stepper_button--increment')
+  const incrementButton = await canvas.findByTestId(selectors().increment())
   await userEvent.click(incrementButton)
   // const input = await canvas.findByTestId('Stepper_input')
   await waitFor(() => {
@@ -28,7 +29,7 @@ Default.play = async ({ args, canvasElement }) => {
     // expect(parseInt(input.value)).toBe(1)
   })
 
-  const decrementButton = await canvas.findByTestId('Stepper_button--decrement')
+  const decrementButton = await canvas.findByTestId(selectors().decrement())
   await userEvent.click(decrementButton)
   await waitFor(() => {
     expect(args.onChange).toHaveBeenCalledWith(0)

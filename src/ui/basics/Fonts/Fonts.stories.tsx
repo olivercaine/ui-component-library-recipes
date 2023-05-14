@@ -59,4 +59,4 @@ export default {
 
 const template = storyTemplate(Fonts)
 
-export const Default = template({ })
+export const Default = template({})

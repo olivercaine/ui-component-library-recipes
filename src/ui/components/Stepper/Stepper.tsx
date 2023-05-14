@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Button } from '../../basics/Button/Button'
+import { selectors } from './Stepper.selectors'
 
 export const Stepper = ({
   min = 0,
@@ -24,7 +25,7 @@ export const Stepper = ({
     onChange(newValue)
   }
 
-  const handleInput = (e:any) => {
+  const handleInput = (e: any) => {
     const inputValue = Math.min(e.target.value) || value
     const newValue = inputValue > max ? max : inputValue < 0 ? 0 : inputValue
     setValue(newValue)
@@ -32,11 +33,11 @@ export const Stepper = ({
   }
 
   return (
-    <div data-testid='Stepper'>
+    <div data-testid={selectors().wrapper()}>
       {value > 0 &&
         <span>
           <Button disabled={!value}
-            dataTestId='Stepper_button--decrement'
+            dataTestId={selectors().decrement()}
             text='-'
             onClick={handleDecrease} css='border-0 rounded-r-none bg-amber-300'
           />
@@ -52,7 +53,7 @@ export const Stepper = ({
         </span>
       }
       <Button disabled={value === max}
-        dataTestId='Stepper_button--increment'
+        dataTestId={selectors().increment()}
         text={value ? '+' : 'Add to cart'}
         onClick={handleIncrease}
         css={`border-0 bg-amber-300 ${value ? 'rounded-l-none' : ''}`}

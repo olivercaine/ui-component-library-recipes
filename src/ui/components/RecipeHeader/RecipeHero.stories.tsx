@@ -12,7 +12,7 @@ export default {
 
 const template = storyTemplate(RecipeHero)
 
-const favComponent = (props: any) => <Favourite className='absolute top-5 right-5' {...props}/>
+const favComponent = (props: any) => <Favourite className='absolute top-5 right-5' {...props} />
 
 const defaultArgs = {
   recipe: recipes[0]

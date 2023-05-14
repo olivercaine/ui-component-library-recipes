@@ -16,7 +16,7 @@ export const RecipeHero: FC<{
   recipe,
   favouriteComponent
 }) =>
-  <div data-testid='RecipeHero'>
+  (<div data-testid='RecipeHero'>
     <section className='body-font'>
       <div className='container mx-auto flex py-6 md:flex-row flex-col items-center'>
         <div className='lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0'>
@@ -35,13 +35,13 @@ export const RecipeHero: FC<{
             {recipe && recipe.prep_times &&
               <span>{recipe.prep_times.for_2} minutes</span>
             }
-            <br/>
-            <br/>
+            <br />
+            <br />
             {recipe && recipe.rating &&
               <Rating name='read-only' value={recipe.rating.average} readOnly />
             }
-            <br/>
-            <br/>
+            <br />
+            <br />
             {recipe && recipe?.rating &&
               <span>{recipe.rating.count} reviews</span>
             }
@@ -49,4 +49,4 @@ export const RecipeHero: FC<{
         </div>
       </div>
     </section>
-  </div>
+  </div>)
