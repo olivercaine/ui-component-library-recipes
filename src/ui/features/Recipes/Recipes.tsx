@@ -34,10 +34,16 @@ export const Recipes: FC<IProps> = ({
                 })}
               />
             }
-            actions={<Favourite onChangeCallback={(e) => onFavouriteToggle({
-              isFavourite: e.isFavourite,
-              recipeId: e.value.toString()
-            })} value={recipe.uid} css='absolute top-5 right-5' />}
+            actions={
+              <Favourite
+                onChangeCallback={(e) => onFavouriteToggle({
+                  isFavourite: e.isFavourite,
+                  recipeId: e.value.toString()
+                })}
+                value={recipe.uid}
+                css='absolute top-5 right-5'
+              />
+            }
             onImageClick={onImageClick}
             recipe={recipe}
           />

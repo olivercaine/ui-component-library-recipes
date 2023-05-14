@@ -55,7 +55,7 @@ Toggle.play = async ({ args, canvasElement }) => {
   await waitFor(() => {
     expect(args.onChangeCallback).toHaveBeenCalledWith({
       value: '1234',
-      checked: true,
+      isFavourite: true,
     })
     expect(btn).toHaveClass('bg-red-200') // Click to red
   })
@@ -64,7 +64,7 @@ Toggle.play = async ({ args, canvasElement }) => {
   await waitFor(() => {
     expect(args.onChangeCallback).toHaveBeenCalledWith({
       value: '1234',
-      checked: false,
+      isFavourite: false,
     })
     expect(btn).toHaveClass('bg-gray-200') // Click to gray
   })

@@ -43,7 +43,7 @@ WithFavouriteAction.play = async ({ args, canvasElement }) => {
   expect(favBtn).toHaveClass('bg-red-200')
   expect(favouriteCallback).toHaveBeenCalledWith({
     value: defaultArgs.recipe.uid,
-    checked: true,
+    isFavourite: true,
   })
 }
 
