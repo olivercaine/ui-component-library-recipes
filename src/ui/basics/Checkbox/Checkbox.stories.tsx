@@ -24,7 +24,7 @@ const select = (canvas) => ({
 export const Default = template({
   ...defaultArgs
 })
-Default.play = async ({ args, canvasElement }) => {
+Default.play = async ({ canvasElement }) => {
   const canvas = await within(canvasElement)
   await expect(select(canvas).checkbox).not.toHaveAttribute('checked')
 }
