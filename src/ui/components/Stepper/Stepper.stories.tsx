@@ -23,16 +23,17 @@ Default.play = async ({ args, canvasElement }) => {
 
   const incrementButton = await canvas.findByTestId(selectors().increment())
   await userEvent.click(incrementButton)
-  // const input = await canvas.findByTestId('Stepper_input')
+  const input = await canvas.findByTestId(selectors().input())
   await waitFor(() => {
     expect(args.onChange).toHaveBeenCalledWith(1)
     // expect(parseInt(input.value)).toBe(1)
+    expect(input).toHaveAttribute('value', '1')
   })
 
   const decrementButton = await canvas.findByTestId(selectors().decrement())
   await userEvent.click(decrementButton)
   await waitFor(() => {
     expect(args.onChange).toHaveBeenCalledWith(0)
-    // expect(parseInt(input.value)).toBe(0)
+    expect(input).toHaveAttribute('value', '0')
   })
 }
