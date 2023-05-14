@@ -13,16 +13,16 @@ export const ShoppingListDemo: React.FC<{
   The name of the app
   */
   appName?: string
-    /**
-  The recipe to use
-  */
+  /**
+The recipe to use
+*/
   recipes: IRecipe[]
 }> = ({
   appName,
   recipes
 }) =>
-  <>
-    <AppHeader appName={appName}/>
+  (<>
+    <AppHeader appName={appName} />
     <ShoppingList onCheckboxChange={console.log} recipes={recipes} />
     <FooterNav>
       <BottomNavigationAction
@@ -44,4 +44,4 @@ export const ShoppingListDemo: React.FC<{
         sx={{ color: '#a3a3a3', font: '#a3a3a3' }}
         icon={<ShoppingCartIcon />} />
     </FooterNav>
-  </>
+  </>)

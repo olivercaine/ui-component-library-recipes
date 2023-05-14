@@ -1,8 +1,11 @@
 {
   "root": true,
+  "ignorePatterns": ["/lib", "/dist"],
   "parser": "@typescript-eslint/parser",
   "extends": [
-    "standard"
+    "standard",
+    "eslint:recommended",
+    "plugin:react/recommended"
   ],
   "settings": {
     "react": {
@@ -41,6 +44,7 @@
     "comma-dangle"                : "off",
     "no-undef"                    : "off",
     "one-var"                     : "off",
+    "react/no-unescaped-entities" : "off",
     "no-only-tests/no-only-tests" : "error"
   }
 }

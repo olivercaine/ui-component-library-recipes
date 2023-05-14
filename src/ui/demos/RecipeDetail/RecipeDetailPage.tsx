@@ -13,16 +13,16 @@ export const RecipeDetailPage: React.FC<{
   The name of the app
   */
   appName?: string
-    /**
-  The recipe to use
-  */
+  /**
+The recipe to use
+*/
   recipe: IRecipe
 }> = ({
   appName,
   recipe
 }) =>
-  <>
-    <AppHeader appName={appName}/>
+  (<>
+    <AppHeader appName={appName} />
     <RecipeDetail recipe={recipe} />
     <FooterNav>
       <BottomNavigationAction
@@ -44,4 +44,4 @@ export const RecipeDetailPage: React.FC<{
         sx={{ color: '#a3a3a3', font: '#a3a3a3' }}
         icon={<ShoppingCartIcon />} />
     </FooterNav>
-  </>
+  </>)

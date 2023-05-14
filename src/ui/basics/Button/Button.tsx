@@ -28,11 +28,11 @@ export const Button: FC<{
   disabled = false,
   dataTestId = 'Button'
 }) =>
-  <button
+  (<button
     data-testid={dataTestId}
     disabled={disabled}
     className={`relative inline-flex no-underline items-center rounded-md border border-gray-300 px-4 py-2 
     text-sm font-medium hover:bg-gray-50 ${css}`}
     onClick={onClick}>
     {text}
-  </button>
+  </button>)
