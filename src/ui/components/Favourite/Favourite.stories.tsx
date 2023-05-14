@@ -5,7 +5,7 @@ import { userEvent, within } from '@storybook/testing-library'
 import { waitFor } from '@testing-library/react'
 import { storyTemplate } from '../../../../.storybook/helpers'
 import { Favourite } from '../../../index'
-import { selectors } from './Favourite selectors'
+import { selectors } from './Favourite.selectors'
 
 export default {
   component: Favourite,
