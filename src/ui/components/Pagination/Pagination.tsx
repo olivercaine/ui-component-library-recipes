@@ -31,7 +31,7 @@ export const Pagination = () =>
           <nav className='isolate inline-flex -space-x-px rounded-md shadow-sm' aria-label='Pagination'>
             <a
               href='#'
-              className='relative inline-flex items-center rounded-l-md px-2 py-2 ring-1 ring-inset 
+              className='relative inline-flex items-center rounded-l-md px-2 py-2 ring-1 ring-inset
               ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0'
             >
               <span className='sr-only'>Previous</span>

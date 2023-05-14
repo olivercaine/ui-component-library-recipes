@@ -5,18 +5,18 @@ import { Image } from '../../../index'
 export const RecipePreview = ({
   recipe,
   onImageClick,
-  favouriteComponent,
+  actions,
   stepperComponent
 }: {
   recipe: Partial<IRecipe>,
   onImageClick: UIEvent | any,
-  favouriteComponent?: React.ReactNode | false
+  actions?: JSX.Element | JSX.Element[]
   stepperComponent?: React.ReactNode
 }) =>
-  <div className='bg-light-grey duration-300 hover:scale-105 rounded-lg' data-testid={`RecipePreview`}>
-    {favouriteComponent}
+  <div className='bg-light-grey rounded-lg relative' data-testid={`RecipePreview--${recipe.uid}`}>
+    {actions}
     <Image
-      data-testId={`RecipePreview_img--main`}
+      data-testId={'RecipePreview_img--main'}
       alt='blog'
       className='lg:h-48 w-full object-cover object-center'
       onClick={() => onImageClick(recipe.uid)}

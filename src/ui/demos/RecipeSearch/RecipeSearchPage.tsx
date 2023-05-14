@@ -22,7 +22,7 @@ export const RecipeSearchPage = ({
 }) =>
   <>
     <AppHeader appName={appName} />
-    <Recipes onImageClick={console.log} recipes={recipes} onStepperChange={console.log} />
+    <Recipes dispatch={console.log} recipes={recipes} />
     <Pagination />
     <FooterNav>
       <BottomNavigationAction
