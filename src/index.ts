@@ -5,11 +5,13 @@ import { Image } from './ui/basics/Image/Image'
 import { CookingInstruction } from './ui/components/CookingInstruction/CookingInstruction'
 import { CookingInstructions } from './ui/components/CookingInstructions/CookingInstructions'
 import { Favourite } from './ui/components/Favourite/Favourite'
+import { selectors as favouriteSelectors } from './ui/components/Favourite/Favourite.selectors'
 import { Ingredients } from './ui/components/Ingredients/Ingredients'
 import { Pagination } from './ui/components/Pagination/Pagination'
 import { Rating } from './ui/components/Rating/Rating'
 import { RecipePreview } from './ui/components/RecipePreview/RecipePreview'
 import { Stepper } from './ui/components/Stepper/Stepper'
+import { selectors as stepperSelectors } from './ui/components/Stepper/Stepper.selectors'
 import { RecipeDetail } from './ui/features/RecipeDetail/RecipeDetail'
 import { Recipes } from './ui/features/Recipes/Recipes'
 import { ShoppingList } from './ui/features/ShoppingList/ShoppingList'
@@ -30,8 +32,12 @@ export {
   RecipeDetail,
   RecipePreview,
   Recipes,
-  recipes as exampleRecipes,
+  recipes as mockRecipeData,
   ShoppingList,
   Stepper,
   Rating,
+
+  // Selectors
+  favouriteSelectors,
+  stepperSelectors
 }

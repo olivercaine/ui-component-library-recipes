@@ -26,7 +26,6 @@ Default.play = async ({ args, canvasElement }) => {
   const input = await canvas.findByTestId(selectors().input())
   await waitFor(() => {
     expect(args.onChange).toHaveBeenCalledWith(1)
-    // expect(parseInt(input.value)).toBe(1)
     expect(input).toHaveAttribute('value', '1')
   })
 
