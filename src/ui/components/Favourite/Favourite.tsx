@@ -9,7 +9,7 @@ export interface IChangeCallbackValue {
 }
 
 export const Favourite: FC<{
-  checkedInit?: boolean
+  initialValue?: boolean
   /**
   Any custom CSS
   */
@@ -20,7 +20,7 @@ export const Favourite: FC<{
   onChangeCallback: ({ value, checked }: IChangeCallbackValue | any) => any
   value: string | number,
 }> = ({
-  checkedInit = false,
+  initialValue: checkedInit = false,
   css,
   onChangeCallback,
   value,

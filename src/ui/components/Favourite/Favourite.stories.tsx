@@ -24,20 +24,20 @@ export const Default = template({
   ...defaultArgs,
 })
 
-export const DefaultFavourite = template({
+export const InitialValueTrue = template({
   ...defaultArgs,
-  checkedInit: true,
+  initialValue: true,
 })
-DefaultFavourite.play = async ({ canvasElement }) => {
+InitialValueTrue.play = async ({ canvasElement }) => {
   const canvas = await within(canvasElement)
   expect(canvas.getByTestId(selectors().button(defaultArgs.value))).toHaveClass('bg-red-200')
 }
 
-export const DefaultNotFavourite = template({
+export const InitialValueFalse = template({
   ...defaultArgs,
-  checkedInit: false,
+  initialValue: false,
 })
-DefaultNotFavourite.play = async ({ canvasElement }) => {
+InitialValueFalse.play = async ({ canvasElement }) => {
   const canvas = await within(canvasElement)
   expect(canvas.getByTestId(selectors().button(defaultArgs.value))).toHaveClass('bg-gray-200')
 }

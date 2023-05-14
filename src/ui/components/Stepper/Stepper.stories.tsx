@@ -36,3 +36,15 @@ Default.play = async ({ args, canvasElement }) => {
     expect(input).toHaveAttribute('value', '0')
   })
 }
+
+export const InitialValue = template({
+  ...defaultArgs,
+  defaultValue: 5
+})
+InitialValue.play = async ({ canvasElement }) => {
+  const canvas = await within(canvasElement)
+  const input = await canvas.findByTestId(selectors().input())
+  await waitFor(() => {
+    expect(input).toHaveAttribute('value', '5')
+  })
+}

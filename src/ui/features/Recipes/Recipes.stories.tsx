@@ -9,6 +9,7 @@ import { Recipes } from '../../../index'
 import { userEvent, within } from '@storybook/testing-library'
 import { waitFor } from '@testing-library/react'
 import { selectors } from '../../components/Favourite/Favourite.selectors'
+import { IProps } from './Recipes'
 // import { userEvent, within } from '@storybook/testing-library'
 // import { storyTemplate } from '../../../../.storybook/helpers'
 // import { Favourite } from '../../../index'
@@ -21,10 +22,10 @@ export default {
 
 const template = storyTemplate(Recipes)
 
-const defaultArgs = {
+const defaultArgs: IProps = {
   recipes,
-  onStepperChange: action('onStepperChange'),
-  onImageClick: action('onStepperChange'),
+  // onStepperChange: action('onStepperChange'),
+  // onImageClick: action('onStepperChange'),
   dispatch: action('Dispatch')
 }
 
@@ -58,3 +59,30 @@ ToggleFavourites.play = async ({ args, canvasElement }) => {
     })
   })
 }
+
+export const WithAllActions = template({
+  ...defaultArgs,
+  // dispatch: jest.fn()
+})
+// WithAllActions.play = async ({ args, canvasElement }) => {
+//   const canvas = await within(canvasElement)
+//   const favRecipeBtn = (recipeUid: string) => canvas.getByTestId(selectors().button(recipeUid))
+
+//   // Favourite recipe 1
+//   await userEvent.click(await favRecipeBtn(recipes[0].uid))
+//   await waitFor(() => {
+//     expect(args.dispatch).toHaveBeenCalledWith({
+//       checked: true,
+//       value: recipes[0].uid
+//     })
+//   })
+
+//   // Favourite recipe 2
+//   await userEvent.click(await favRecipeBtn(recipes[1].uid))
+//   await waitFor(() => {
+//     expect(args.dispatch).toHaveBeenCalledWith({
+//       checked: true,
+//       value: recipes[1].uid
+//     })
+//   })
+// }

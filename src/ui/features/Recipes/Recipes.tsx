@@ -1,7 +1,6 @@
-import { Stepper } from '@mui/material'
 import { IRecipe } from '@olivercaine/recipe-data/types'
 import React, { FC } from 'react'
-import { Favourite } from '../../../index'
+import { Favourite, Stepper } from '../../../index'
 import { RecipePreview } from '../../components/RecipePreview/RecipePreview'
 
 export interface IProps {

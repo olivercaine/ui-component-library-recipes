@@ -735,14 +735,6 @@ select {
   visibility: visible;
 }
 
-.invisible {
-  visibility: hidden;
-}
-
-.collapse {
-  visibility: collapse;
-}
-
 .fixed {
   position: fixed;
 }
@@ -777,6 +769,10 @@ select {
 
 .col-span-6 {
   grid-column: span 6 / span 6;
+}
+
+.float-right {
+  float: right;
 }
 
 .mx-auto {
@@ -952,6 +948,10 @@ select {
   align-items: center;
 }
 
+.items-stretch {
+  align-items: stretch;
+}
+
 .justify-center {
   justify-content: center;
 }
@@ -972,6 +972,10 @@ select {
 
 .self-start {
   align-self: flex-start;
+}
+
+.self-end {
+  align-self: flex-end;
 }
 
 .rounded {
