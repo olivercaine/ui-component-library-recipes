@@ -10,8 +10,8 @@ export interface IProps {
   */
   actions?: JSX.Element
   onImageClick: (recipeId: string) => void
-  onFavouriteToggle: ({ recipeId, isFavourite }: { recipeId: string, isFavourite: boolean }) => void
-  onPortionChange: ({ recipeId, portionCount }: { recipeId: string, portionCount: number }) => void
+  onFavouriteToggle: (obj: { recipeId: string, isFavourite: boolean }) => void
+  onPortionChange: (obj: { recipeId: string, portionCount: number }) => void
 }
 
 export const Recipes: FC<IProps> = ({
@@ -20,9 +20,6 @@ export const Recipes: FC<IProps> = ({
   onFavouriteToggle,
   onPortionChange,
 }: IProps) => {
-  const RecipePreviewActions = ({ value, onFavouriteToggle: favouriteCallback }: { value: string | number, onFavouriteToggle: any }) =>
-    <Favourite onChangeCallback={favouriteCallback} value={value} css='absolute top-5 right-5' />
-
   return (<div className='container' data-testid='Recipes'>
     <div className='flex flex-wrap'>
       {recipes.map(recipe =>
@@ -37,7 +34,10 @@ export const Recipes: FC<IProps> = ({
                 })}
               />
             }
-            actions={<RecipePreviewActions value={recipe.uid} onFavouriteToggle={onFavouriteToggle} />}
+            actions={<Favourite onChangeCallback={(e) => onFavouriteToggle({
+              isFavourite: e.isFavourite,
+              recipeId: e.value.toString()
+            })} value={recipe.uid} css='absolute top-5 right-5' />}
             onImageClick={onImageClick}
             recipe={recipe}
           />
