@@ -26,7 +26,7 @@ export const Recipes: FC<IProps> = ({
   return (<div className='container' data-testid='Recipes'>
     <div className='flex flex-wrap'>
       {recipes.map(recipe =>
-        <div className='w-full md:w-1/3 lg:w-1/4 px-4 py-4'>
+        <div key={recipe.uid} className='w-full md:w-1/3 lg:w-1/4 px-4 py-4'>
           <RecipePreview
             stepperComponent={
               <Stepper
