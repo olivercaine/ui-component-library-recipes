@@ -6,6 +6,10 @@ import { RecipePreview } from '../../components/RecipePreview/RecipePreview'
 export interface IProps {
   recipes: IRecipe[]
   /**
+  An array of ids of favourite recipes
+  */
+  favourites?: string[]
+  /**
   Actions to appear in the top right of each recipe preview component
   */
   actions?: JSX.Element
@@ -16,6 +20,7 @@ export interface IProps {
 
 export const Recipes: FC<IProps> = ({
   recipes,
+  favourites,
   onImageClick,
   onFavouriteToggle,
   onPortionChange,
@@ -40,6 +45,7 @@ export const Recipes: FC<IProps> = ({
                   isFavourite: e.isFavourite,
                   recipeId: e.value.toString()
                 })}
+                initialValue={favourites?.includes(recipe.uid)}
                 value={recipe.uid}
                 css='absolute top-5 right-5'
               />

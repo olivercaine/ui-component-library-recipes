@@ -98,3 +98,15 @@ ClickImage.play = async ({ args, canvasElement }) => {
     })
   })
 }
+
+export const CanSetFavourites = template({
+  ...defaultArgs,
+  favourites: [recipes[1].uid]
+})
+CanSetFavourites.play = async ({ args, canvasElement }) => {
+  const canvas = within(canvasElement)
+  const favRecipeBtn = (uniqueId: string) => canvas.getByTestId(favouriteSelectors({ uniqueId }).button)
+
+  expect(favRecipeBtn(recipes[0].uid)).toHaveClass('bg-gray-200')
+  expect(favRecipeBtn(recipes[1].uid)).toHaveClass('bg-red-200')
+}
