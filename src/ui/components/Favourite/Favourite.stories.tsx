@@ -2,8 +2,10 @@ import { action } from '@storybook/addon-actions'
 import { expect, jest } from '@storybook/jest'
 import { ComponentMeta } from '@storybook/react'
 import { userEvent, within } from '@storybook/testing-library'
+import { waitFor } from '@testing-library/react'
 import { storyTemplate } from '../../../../.storybook/helpers'
 import { Favourite } from '../../../index'
+import { selectors } from './Favourite selectors'
 
 export default {
   component: Favourite,
@@ -11,10 +13,6 @@ export default {
 } as ComponentMeta<typeof Favourite>
 
 const template = storyTemplate(Favourite)
-
-const select = (canvas: any) => ({ // TODO - assign proper type
-  button: canvas.getByRole('button'),
-})
 
 const defaultArgs = {
   onChangeCallback: action('onClick'),
@@ -25,28 +23,48 @@ const defaultArgs = {
 export const Default = template({
   ...defaultArgs,
 })
-Default.play = async ({ args, canvasElement }) => {
-  const canvas = await within(canvasElement)
-  expect(select(canvas).button).toHaveClass('bg-gray-200')
-}
 
-export const NotFavourite = template({
-  ...defaultArgs,
-  checkedInit: false,
-  onChangeCallback: jest.fn(),
-})
-NotFavourite.play = async ({ args, canvasElement }) => {
-  const canvas = await within(canvasElement)
-  expect(select(canvas).button).toHaveClass('bg-gray-200')
-}
-
-export const IsFavourite = template({
+export const DefaultFavourite = template({
   ...defaultArgs,
   checkedInit: true,
-  onChangeCallback: jest.fn(),
 })
-IsFavourite.play = async ({ args, canvasElement }) => {
+DefaultFavourite.play = async ({ canvasElement }) => {
   const canvas = await within(canvasElement)
-  await userEvent.click(select(canvas).button)
-  expect(select(canvas).button).toHaveClass('bg-red-200')
+  expect(canvas.getByTestId(selectors().button(defaultArgs.value))).toHaveClass('bg-red-200')
+}
+
+export const DefaultNotFavourite = template({
+  ...defaultArgs,
+  checkedInit: false,
+})
+DefaultNotFavourite.play = async ({ canvasElement }) => {
+  const canvas = await within(canvasElement)
+  expect(canvas.getByTestId(selectors().button(defaultArgs.value))).toHaveClass('bg-gray-200')
+}
+
+export const Toggle = template({
+  ...defaultArgs,
+  onChangeCallback: jest.fn()
+})
+Toggle.play = async ({ args, canvasElement }) => {
+  const canvas = await within(canvasElement)
+  expect(canvas.getByTestId(selectors().button(defaultArgs.value))).toHaveClass('bg-gray-200') // Start gray
+
+  await userEvent.click(canvas.getByTestId(selectors().button(defaultArgs.value)))
+  await waitFor(() => {
+    expect(args.onChangeCallback).toHaveBeenCalledWith({
+      value: '1234',
+      checked: true,
+    })
+    expect(canvas.getByTestId(selectors().button(defaultArgs.value))).toHaveClass('bg-red-200') // Click to red
+  })
+
+  await userEvent.click(canvas.getByTestId(selectors().button(defaultArgs.value)))
+  await waitFor(() => {
+    expect(args.onChangeCallback).toHaveBeenCalledWith({
+      value: '1234',
+      checked: false,
+    })
+    expect(canvas.getByTestId(selectors().button(defaultArgs.value))).toHaveClass('bg-gray-200') // Click to gray
+  })
 }
