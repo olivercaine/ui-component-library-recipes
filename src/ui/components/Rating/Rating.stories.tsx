@@ -12,5 +12,3 @@ const template = storyTemplate(Rating)
 const defaultArgs = {}
 
 export const Default = template({ ...defaultArgs })
-
-export const Disabled = template({ ...defaultArgs, readOnly: true, value: 4 })

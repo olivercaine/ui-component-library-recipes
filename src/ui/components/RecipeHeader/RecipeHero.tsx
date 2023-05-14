@@ -38,7 +38,7 @@ export const RecipeHero: FC<{
             <br />
             <br />
             {recipe && recipe.rating &&
-              <Rating name='read-only' value={recipe.rating.average} readOnly />
+              <Rating />
             }
             <br />
             <br />

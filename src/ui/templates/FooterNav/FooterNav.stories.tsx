@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-key */
+
 import FavoriteIcon from '@mui/icons-material/Favorite'
 import ManageSearchIcon from '@mui/icons-material/ManageSearch'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'

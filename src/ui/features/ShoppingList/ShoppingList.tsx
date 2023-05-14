@@ -23,7 +23,7 @@ The recipe to use
               <h1 className='text-xl font-medium text-neutral-300'>Shopping List</h1>
               {recipes.map((recipe) =>
                 recipe.ingredients?.map((ingredient) =>
-                  <div className='flex justify-between items-center pt-6'>
+                  <div className='flex justify-between items-center pt-6' key={ingredient.uid}>
                     <div className='flex  items-center'>
                       <Image src={ingredient.media.images?.length ? ingredient?.media?.images[0]?.image : undefined}
                         width='60'

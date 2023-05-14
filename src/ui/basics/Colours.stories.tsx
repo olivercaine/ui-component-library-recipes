@@ -5,7 +5,7 @@ import { storyTemplate } from '../../../.storybook/helpers'
 const Colors: FC<{ cols: string[] }> = ({ cols }) =>
   <>
     {cols.map((color) =>
-      <div style={{
+      <div key={color} style={{
         color: 'white',
         display: 'inline',
         float: 'left',

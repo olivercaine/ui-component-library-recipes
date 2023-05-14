@@ -51,6 +51,7 @@ export const WithCustomAction = template({
   ...defaultArgs,
   actions: [
     <button
+      key={1}
       className={'justify-center text-gray-500 absolute top-5 right-5 bg-white'}
       onClick={action('Button callback')}>
       A custom action
