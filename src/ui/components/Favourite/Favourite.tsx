@@ -26,7 +26,7 @@ export const Favourite: FC<{
 }) => {
     const [checked, setChecked] = useState<boolean>(false)
 
-    const onClickHandler = (e) => {
+    const onClickHandler = (/* e: UIEvent */) => {
       setChecked(!checked)
       onChangeCallback({
         checked: !checked,
