@@ -12,14 +12,14 @@ export default {
 
 const template = storyTemplate(Checkbox)
 
+const select = (canvas: any) => ({ // TODO - assign proper type
+  checkbox: canvas.getByRole('checkbox'),
+})
+
 const defaultArgs = {
   onChangeCallback: action('changeCallback'),
   value: '1234'
 }
-
-const select = (canvas) => ({
-  checkbox: canvas.getByRole('checkbox'),
-})
 
 export const Default = template({
   ...defaultArgs

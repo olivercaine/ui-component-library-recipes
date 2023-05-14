@@ -12,7 +12,7 @@ export default {
 
 const template = storyTemplate(Favourite)
 
-const select = (canvas) => ({
+const select = (canvas: any) => ({ // TODO - assign proper type
   button: canvas.getByRole('button'),
 })
 
