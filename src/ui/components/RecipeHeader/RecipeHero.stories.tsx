@@ -21,7 +21,7 @@ export const Default = template({ ...defaultArgs })
 
 export const WithFavourite = template({
   ...defaultArgs,
-  favouriteComponent: <Favourite
+  actions: <Favourite
     onChangeCallback={action('onChangeCallback')}
     value={'recipeId1234'}
     css='absolute top-5 right-5'
