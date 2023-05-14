@@ -48,23 +48,24 @@ export const Toggle = template({
 })
 Toggle.play = async ({ args, canvasElement }) => {
   const canvas = await within(canvasElement)
-  expect(canvas.getByTestId(selectors().button(defaultArgs.value))).toHaveClass('bg-gray-200') // Start gray
+  const btn = canvas.getByTestId(selectors().button(defaultArgs.value))
+  expect(btn).toHaveClass('bg-gray-200') // Start gray
 
-  await userEvent.click(canvas.getByTestId(selectors().button(defaultArgs.value)))
+  await userEvent.click(btn)
   await waitFor(() => {
     expect(args.onChangeCallback).toHaveBeenCalledWith({
       value: '1234',
       checked: true,
     })
-    expect(canvas.getByTestId(selectors().button(defaultArgs.value))).toHaveClass('bg-red-200') // Click to red
+    expect(btn).toHaveClass('bg-red-200') // Click to red
   })
 
-  await userEvent.click(canvas.getByTestId(selectors().button(defaultArgs.value)))
+  await userEvent.click(btn)
   await waitFor(() => {
     expect(args.onChangeCallback).toHaveBeenCalledWith({
       value: '1234',
       checked: false,
     })
-    expect(canvas.getByTestId(selectors().button(defaultArgs.value))).toHaveClass('bg-gray-200') // Click to gray
+    expect(btn).toHaveClass('bg-gray-200') // Click to gray
   })
 }
