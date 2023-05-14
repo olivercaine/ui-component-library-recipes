@@ -9,12 +9,13 @@ export interface IProps {
   The recipe to display
   */
   recipe: IRecipe
+  actions?: JSX.Element | JSX.Element[]
 }
 
-export const RecipeDetail: FC<IProps> = ({ recipe }: IProps) =>
+export const RecipeDetail: FC<IProps> = ({ recipe, actions }: IProps) =>
   <div className='grid grid-cols-6 gap-8 py-10 md:px-16 pb-20'>
     <div className='col-span-6'>
-      <RecipeHero recipe={recipe} />
+      <RecipeHero recipe={recipe} actions={actions} />
     </div>
     {/* <div className='rounded-lg'>
       <h2>Recipe info</h2>

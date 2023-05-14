@@ -1,7 +1,9 @@
 import { recipes } from '@olivercaine/recipe-data'
+import { action } from '@storybook/addon-actions'
 import { ComponentMeta } from '@storybook/react'
+import React from 'react'
 import { storyTemplate } from '../../../../.storybook/helpers'
-import { RecipeDetail } from '../../../index'
+import { Favourite, RecipeDetail } from '../../../index'
 
 export default {
   component: RecipeDetail,
@@ -17,3 +19,9 @@ const defaultArgs = {
 export const Default = template({ ...defaultArgs })
 
 export const CremeBrulee = template({ ...defaultArgs, recipe: recipes[1] })
+
+export const WithFavourite = template({
+  ...defaultArgs,
+  recipe: recipes[1],
+  actions: <Favourite value={defaultArgs.recipe.uid} css='absolute top-5 right-5' onChangeCallback={action('onChangeCallback')} />
+})

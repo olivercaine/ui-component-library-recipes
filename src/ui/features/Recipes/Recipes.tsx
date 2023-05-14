@@ -9,7 +9,7 @@ export interface IProps {
   Actions to appear in the top right of each recipe preview component
   */
   actions?: JSX.Element
-  onImageClick: ({ recipeId }: { recipeId: string }) => void
+  onImageClick: (recipeId: string) => void
   onFavouriteToggle: ({ recipeId, isFavourite }: { recipeId: string, isFavourite: boolean }) => void
   onPortionChange: ({ recipeId, portionCount }: { recipeId: string, portionCount: number }) => void
 }
