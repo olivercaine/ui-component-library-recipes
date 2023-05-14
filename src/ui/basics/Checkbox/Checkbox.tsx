@@ -22,27 +22,25 @@ export const Checkbox: FC<{
   onChangeCallback,
   value
 }) => {
-    const [checked, setChecked] = useState<IChangeCallbackValue>({
-      checked: false,
-      value
-    })
+    const [checked, setChecked] = useState<boolean>(false)
 
     const handleChange = (checked: boolean) => {
-      const newVal: IChangeCallbackValue = {
+      setChecked(checked)
+      onChangeCallback({
         checked,
         value
-      }
-      setChecked(newVal)
-      onChangeCallback(newVal)
+      })
     }
 
-    return (<input
-      data-testid='Checkbox'
-      disabled={!checked}
-      role='checkbox'
-      type='checkbox'
-      className={`relative inline-flex no-underline items-center rounded-md px-4 py-2 
+    return (
+      <input
+        data-testid='Checkbox'
+        defaultChecked={checked}
+        role='checkbox'
+        type='checkbox'
+        className={`relative inline-flex no-underline items-center rounded-md px-4 py-2 
     text-sm font-medium hover:bg-gray-50 ${css}`}
-      onChange={e => handleChange(e.target.checked)}
-    />)
+        onChange={e => handleChange(e.target.checked)}
+      />
+    )
   }

@@ -12,6 +12,10 @@ export default {
 
 const template = storyTemplate(Checkbox)
 
+const select = (canvas: any) => ({ // TODO - assign proper type
+  checkbox: canvas.getByRole('checkbox'),
+})
+
 const defaultArgs = {
   onChangeCallback: action('changeCallback'),
   value: '1234'
@@ -20,6 +24,10 @@ const defaultArgs = {
 export const Default = template({
   ...defaultArgs
 })
+Default.play = async ({ canvasElement }) => {
+  const canvas = await within(canvasElement)
+  await expect(select(canvas).checkbox).not.toHaveAttribute('checked')
+}
 
 export const Unchecked = template({
   ...defaultArgs,
@@ -27,11 +35,13 @@ export const Unchecked = template({
 })
 Unchecked.play = async ({ args, canvasElement }) => {
   const canvas = await within(canvasElement)
-  await userEvent.click(canvas.getByRole('checkbox'))
+  await expect(select(canvas).checkbox).not.toHaveAttribute('checked')
+  await userEvent.click(select(canvas).checkbox)
   await waitFor(() => {
     expect(args.onChangeCallback).toHaveBeenCalledWith({
       value: '1234',
       checked: true
     })
   })
+  await expect(select(canvas).checkbox).toHaveAttribute('checked')
 }
