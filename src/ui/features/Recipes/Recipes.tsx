@@ -5,18 +5,22 @@ import { RecipePreview } from '../../components/RecipePreview/RecipePreview'
 
 export interface IProps {
   recipes: IRecipe[]
-  dispatch: any,
   /**
   Actions to appear in the top right of each recipe preview component
   */
   actions?: JSX.Element
+  onImageClick: ({ recipeId }: { recipeId: string }) => void
+  onFavouriteToggle: ({ recipeId, isFavourite }: { recipeId: string, isFavourite: boolean }) => void
+  onPortionChange: ({ recipeId, portionCount }: { recipeId: string, portionCount: number }) => void
 }
 
 export const Recipes: FC<IProps> = ({
   recipes,
-  dispatch,
+  onImageClick,
+  onFavouriteToggle,
+  onPortionChange,
 }: IProps) => {
-  const RecipePreviewActions = ({ value, favouriteCallback }: { value: string | number, favouriteCallback: any }) =>
+  const RecipePreviewActions = ({ value, onFavouriteToggle: favouriteCallback }: { value: string | number, onFavouriteToggle: any }) =>
     <Favourite onChangeCallback={favouriteCallback} value={value} css='absolute top-5 right-5' />
 
   return (<div className='container' data-testid='Recipes'>
@@ -26,11 +30,15 @@ export const Recipes: FC<IProps> = ({
           <RecipePreview
             stepperComponent={
               <Stepper
-                onChange={dispatch}
+                id={recipe.uid}
+                onChange={(value: number) => onPortionChange({
+                  portionCount: value,
+                  recipeId: recipe.uid
+                })}
               />
             }
-            actions={<RecipePreviewActions value={recipe.uid} favouriteCallback={dispatch} />}
-            onImageClick={dispatch}
+            actions={<RecipePreviewActions value={recipe.uid} onFavouriteToggle={onFavouriteToggle} />}
+            onImageClick={onImageClick}
             recipe={recipe}
           />
         </div>

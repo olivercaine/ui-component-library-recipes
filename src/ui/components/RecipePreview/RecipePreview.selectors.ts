@@ -1,7 +1,7 @@
 export const testIds = ({ uniqueId = 'Error: missing id' }) => {
-  const wrapper = `Favourite-${uniqueId}`
+  const wrapper = `RecipePreview-${uniqueId}`
   return {
     wrapper,
-    button: `${wrapper}_button`
+    image: `${wrapper}_img--main`
   }
 }

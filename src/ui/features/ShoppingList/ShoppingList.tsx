@@ -20,7 +20,7 @@ The recipe to use
         <div className='w-full px-5'>
           <div className='md:grid md:grid-cols-1'>
             <div className='col-span-2 bg-light-grey p-6 rounded-lg'>
-              <h1 className='text-xl font-medium text-neutral-300'>Shopping Cart</h1>
+              <h1 className='text-xl font-medium text-neutral-300'>Shopping List</h1>
               {recipes.map((recipe) =>
                 recipe.ingredients?.map((ingredient) =>
                   <div className='flex justify-between items-center pt-6'>

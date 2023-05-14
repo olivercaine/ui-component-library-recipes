@@ -22,7 +22,7 @@ export const RecipeSearchPage = ({
 }) =>
   <>
     <AppHeader appName={appName} />
-    <Recipes dispatch={console.log} recipes={recipes} />
+    <Recipes onPortionChange={console.log} onImageClick={console.log} onFavouriteToggle={console.log} recipes={recipes} />
     <Pagination />
     <FooterNav>
       <BottomNavigationAction
