@@ -9,4 +9,4 @@ export default {
 
 const template = storyTemplate(Pagination)
 
-export const Default = template({ })
+export const Default = template({})
