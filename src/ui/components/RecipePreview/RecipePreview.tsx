@@ -13,10 +13,10 @@ export const RecipePreview = ({
   favouriteComponent?: React.ReactNode | false
   stepperComponent?: React.ReactNode
 }) =>
-  <div className='bg-light-grey duration-300 hover:scale-105 rounded-lg' data-testid={`RecipePreview`}>
+  <div className='bg-light-grey duration-300 hover:scale-105 rounded-lg' data-testid={'RecipePreview'}>
     {favouriteComponent}
     <Image
-      data-testId={`RecipePreview_img--main`}
+      data-testId={'RecipePreview_img--main'}
       alt='blog'
       className='lg:h-48 w-full object-cover object-center'
       onClick={() => onImageClick(recipe.uid)}
