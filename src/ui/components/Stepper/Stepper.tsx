@@ -14,7 +14,7 @@ export interface IProps {
 
 export const Stepper: FC<IProps> = ({
   min = 0,
-  max = 5,
+  max = 1000, // TODO: remove max
   step = 1,
   defaultValue = 0,
   name = 'stepper-name',
