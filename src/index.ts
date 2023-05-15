@@ -16,6 +16,7 @@ import { testIds as stepperSelectors } from './ui/components/Stepper/Stepper.sel
 import { RecipeDetail } from './ui/features/RecipeDetail/RecipeDetail'
 import { Recipes } from './ui/features/Recipes/Recipes'
 import { ShoppingList } from './ui/features/ShoppingList/ShoppingList'
+import { testIds as shoppingListSelectors } from './ui/features/ShoppingList/ShoppingList.selectors'
 import { AppHeader } from './ui/templates/AppHeader/AppHeader'
 import { FooterNav } from './ui/templates/FooterNav/FooterNav'
 
@@ -41,5 +42,6 @@ export {
   // Selectors
   favouriteSelectors,
   stepperSelectors,
-  recipePreviewSelectors
+  recipePreviewSelectors,
+  shoppingListSelectors,
 }
