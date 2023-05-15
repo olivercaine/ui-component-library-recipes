@@ -18,3 +18,8 @@ const defaultArgs = {
 }
 
 export const Default = template({ ...defaultArgs })
+
+export const NoRecipes = template({
+  ...defaultArgs,
+  recipes: []
+})

@@ -42,6 +42,9 @@ The recipe to use
                   </div>
                 )
               )}
+              {!recipes.length &&
+                <p>There are currently no items in your shopping list.</p>
+              }
             </div>
           </div>
         </div>
