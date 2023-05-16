@@ -103,10 +103,26 @@ export const CanSetFavourites = template({
   ...defaultArgs,
   favourites: [recipes[1].uid]
 })
-CanSetFavourites.play = async ({ args, canvasElement }) => {
+CanSetFavourites.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement)
   const favRecipeBtn = (uniqueId: string) => canvas.getByTestId(favouriteSelectors({ uniqueId }).button)
 
   expect(favRecipeBtn(recipes[0].uid)).toHaveClass('bg-gray-200')
   expect(favRecipeBtn(recipes[1].uid)).toHaveClass('bg-red-200')
+}
+
+export const PortionDefaultValues = template({
+  ...defaultArgs,
+  portions: {
+    [recipes[1].uid]: 8
+  }
+})
+PortionDefaultValues.play = async ({ canvasElement }) => {
+  const canvas = within(canvasElement)
+
+  const getStepperInput = (recipeId: string) =>
+    canvas.findByTestId(stepperSelectors({ uniqueId: recipeId }).input)
+
+  expect(await getStepperInput(recipes[0].uid)).toHaveAttribute('value', '0')
+  expect(await getStepperInput(recipes[1].uid)).toHaveAttribute('value', '8')
 }
