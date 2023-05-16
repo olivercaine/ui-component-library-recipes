@@ -7,13 +7,15 @@ import { testIds } from './ShoppingList.selectors'
 export const ShoppingList: React.FC<{
   appName?: string
   /**
-The recipe to use
-*/
+  The recipe to use
+  */
   recipes: IRecipe[],
-  onCheckboxChange: any
+  onCheckboxChange: any,
+  portions?: Record<string, number>
 }> = ({
   recipes,
-  onCheckboxChange
+  onCheckboxChange,
+  portions
 }) =>
   (<div className='h-screen text-neutral-400' data-testid={testIds({}).wrapper}>
     <div className='max-w-md mx-auto shadow-lg md:max-w-5xl pb-20'>
@@ -33,7 +35,9 @@ The recipe to use
                         width='60'
                       />
                       <div className='flex flex-col ml-3'>
-                        <span className='md:text-md font-medium'>{ingredient.name}</span>
+                        <span className='md:text-md font-medium'>
+                          {ingredient.name} {portions && portions[recipe.uid] && <>(x{portions[recipe.uid]})</>}
+                        </span>
                       </div>
                     </div>
                     <div className='flex justify-center items-center'>
