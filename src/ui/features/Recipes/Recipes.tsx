@@ -9,6 +9,7 @@ export interface IProps {
   An array of ids of favourite recipes
   */
   favourites?: string[]
+  portions?: Record<string, number>
   /**
   Actions to appear in the top right of each recipe preview component
   */
@@ -24,6 +25,7 @@ export const Recipes: FC<IProps> = ({
   onImageClick,
   onFavouriteToggle,
   onPortionChange,
+  portions,
 }: IProps) => {
   return (<div className='container' data-testid='Recipes'>
     <div className='flex flex-wrap'>
@@ -33,6 +35,7 @@ export const Recipes: FC<IProps> = ({
             stepperComponent={
               <Stepper
                 id={recipe.uid}
+                defaultValue={portions ? portions[recipe.uid] : 0}
                 onChange={(value: number) => onPortionChange({
                   portionCount: value,
                   recipeId: recipe.uid
