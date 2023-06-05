@@ -27,41 +27,11 @@ export const parameters = {
       ],
     },
   },
-  screenshot: <ScreenshotOptions>{
-    // delay?: number;                           // default 0 msec
-    // waitAssets?: boolean;                     // default true
-    // waitFor?: string | () => Promise<void>;   // default ""
-    // hover?: string;                           // default ""
-    // focus?: string;                           // default ""
-    // click?: string;                           // default ""
-    // skip?: boolean;                           // default false
-    // viewport?: Viewport;
-    // viewports?: string[] | { [variantName]: Viewport };
-    // variants?: Variants;
-    // waitImages?: boolean;                     // default true
-    // clip?: { x: number; y: number; width: number; height: number } | null; // default null
-
-    captureBeyondViewport: false, // If set true, Storycap captures screenshot beyond the viewport.
-    omitBackground: true,
+  screenshot: <ScreenshotOptions>{ // https://github.com/reg-viz/storycap
+    skip: true, // If set true, Storycap cancels capturing corresponding stories.
+    captureBeyondViewport: true, // If set true, Storycap captures screenshot beyond the viewport.
+    omitBackground: true, // If set true, Storycap omits the background of the page allowing for transparent screenshots. Note the storybook theme will need to be transparent as well.
     fullPage: false, // If set true, Storycap captures the entire page of stories.
-    // viewports: {
-    //   desktop: {
-    //     width: 1024,
-    //     height: 768,
-    //   },
-    //   mobile: {
-    //     width: 320,
-    //     height: 568,
-    //   },
-    // },
-    // variants: {
-    //   small: {
-    //     viewport: 'iPhone 5',
-    //   },
-    //   hovered: {
-    //     extends: 'small',
-    //   },
-    // },
   },
 }
 
