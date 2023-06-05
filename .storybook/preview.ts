@@ -1,6 +1,7 @@
 import { StoryTypes } from '@olliecaine/storybook-utils'
 import { withTests } from '@storybook/addon-jest'
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
+import { withScreenshot } from 'storycap'
 import results from '../.jest-test-results.json'
 import '../src/ui/styles/base.css'
 import '../src/ui/styles/styles.css'
@@ -29,6 +30,7 @@ export const parameters = {
 }
 
 export const decorators = [
+  withScreenshot,
   withTests({
     results,
   }),

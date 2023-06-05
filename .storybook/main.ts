@@ -13,6 +13,7 @@ const config = {
     '@storybook/addon-jest',
     '@storybook/addon-links',
     '@storybook/addon-postcss',
+    'storycap',
   ],
   features: {
     interactionsDebugger: true, // Enable playback controls
