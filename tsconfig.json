@@ -21,7 +21,6 @@
     "resolveJsonModule": true, // Allows importing modules with a ‘.json’ extension - https://www.typescriptlang.org/tsconfig#resolveJsonModule
     "skipLibCheck": true, // Skip type checking of declaration files - https://www.typescriptlang.org/tsconfig#skipLibCheck
     "strict": true, // Results in stronger guarantees of program correctness
-    "target": "es5", // Target es5 for IE9/10 strict - https://www.typescriptlang.org/tsconfig#target
     "types": [
       "node",
       "@testing-library/jest-dom",
