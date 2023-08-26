@@ -36,7 +36,7 @@ export const WithFavouriteAction = template({
     favouriteCallback
   })
 })
-WithFavouriteAction.play = async ({ args, canvasElement }) => {
+WithFavouriteAction.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement)
   const favBtn = canvas.getByTestId(favouriteSelectors({ uniqueId: defaultArgs.recipe.uid }).button)
   await userEvent.click(favBtn)
