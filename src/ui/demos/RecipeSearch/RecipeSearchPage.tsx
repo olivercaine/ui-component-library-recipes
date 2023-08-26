@@ -8,8 +8,6 @@ import { AppHeader, FooterNav, Pagination, Recipes } from '../../../index'
 
 export const RecipeSearchPage = ({
   appName,
-  onImageClick,
-  onStepperChange,
   recipes,
 }: {
   /**
