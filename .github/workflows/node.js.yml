@@ -41,7 +41,7 @@ jobs:
       - name: Install dependencies
         env:
           MY_GITHUB_TOKEN_CLASSIC: ${{secrets.GITHUB_TOKEN}}   
-        run: npm install
+        run: npm ci
 
       - name: Perform health check
         run: npm run health-check 
