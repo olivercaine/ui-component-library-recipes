@@ -25,7 +25,7 @@
     "test:watch": "npm test -- --watch",
     "compile": "tsc",
     "build": "rollup -c",
-    "health-check": "time concurrently --group --kill-others-on-fail --timings 'npm run lint --quiet' 'npm run compile' 'npm run build' 'npm test' 'npm run storybook:build' 'npm run storybook:start-and-test'",
+    "health-check": "time concurrently --group --kill-others-on-fail 'npm run lint --quiet' 'npm run compile' 'npm run build' 'npm test' 'npm run storybook:build' 'npm run storybook:start-and-test'",
     "update-recipe-data": "npm install --save-dev @olivercaine/recipe-data@latest",
     "prepublishOnly": "npm build"
   },
@@ -47,6 +47,7 @@
   "devDependencies": {
     "@babel/core": "^7.21.5",
     "@olivercaine/recipe-data": "0.0.1-4907933064.0",
+    "@olliecaine/eslint-config": "^1.0.4",
     "@olliecaine/storybook-utils": "0.0.1",
     "@olliecaine/tsconfig": "^1.0.10",
     "@rollup/plugin-commonjs": "^17.0.0",
