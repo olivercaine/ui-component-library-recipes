@@ -27,26 +27,32 @@ const recipePreviewActions = ({ recipe, favouriteCallback }: { recipe: IRecipe, 
     <Favorite value={recipe.uid} css='absolute top-5 right-5' onChangeCallback={favouriteCallback} />
   </>
 
+// @ts-expect-error
 export const Default = template({ ...defaultArgs })
 
+// @ts-expect-error
 export const WithFavouriteAction = template({
   ...defaultArgs,
   actions: recipePreviewActions({
+    // @ts-expect-error
     recipe: defaultArgs.recipe,
     favouriteCallback
   })
 })
 WithFavouriteAction.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement)
+  // @ts-expect-error
   const favBtn = canvas.getByTestId(favouriteSelectors({ uniqueId: defaultArgs.recipe.uid }).button)
   await userEvent.click(favBtn)
   expect(favBtn).toHaveClass('bg-red-200')
   expect(favouriteCallback).toHaveBeenCalledWith({
+    // @ts-expect-error
     value: defaultArgs.recipe.uid,
     isFavourite: true,
   })
 }
 
+// @ts-expect-error
 export const WithCustomAction = template({
   ...defaultArgs,
   actions: [
@@ -59,11 +65,14 @@ export const WithCustomAction = template({
   ]
 })
 
+// @ts-expect-error
 export const WithStepperComponent = template({
   ...defaultArgs,
+  // @ts-expect-error
   stepperComponent: <Stepper id={defaultArgs.recipe.uid} onChange={action('Setting portion count')} />
 })
 
+// @ts-expect-error
 export const ClickingImage = template({
   ...defaultArgs,
   onImageClick: jest.fn()
@@ -73,6 +82,7 @@ ClickingImage.play = async ({ args, canvasElement }) => {
   await canvas.findByRole('img')
 
   const image = await waitFor(() => canvas.getByTestId(
+    // @ts-expect-error
     recipePreviewSelectors({ uniqueId: defaultArgs.recipe.uid }).image
   ))
   await userEvent.click(image)

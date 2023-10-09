@@ -22,6 +22,7 @@ export const Default = template({ ...defaultArgs })
 export const WithPortionCount = template({
   ...defaultArgs,
   portions: {
+    // @ts-expect-error
     [recipes[1].uid]: 8
   }
 })

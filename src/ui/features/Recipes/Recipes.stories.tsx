@@ -32,20 +32,22 @@ ToggleFavourites.play = async ({ args, canvasElement }) => {
   const canvas = within(canvasElement)
   const favRecipeBtn = (uniqueId: string) => canvas.getByTestId(favouriteSelectors({ uniqueId }).button)
 
-  // Favourite recipe 1
+  // @ts-expect-error - Favourite recipe 1
   await userEvent.click(await favRecipeBtn(recipes[0].uid))
   await waitFor(() => {
     expect(args.onFavouriteToggle).toHaveBeenCalledWith({
       isFavourite: true,
+      // @ts-expect-error
       recipeId: recipes[0].uid
     })
   })
 
-  // Favourite recipe 2
+  // @ts-expect-error - Favourite recipe 2
   await userEvent.click(await favRecipeBtn(recipes[1].uid))
   await waitFor(() => {
     expect(args.onFavouriteToggle).toHaveBeenCalledWith({
       isFavourite: true,
+      // @ts-expect-error
       recipeId: recipes[1].uid
     })
   })
@@ -60,20 +62,22 @@ ChangePortion.play = async ({ args, canvasElement }) => {
 
   const getStepperSelectors = (uniqueId: string) => stepperSelectors({ uniqueId })
 
-  // Add portion to recipe 1
+  // @ts-expect-error - Add portion to recipe 1
   await userEvent.click(await canvas.getByTestId(getStepperSelectors(recipes[0].uid).increment))
   await waitFor(() => {
     expect(args.onPortionChange).toHaveBeenCalledWith({
       portionCount: 1,
+      // @ts-expect-error
       recipeId: recipes[0].uid
     })
   })
 
-  // Add portion to recipe 1
+  // @ts-expect-error - Add portion to recipe 1
   await userEvent.click(await canvas.getByTestId(getStepperSelectors(recipes[1].uid).increment))
   await waitFor(() => {
     expect(args.onPortionChange).toHaveBeenCalledWith({
       portionCount: 1,
+      // @ts-expect-error
       recipeId: recipes[1].uid
     })
   })
@@ -101,19 +105,23 @@ ClickImage.play = async ({ args, canvasElement }) => {
 
 export const CanSetFavourites = template({
   ...defaultArgs,
+  // @ts-expect-error
   favourites: [recipes[1].uid]
 })
 CanSetFavourites.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement)
   const favRecipeBtn = (uniqueId: string) => canvas.getByTestId(favouriteSelectors({ uniqueId }).button)
 
+  // @ts-expect-error
   expect(favRecipeBtn(recipes[0].uid)).toHaveClass('bg-gray-200')
+  // @ts-expect-error
   expect(favRecipeBtn(recipes[1].uid)).toHaveClass('bg-red-200')
 }
 
 export const PortionDefaultValues = template({
   ...defaultArgs,
   portions: {
+    // @ts-expect-error
     [recipes[1].uid]: 8
   }
 })
@@ -123,6 +131,8 @@ PortionDefaultValues.play = async ({ canvasElement }) => {
   const getStepperInput = (recipeId: string) =>
     canvas.findByTestId(stepperSelectors({ uniqueId: recipeId }).input)
 
+  // @ts-expect-error
   expect(await getStepperInput(recipes[0].uid)).toHaveAttribute('value', '0')
+  // @ts-expect-error
   expect(await getStepperInput(recipes[1].uid)).toHaveAttribute('value', '8')
 }
