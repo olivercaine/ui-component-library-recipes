@@ -20,4 +20,5 @@ const defaultArgs = {
   recipe: recipes[0]
 }
 
+// @ts-expect-error
 export const Default = template({ ...defaultArgs })

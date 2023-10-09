@@ -15,4 +15,5 @@ const defaultArgs = {
   cookingInstruction: recipes[0]?.cooking_instructions ? recipes[0]?.cooking_instructions[0] : {}
 }
 
+// @ts-expect-error
 export const Default = template({ ...defaultArgs })
