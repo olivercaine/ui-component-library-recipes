@@ -4,7 +4,6 @@
   "parser": "@typescript-eslint/parser",
   "extends": [
     "standard",
-    "eslint:recommended",
     "plugin:react/recommended",
     "@olliecaine/eslint-config"
   ],
@@ -14,9 +13,7 @@
     }
   },
   "plugins": [
-    "no-null",
-    "promise",
-    "no-only-tests"
+    "promise"
   ],
   "env": {
     "browser" : true,
