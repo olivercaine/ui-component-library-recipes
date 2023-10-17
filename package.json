@@ -47,7 +47,7 @@
   "devDependencies": {
     "@babel/core": "^7.21.5",
     "@olivercaine/recipe-data": "0.0.1-4907933064.0",
-    "@olliecaine/eslint-config": "^1.0.4",
+    "@olliecaine/eslint-config": "^1.0.6",
     "@olliecaine/storybook-utils": "0.0.2",
     "@olliecaine/tsconfig": "^1.0.10",
     "@rollup/plugin-commonjs": "^17.0.0",
@@ -82,8 +82,6 @@
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-n": "^15.7.0",
-    "eslint-plugin-no-null": "^1.0.2",
-    "eslint-plugin-no-only-tests": "^3.1.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.32.2",
