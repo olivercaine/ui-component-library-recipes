@@ -74,6 +74,7 @@ export const MyComponent = () =>
 
 1. `npm ci`
 2. `npm run dev`
+3. `npx storycap http://localhost:6006` - to generate screenshots
 
 ## Credits
 

@@ -2,12 +2,19 @@ import { recipes } from '@olivercaine/recipe-data'
 import { action } from '@storybook/addon-actions'
 import { ComponentMeta } from '@storybook/react'
 import React from 'react'
-import { storyTemplate } from '../../../../.storybook/helpers'
+import { ScreenshotOptions } from 'storycap'
+import { storyCapVariants, storyTemplate } from '../../../../.storybook/helpers'
 import { Favourite, RecipeDetail } from '../../../index'
 
 export default {
   component: RecipeDetail,
   title: 'Features/RecipeDetail',
+  parameters: {
+    screenshot: {
+      skip: false,
+      variants: storyCapVariants
+    } as ScreenshotOptions,
+  },
 } as ComponentMeta<typeof RecipeDetail>
 
 const template = storyTemplate(RecipeDetail)

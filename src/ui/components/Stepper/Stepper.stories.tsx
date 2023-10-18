@@ -2,6 +2,7 @@ import { action } from '@storybook/addon-actions'
 import { expect } from '@storybook/jest'
 import { ComponentMeta } from '@storybook/react'
 import { userEvent, waitFor, within } from '@storybook/testing-library'
+import { ScreenshotOptions } from 'storycap'
 import { storyTemplate } from '../../../../.storybook/helpers'
 import { Stepper } from '../../../index'
 import { testIds } from './Stepper.selectors'
@@ -9,6 +10,11 @@ import { testIds } from './Stepper.selectors'
 export default {
   component: Stepper,
   title: 'Components/Stepper',
+  parameters: {
+    screenshot: {
+      skip: false,
+    } as ScreenshotOptions,
+  },
 } as ComponentMeta<typeof Stepper>
 
 const template = storyTemplate(Stepper)

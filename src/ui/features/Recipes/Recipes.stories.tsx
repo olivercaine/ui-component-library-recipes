@@ -4,13 +4,20 @@ import { expect, jest } from '@storybook/jest'
 import { ComponentMeta } from '@storybook/react'
 import { userEvent, within } from '@storybook/testing-library'
 import { waitFor } from '@testing-library/react'
-import { storyTemplate } from '../../../../.storybook/helpers'
+import { ScreenshotOptions } from 'storycap'
+import { storyCapVariants, storyTemplate } from '../../../../.storybook/helpers'
 import { Recipes, favouriteSelectors, recipePreviewSelectors, stepperSelectors } from '../../../index'
 import { IProps } from './Recipes'
 
 export default {
   component: Recipes,
   title: 'Features/Recipes',
+  parameters: {
+    screenshot: {
+      skip: false,
+      variants: storyCapVariants
+    } as ScreenshotOptions,
+  },
 } as ComponentMeta<typeof Recipes>
 
 const template = storyTemplate(Recipes)
