@@ -46,7 +46,7 @@
   ],
   "devDependencies": {
     "@babel/core": "^7.21.5",
-    "@olivercaine/recipe-data": "^0.0.1-6052662810.0",
+    "@olivercaine/recipe-data": "0.0.1-4907933064.0",
     "@olliecaine/eslint-config": "^1.0.6",
     "@olliecaine/storybook-utils": "0.0.2",
     "@olliecaine/tsconfig": "^1.0.10",

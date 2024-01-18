@@ -33,6 +33,8 @@ jobs:
         run: npm list
 
       - name: Install dependencies
+        env:
+          MY_GITHUB_TOKEN_CLASSIC: ${{secrets.GITHUB_TOKEN}}   
         run: npm ci
       
       - name: Perform health check
