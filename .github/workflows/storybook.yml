@@ -36,6 +36,8 @@ jobs:
         uses: actions/configure-pages@v4
 
       - name: Install dependencies
+        env:
+          MY_GITHUB_TOKEN_CLASSIC: ${{secrets.GITHUB_TOKEN}}      
         run: npm ci
 
       - name: Run tests (for @storybook/addon-jest)
