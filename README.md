@@ -1,4 +1,4 @@
-# Recipe UI Components
+# Boilerplate UI Component Library
 
 [![Node.js CI](https://github.com/olivercaine/ui-component-library/actions/workflows/node.js.yml/badge.svg)](https://github.com/olivercaine/ui-component-library/actions/workflows/node.js.yml) [![Deploy Static Storybook](https://github.com/olivercaine/ui-component-library/actions/workflows/storybook.yml/badge.svg)](https://github.com/olivercaine/ui-component-library/actions/workflows/storybook.yml)[![Publish package](https://github.com/olivercaine/ui-component-library-recipes/actions/workflows/publish.js.yml/badge.svg)](https://github.com/olivercaine/ui-component-library-recipes/actions/workflows/publish.js.yml)
 
@@ -30,6 +30,30 @@ Recipe components built on React Storybook
 
 5. Auto-deploy Storybook to GitHub pages (demo above)
 
+## Getting started
+
+### Run the app
+
+Option 1: Using local environment:
+
+```shell
+nvm use # Switches to Node version defined in .nvmrc
+npm ci
+npm run dev
+```
+
+Option 2: Running in Docker:
+
+```shell
+npm run dev:docker
+```
+
+### View the component library
+
+```shell
+open http://127.0.0.1:6006
+```
+
 ## How to use
 
 1. Register the GitHub Package Registry in your .npmrc file ([additional docs](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry)):
@@ -42,13 +66,12 @@ Recipe components built on React Storybook
 
 2. Install the package:
 
-```
+```shell
 npm install @olivercaine/ui-component-library-recipes@latest
 ```
-
 or
 
-```
+```shell
 yarn install @olivercaine/ui-component-library-recipes@latest
 ```
 
