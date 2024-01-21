@@ -52,5 +52,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         env:
-          MY_GITHUB_TOKEN_CLASSIC: ${{secrets.GITHUB_TOKEN}}   
+          MY_GITHUB_TOKEN_CLASSIC: ${{secrets.PAT_TOKEN}}   
       - run: npm run health-check:docker
