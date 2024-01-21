@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "dev": "concurrently 'npm install' 'npm run test:watch' 'npm run storybook:start-and-test:watch' 'npx tailwindcss -i ./src/ui/styles/base.css -o ./src/ui/styles/styles.css --watch'",
-    "dev:docker": "docker run --env MY_GITHUB_TOKEN_CLASSIC=${MY_GITHUB_TOKEN_CLASSIC} --rm -it -w /app -v ${PWD}:/app -p 6006:6006 $(docker build . -q) sh -c 'npm run dev'",
+    "dev:docker": "docker run -e MY_GITHUB_TOKEN_CLASSIC=${MY_GITHUB_TOKEN_CLASSIC} --rm -it -w /app -v ${PWD}:/app -p 6006:6006 $(docker build . -q) sh -c 'npm run dev'",
     "lint": "eslint . -c .eslintrc --ext .ts,.tsx",
     "lint:fix": "npm run lint -- --fix",
     "storybook": "TS_NODE_PROJECT=.storybook/tsconfig.json start-storybook -p 6006",
@@ -26,7 +26,7 @@
     "compile": "tsc",
     "build": "rollup -c",
     "health-check": "time concurrently --group --kill-others-on-fail 'npm run lint --quiet' 'npm run compile' 'npm run build' 'npm test' 'npm run storybook:build' 'echo \"move `npm run storybook:start-and-test` to here from pre-push\"'",
-    "health-check:docker": "docker run --env MY_GITHUB_TOKEN_CLASSIC=${MY_GITHUB_TOKEN_CLASSIC} --rm -w /app -v ${PWD}:/app $(docker build . -q) sh -c 'echo $MY_GITHUB_TOKEN_CLASSIC && npm ci && npm run health-check'",
+    "health-check:docker": "docker run -e MY_GITHUB_TOKEN_CLASSIC=${MY_GITHUB_TOKEN_CLASSIC} --rm -w /app -v ${PWD}:/app $(docker build . -q) sh -c 'npm ci && npm run health-check'",
     "update-recipe-data": "npm install --save-dev @olivercaine/recipe-data@latest",
     "prepublishOnly": "npm build"
   },
