@@ -93,11 +93,6 @@ export const MyComponent = () =>
 
 4. Example recipe data can be installed from [olivercaine/recipe-data](https://github.com/olivercaine/recipe-data)
 
-## How to run locally
-
-1. `npm ci`
-2. `npm run dev`
-
 ## Credits
 
 1. https://tailblocks.cc for providing helpful pre-built components
