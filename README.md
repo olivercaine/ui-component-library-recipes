@@ -51,7 +51,7 @@ npm run dev:docker
 ### View the component library
 
 ```shell
-open http://127.0.0.1:6005
+open http://127.0.0.1:6006
 ```
 
 ## How to use
