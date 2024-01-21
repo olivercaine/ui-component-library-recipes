@@ -5,4 +5,4 @@ FROM olliecaine/ui-component-library:dependencies-1 as stage-develop
 # EXPOSE 8585
 
 # Expose the Storybook port
-# EXPOSE 6005
+# EXPOSE 6006
