@@ -1,4 +1,8 @@
-FROM node:14-alpine
+# --------------- STAGE 1: Develop ---------------
+FROM olliecaine/ui-component-library:dependencies-1 as stage-develop
 
-# Update .nvm when changing this file:
-# docker run --rm -it -w /app -v ${PWD}:/app $(docker build . -q) sh -c 'node -v > .nvmrc'
+# Expose the default Playwright port
+# EXPOSE 8585
+
+# Expose the Storybook port
+# EXPOSE 6006
