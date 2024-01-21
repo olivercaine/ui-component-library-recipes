@@ -4,11 +4,11 @@
   "license": "MIT",
   "version": "1.0.0",
   "description": "A React Storybook boilerplate for rapidly developing user interfaces",
-  "main": "lib/index.js",
-  "module": "lib/index.esm.js",
-  "types": "lib/src/index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/src/index.d.ts",
   "files": [
-    "lib"
+    "dist"
   ],
   "scripts": {
     "dev": "concurrently 'npm install' 'npm run test:watch' 'npm run storybook:start-and-test:watch' 'npx tailwindcss -i ./src/ui/styles/base.css -o ./src/ui/styles/styles.css --watch'",
