@@ -1,9 +1,9 @@
 {
   "models": [
     {
-      "title": "GPT-OSS 20B",
+      "title": "LLaMA 3.1",
       "provider": "ollama",
-      "model": "gpt-oss:20b",
+      "model": "llama3.1:latest",
       "apiBase": "http://localhost:11434",
       "contextLength": 8192
     }
@@ -20,11 +20,10 @@
           "**/*.json"
         ],
         "exclude": [
-          ".git/**",
-          ".nyc_output/**",
-          "coverage/**",
-          "dist/**",
           "node_modules/**",
+          "dist/**",
+          "build/**",
+          ".git/**",
           "*.log"
         ]
       }
@@ -35,21 +34,16 @@
     "model": "nomic-embed-text"
   },
   "tabAutocompleteModel": {
-    "title": "GPT-OSS 20B",
+    "title": "LLaMA 3.1",
     "provider": "ollama",
-    "model": "gpt-oss:20b",
+    "model": "llama3.1:latest",
     "apiBase": "http://localhost:11434"
   },
   "slashCommands": [
     {
       "name": "agent",
-      "description": "Use GPT-OSS 20B in agentic mode",
-      "model": "gpt-oss:20b"
-    },
-    {
-      "name": "codegen",
-      "description": "Generate code with GPT-OSS 20B (non-agentic)",
-      "model": "gpt-oss:20b"
+      "description": "Use LLaMA 3.1 in agentic mode",
+      "model": "llama3.1:latest"
     }
   ]
 }
