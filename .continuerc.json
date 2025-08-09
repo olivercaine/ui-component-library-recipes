@@ -14,11 +14,7 @@
       "name": "files",
       "params": {
         "include": [
-          "**/*.js",
-          "**/*.ts",
-          "**/*.tsx",
-          "**/*.py",
-          "**/*.json"
+          "**/**"
         ],
         "exclude": [
           ".git/**",
