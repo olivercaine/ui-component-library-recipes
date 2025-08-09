@@ -1,0 +1,54 @@
+{
+  "models": [
+    {
+      "title": "GPT-OSS 20B",
+      "provider": "ollama",
+      "model": "gpt-oss:20b",
+      "apiBase": "http://localhost:11434",
+      "contextLength": 8192
+    }
+  ],
+  "contextProviders": [
+    {
+      "name": "files",
+      "params": {
+        "include": [
+          "**/*.js",
+          "**/*.ts",
+          "**/*.tsx",
+          "**/*.py",
+          "**/*.json"
+        ],
+        "exclude": [
+          "node_modules/**",
+          "dist/**",
+          "build/**",
+          ".git/**",
+          "*.log"
+        ]
+      }
+    }
+  ],
+  "embeddingsProvider": {
+    "provider": "ollama",
+    "model": "nomic-embed-text"
+  },
+  "tabAutocompleteModel": {
+    "title": "GPT-OSS 20B",
+    "provider": "ollama",
+    "model": "gpt-oss:20b",
+    "apiBase": "http://localhost:11434"
+  },
+  "slashCommands": [
+    {
+      "name": "agent",
+      "description": "Use GPT-OSS 20B in agentic mode",
+      "model": "gpt-oss:20b"
+    },
+    {
+      "name": "codegen",
+      "description": "Generate code with GPT-OSS 20B (non-agentic)",
+      "model": "gpt-oss:20b"
+    }
+  ]
+}
