@@ -1,4 +1,5 @@
 {
+  "mergeBehavior": "overwrite",
   "models": [
     {
       "title": "Qwen2.5-Coder 32B",
