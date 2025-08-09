@@ -1,4 +1,5 @@
 {
+  "mergeBehavior": "merge",
   "models": [
     {
       "title": "LLaMA 3.1",
