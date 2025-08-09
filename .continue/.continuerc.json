@@ -1,11 +1,11 @@
 {
   "models": [
     {
-      "title": "LLaMA 3.1",
+      "title": "Qwen2.5-Coder 32B",
       "provider": "ollama",
-      "model": "llama3.1:latest",
+      "model": "qwen2.5-coder:32b",
       "apiBase": "http://localhost:11434",
-      "contextLength": 8192
+      "contextLength": 32768
     }
   ],
   "contextProviders": [
@@ -34,16 +34,21 @@
     "model": "nomic-embed-text"
   },
   "tabAutocompleteModel": {
-    "title": "LLaMA 3.1",
+    "title": "Qwen2.5-Coder 32B",
     "provider": "ollama",
-    "model": "llama3.1:latest",
+    "model": "qwen2.5-coder:32b",
     "apiBase": "http://localhost:11434"
   },
   "slashCommands": [
     {
       "name": "agent",
-      "description": "Use LLaMA 3.1 in agentic mode",
-      "model": "llama3.1:latest"
+      "description": "Use Qwen2.5-Coder 32B in agentic mode",
+      "model": "qwen2.5-coder:32b"
+    },
+    {
+      "name": "codegen",
+      "description": "Generate code with Qwen2.5-Coder 32B (non-agentic)",
+      "model": "qwen2.5-coder:32b"
     }
   ]
 }
